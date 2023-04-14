@@ -4,8 +4,10 @@ from rest_framework import status
 from .models import City
 from .serializers.common import CitySerializer
 from .serializers.populate import PopulatedCitySerializer
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 
 class CitiesListView(APIView):
+    permission_classes = (IsAuthenticatedOrReadOnly, )
     # ENDPOINT GET /api/sweden/
     def get(self, request):
         cities = City.objects.all()
@@ -21,6 +23,7 @@ class CitiesListView(APIView):
         return Response(city_to_create.data, status.HTTP_201_CREATED)
     
 class CitySingleView(APIView):
+    permission_classes = (IsAuthenticated, )
     # ENDPOINT GET /api/sweden/<pk>
     def get(self, request, pk):
         city = City.objects.get(pk=pk)

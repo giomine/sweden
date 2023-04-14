@@ -22,5 +22,6 @@ urlpatterns = [
     path('api/sweden/', include('sweden.urls')),
     path('api/facts/', include('facts.urls')),
     path('api/regions/', include('regions.urls')),
-    path('api/mustsee/', include('must_see.urls'))
+    path('api/mustsee/', include('must_see.urls')),
+    path('api/auth/', include('users.urls'))
 ]
