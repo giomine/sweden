@@ -3,21 +3,18 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import City
 from .serializers.common import CitySerializer
+from .serializers.populate import PopulatedCitySerializer
 
 class CitiesListView(APIView):
     # ENDPOINT GET /api/sweden/
     def get(self, request):
-        # print('GET /api/sweden/ api endpoint hit')
-        # return Response('GET /api/sweden/ api endpoint hit')
         cities = City.objects.all()
-        serialized_cities = CitySerializer(cities, many=True)
+        serialized_cities = PopulatedCitySerializer(cities, many=True)
         return Response(serialized_cities.data)
     
 
     # ENDPOINT POST /api/sweden/
     def post(self, request):
-        # print('POST /api/sweden/ api endpoint hit')
-        # return Response('POST /api/sweden/ api endpoint hit')
         city_to_create = CitySerializer(data=request.data)
         city_to_create.is_valid(raise_exception=True)
         city_to_create.save()
