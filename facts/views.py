@@ -37,9 +37,12 @@ class FactSingleView(APIView):
     
     
     # ENDPOINT PUT /api/facts/<pk>/
+    # -- ONLY OWNER CAN UPDATE FACT --
     @exceptions
     def put(self, request, pk):
         fact_to_update = Fact.objects.get(pk=pk)
+        if fact_to_update.owner != request.user and not request.user.is_staff:
+            raise PermissionDenied()
         serialized_fact_to_update = FactSerializer(fact_to_update, request.data, partial=True)
         serialized_fact_to_update.is_valid(raise_exception=True)
         serialized_fact_to_update.save()

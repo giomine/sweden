@@ -16,6 +16,12 @@ class City(models.Model):
         related_name='must_sees'
     )
 
+    owner = models.ForeignKey(
+        'users.User',
+        on_delete=models.CASCADE,
+        related_name='city'
+    )
+
 
     def __str__(self):
         return f'{self.name}'

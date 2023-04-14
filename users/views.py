@@ -33,5 +33,5 @@ class LoginView(APIView):
         dt = datetime.now() + timedelta(days=7)
 
         token = jwt.encode({ 'sub': user_to_login.id, 'exp': int(dt.strftime('%s')) }, settings.SECRET_KEY, algorithm='HS256')
-        print('TOKEN -->', token)
+        # print('TOKEN -->', token)
         return Response({ 'message': f'Welcome back, {user_to_login.username}', 'token': token })
