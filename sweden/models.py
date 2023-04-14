@@ -7,8 +7,14 @@ class City(models.Model):
         on_delete=models.CASCADE,
         related_name='region'
     )
+    
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=200)
+
+    musts = models.ManyToManyField(
+        'must_see.MustSee', 
+        related_name='must_sees'
+    )
 
 
     def __str__(self):

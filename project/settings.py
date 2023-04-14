@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'users',
     'sweden',
     'facts',
-    'regions'
+    'regions',
+    'must_see'
 ]
 
 MIDDLEWARE = [
