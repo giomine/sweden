@@ -17,18 +17,18 @@ class FactsListView(APIView):
         fact_to_create = FactSerializer(data=request.data)
         fact_to_create.is_valid(raise_exception=True)
         fact_to_create.save()
-        return Response(fact_to_create.data, status.HTTP_202_ACCEPTED)
+        return Response(fact_to_create.data, status.HTTP_201_CREATED)
     
 
 class FactSingleView(APIView):
-    # ENDPOINT GET /api/facts/<pk>
+    # ENDPOINT GET /api/facts/<pk>/
     def get(self, request, pk):
         fact = Fact.objects.get(pk=pk)
         serialized_fact = FactSerializer(fact)
         return Response(serialized_fact.data, status.HTTP_200_OK)
     
     
-    # ENDPOINT PUT /api/facts/<pk>
+    # ENDPOINT PUT /api/facts/<pk>/
     def put(self, request, pk):
         fact_to_update = Fact.objects.get(pk=pk)
         serialized_fact_to_update = FactSerializer(fact_to_update, request.data, partial=True)
@@ -37,7 +37,7 @@ class FactSingleView(APIView):
         return Response(serialized_fact_to_update.data, status.HTTP_202_ACCEPTED)
     
 
-    # ENDPOINT DELETE /api/facts/<pk>
+    # ENDPOINT DELETE /api/facts/<pk>/
     def delete(self, request, pk):
         fact_to_delete = Fact.objects.get(pk=pk)
         fact_to_delete.delete()

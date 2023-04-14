@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'users',
     'sweden',
-    'facts'
+    'facts',
+    'regions'
 ]
 
 MIDDLEWARE = [
