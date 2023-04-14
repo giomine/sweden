@@ -5,10 +5,12 @@ from .models import City
 from .serializers.common import CitySerializer
 from .serializers.populate import PopulatedCitySerializer
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
+from lib.exceptions import exceptions
 
 class CitiesListView(APIView):
     permission_classes = (IsAuthenticatedOrReadOnly, )
     # ENDPOINT GET /api/sweden/
+    @exceptions
     def get(self, request):
         cities = City.objects.all()
         serialized_cities = PopulatedCitySerializer(cities, many=True)
@@ -16,6 +18,7 @@ class CitiesListView(APIView):
     
 
     # ENDPOINT POST /api/sweden/
+    @exceptions
     def post(self, request):
         city_to_create = CitySerializer(data=request.data)
         city_to_create.is_valid(raise_exception=True)
@@ -25,6 +28,7 @@ class CitiesListView(APIView):
 class CitySingleView(APIView):
     permission_classes = (IsAuthenticated, )
     # ENDPOINT GET /api/sweden/<pk>
+    @exceptions
     def get(self, request, pk):
         city = City.objects.get(pk=pk)
         serialized_city = CitySerializer(city)
@@ -32,6 +36,7 @@ class CitySingleView(APIView):
     
 
     # ENDPOINT PUT /api/sweden/<pk>
+    @exceptions
     def put(self, request, pk):
         city_to_update = City.objects.get(pk=pk)
         serialized_city_to_update = CitySerializer(city_to_update, request.data, partial=True)
@@ -41,6 +46,7 @@ class CitySingleView(APIView):
     
 
     # ENDPOINT DELETE /api/sweden/<pk>
+    @exceptions
     def delete(self, request, pk):
         city_to_delete = City.objects.get(pk=pk)
         city_to_delete.delete()

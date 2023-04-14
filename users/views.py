@@ -7,10 +7,12 @@ from rest_framework.exceptions import PermissionDenied
 import jwt
 from datetime import datetime, timedelta
 from django.conf import settings
+from lib.exceptions import exceptions
 
 
 class RegisterView(APIView):
     # ENDPOINT: POST /api/auth/register/
+    @exceptions
     def post(self, request):
         # print('REQ DATA --->', request.data)
         user_to_add = UserSerializer(data=request.data)
@@ -20,6 +22,7 @@ class RegisterView(APIView):
     
 class LoginView(APIView):
     # ENDPOINT: POST /api/auth/login/
+    @exceptions
     def post(self, request):
         email = request.data['email']
         password = request.data['password']
