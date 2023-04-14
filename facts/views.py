@@ -3,9 +3,12 @@ from rest_framework.response import Response
 from rest_framework import status
 from .models import Fact
 from .serializers.common import FactSerializer
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.exceptions import PermissionDenied
 
 
 class FactsListView(APIView):
+    permission_classes = (IsAuthenticatedOrReadOnly, )
     # ENDPOINT GET /api/facts/
     def get(self, request):
         facts = Fact.objects.all()
@@ -13,8 +16,9 @@ class FactsListView(APIView):
         return Response(serialized_facts.data)
     
     # ENDPOINT POST /api/facts/
+    # -- OWNER IS ADDED TO ENTRY --
     def post(self, request):
-        fact_to_create = FactSerializer(data=request.data)
+        fact_to_create = FactSerializer(data={ **request.data, 'owner': request.user.id })
         fact_to_create.is_valid(raise_exception=True)
         fact_to_create.save()
         return Response(fact_to_create.data, status.HTTP_201_CREATED)
@@ -38,7 +42,10 @@ class FactSingleView(APIView):
     
 
     # ENDPOINT DELETE /api/facts/<pk>/
+    # -- ONLY OWNER CAN DELETE FACT --
     def delete(self, request, pk):
         fact_to_delete = Fact.objects.get(pk=pk)
+        if fact_to_delete.owner != request.user and not request.user.is_staff:
+            raise PermissionDenied()
         fact_to_delete.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)

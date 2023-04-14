@@ -7,6 +7,11 @@ class Fact(models.Model):
         on_delete=models.CASCADE,
         related_name='facts'
     )
+    owner = models.ForeignKey(
+        'users.User',
+        on_delete=models.CASCADE,
+        related_name='facts'
+    )
     date_created = models.DateTimeField(auto_now_add=True)
     dialect = models.CharField(max_length=50)
     notes = models.TextField(max_length=500)
