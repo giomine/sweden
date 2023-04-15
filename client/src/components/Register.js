@@ -37,19 +37,21 @@ const Register = () => {
 
 
   return (
-    <div>
-      <form action="" onSubmit={handleSubmit}>
-        <h1>Register</h1>
-        <label htmlFor="username"></label>
-        <input type="text" name="username" placeholder="username" onChange={handleChange} value={formFields.username} />
-        <label htmlFor="email"></label>
-        <input type="text" name="email" placeholder="email" onChange={handleChange} value={formFields.email} />
-        <label htmlFor="password"></label>
-        <input type="password" name="password" placeholder="password" onChange={handleChange} value={formFields.password} />
-        <label htmlFor="password_confirmation"></label>
-        <input type="password" name="password_confirmation" placeholder="password_confirmation" onChange={handleChange} value={formFields.password_confirmation} />
-        <button>Register</button>
-      </form>     
+    <div className='register'>
+      <div className='register-border'>
+        <form action="" onSubmit={handleSubmit}>
+          <h1>Register</h1>
+          <label htmlFor="username"></label>
+          <input type="text" name="username" placeholder="username" onChange={handleChange} value={formFields.username} />
+          <label htmlFor="email"></label>
+          <input type="text" name="email" placeholder="email" onChange={handleChange} value={formFields.email} />
+          <label htmlFor="password"></label>
+          <input type="password" name="password" placeholder="password" onChange={handleChange} value={formFields.password} />
+          <label htmlFor="password_confirmation"></label>
+          <input type="password" name="password_confirmation" placeholder="confirm password" onChange={handleChange} value={formFields.password_confirmation} />
+          <button>Register</button>
+        </form>     
+      </div>
     </div>
   )
 }

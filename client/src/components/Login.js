@@ -29,15 +29,17 @@ const Login = () => {
   }
 
   return (
-    <div>
-      <form action="" onSubmit={handleSubmit}>
-        <h1>Login</h1>
-        <label htmlFor="email"></label>
-        <input type="text" name="email" placeholder="email" onChange={handleChange} value={formFields.email} />
-        <label htmlFor="password"></label>
-        <input type="password" name="password" placeholder="password" onChange={handleChange} value={formFields.password} />
-        <button>Log in</button>
-      </form>     
+    <div className='register'>
+      <div className='register-border'>
+        <form action="" onSubmit={handleSubmit}>
+          <h1>Login</h1>
+          <label htmlFor="email"></label>
+          <input type="text" name="email" placeholder="email" onChange={handleChange} value={formFields.email} />
+          <label htmlFor="password"></label>
+          <input type="password" name="password" placeholder="password" onChange={handleChange} value={formFields.password} />
+          <button>Log in</button>
+        </form>     
+      </div>
     </div>
   )
 }

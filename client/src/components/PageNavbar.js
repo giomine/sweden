@@ -4,11 +4,18 @@ const PageNavbar = () => {
 
   return (
     <nav>
-      <Link to='/'>Home</Link>
-      {/* <Link to='/profile'>Profile</Link>
-      <Link to='/'>Logout</Link> */}
-      <Link to='/register'>Register</Link>
-      <Link to='/login'>Login</Link>
+      <div className='nav-container'>
+        <div>
+          <Link to='/'>Home</Link>
+        </div>
+
+        <div>
+          {/* <Link className='margin' to='/profile'>Profile</Link>
+          <Link to='/'>Logout</Link> */}
+          <Link className='margin' to='/register'>Register</Link>
+          <Link to='/login'>Login</Link>
+        </div>
+      </div>
     </nav>
   )
 }
