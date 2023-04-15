@@ -1,16 +1,31 @@
-import { useEffect } from 'react'
-import axios from 'axios'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import PageNavbar from './components/PageNavbar'
+// import Card from './components/Card'
+import Home from './components/Home'
+import CityPage from './components/CityPage'
+import ProfilePage from './components/ProfilePage'
+import Register from './components/Register'
+import Login from './components/Login'
+import Footer from './components/Footer'
+
 
 const App = () => {
-  useEffect(() => {
-    const getData = async () => {
-      const { data } = await axios.get('/api/sweden/') // * <-- replace with your endpoint
-      console.log(data)
-    }
-    getData()
-  })
 
-  return <h1>Hello World</h1>
+  return (
+    <div>
+      <BrowserRouter>
+        <PageNavbar/>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/city' element={<CityPage />} />
+          <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
+  )
 }
 
 export default App
