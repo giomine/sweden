@@ -1,0 +1,32 @@
+.card{
+  // width: 160px;
+  border-radius: 2px;
+  margin: 5px;
+  border: 1px solid gray;
+  @media(min-width: 660px){
+    min-width: 180px;
+  }
+  @media(min-width: 1200px){
+    min-width: 250px;
+  }
+}
+
+.card-image{
+  background-position: center; 
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  height: 160px; 
+  width: 160px; 
+  @media(min-width: 660px){
+    min-width: 100%;
+    min-height: 100%;
+  }
+  @media(min-width: 1000px){
+    min-width: 250px;
+    min-height: 250px;
+  }
+}
+
+.card-bottom{
+  padding: 5px 8px;
+}

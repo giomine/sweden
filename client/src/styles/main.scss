@@ -1,3 +1,38 @@
+@import './variables.scss';
+@import './card.scss';
+
 * {
   box-sizing: border-box;
+  margin: 0;
+}
+
+.page-container{
+  @include flex-center();
+  flex-direction: column;
+}
+
+.hero{
+  background-image: url('https://images.pexels.com/photos/4504337/pexels-photo-4504337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 95vh;
+  @include flex-center();
+}
+
+.card-container{
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  @media(min-width: 660px){
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media(min-width: 1200px){
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  // display: flex;
+  // @include flex-center();
+  // flex-wrap: wrap;
 }
