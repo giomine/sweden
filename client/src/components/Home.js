@@ -21,7 +21,7 @@ const Home = () => {
   },[])
 
   return (
-    <div className='page-container'>
+    <div className='grid-container'>
       <div className='hero'><h1>Home</h1></div>
       <div className='card-container'>
         {allData.length > 0 ? 

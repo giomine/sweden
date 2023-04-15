@@ -1,0 +1,26 @@
+@import './variables.scss';
+
+.footer{
+  @include flex-center();
+  width: 100vw;
+  height: 120px;
+  background-color: rgb(48, 112, 91);
+  background-color: rgb(57, 140, 172);
+  a{
+    color: white;
+    &:hover{
+      color: yellow;
+    }
+  }
+
+  .footer-container{
+    @include flex-center();
+    justify-content: space-between;
+    width: 80%;
+    max-width: 400px;
+
+    .socials a{
+      margin: 0 3px;
+    }
+  }
+}

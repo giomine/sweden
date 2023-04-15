@@ -1,27 +1,33 @@
 @import './variables.scss';
 @import './card.scss';
 @import './navbar.scss';
+@import './footer.scss';
 @import './register-login.scss';
 
 * {
   box-sizing: border-box;
+}
+
+body{
   margin: 0;
+}
+.page-container{
+  min-height: 100vh;
+  @include flex-center();
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 a{
   text-decoration: none;
-  // color: white;
 }
 
-.page-container{
+.grid-container{
   @include flex-center();
   flex-direction: column;
 }
 
 .hero{
-  // position: relative;
-  // top: -50px;
-  // z-index: 1;
   background-image: url('https://images.pexels.com/photos/4504337/pexels-photo-4504337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
   background-position: center;
   background-size: cover;
