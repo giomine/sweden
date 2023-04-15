@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import URLValidator
 
 # Create your models here.
 class City(models.Model):
@@ -10,6 +11,7 @@ class City(models.Model):
     
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=200)
+    image = models.URLField(validators=[URLValidator()])
 
     musts = models.ManyToManyField(
         'must_see.MustSee', 

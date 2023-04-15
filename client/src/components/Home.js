@@ -26,12 +26,12 @@ const Home = () => {
       <div className='card-container'>
         {allData.length > 0 ? 
           allData.map(data => {
-            const { id, name, description } = data
-            console.log(id, name, description)
+            const { id, image, name, description } = data
+            console.log(id, image, name, description)
             return (
               <div key={id}>
                 <Card
-                  image={'https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1'}
+                  image={image}
                   name={name}
                   description={description}
                 />
