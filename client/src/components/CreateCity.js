@@ -67,7 +67,7 @@ const CreateCity = () => {
 
           <label htmlFor="region"></label>
           <select name="region">
-            <option selected disabled value="DEFAULT">Region</option>
+            <option selected disabled value="">-- Select Region --</option>
             {regions.length > 0 ? 
               regions.map(region => {
                 const { id, name } = region
@@ -80,10 +80,9 @@ const CreateCity = () => {
           </select>
 
 
-          <p>Attractions:</p>
           <label htmlFor="musts"></label>
-          <select name="musts" multiple>
-            <option disabled value="">Attractions</option>
+          <select className='select' name="musts" multiple>
+            <option className='big-option' disabled value="">-- Select Attractions --</option>
             {attractions.length > 0 ? 
               attractions.map(attraction => {
                 const { id, name } = attraction

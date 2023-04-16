@@ -21,19 +21,35 @@
     @include flex-center();
     flex-direction: column;
 
-    input, button, select{
-        height: 40px;
+    input, button, select, textarea{
+        &:not(textarea) {
+          height: 40px;
+        }
         width: 220px;
         margin: 5px 0;
         padding-left: 10px;
+    }
+    textarea{
+      padding-top: 10px;
     }
   }
 }
 
 .city-form{
   height: 550px;
+
+  .select{
+    height: 70px;
+    option{
+      margin: 2px 0;
+    }
+    .big-option{
+      margin: 10px 0;
+    }
+  }
 }
 
 .attraction{
   height: 400px;
 }
+
