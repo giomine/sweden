@@ -35,3 +35,20 @@ class LoginView(APIView):
         token = jwt.encode({ 'sub': user_to_login.id, 'exp': int(dt.strftime('%s')) }, settings.SECRET_KEY, algorithm='HS256')
         # print('TOKEN -->', token)
         return Response({ 'message': f'Welcome back, {user_to_login.username}', 'token': token })
+    
+class ProfileView(APIView):
+    # All profiles -- FOR ADMIN USE ONLY --
+    # ENDPOINT: GET /api/auth/profile/
+    @exceptions
+    def get(self, request):
+        profile = User.objects.all()
+        serialized_profile = UserSerializer(profile, many=True)
+        return Response(serialized_profile.data)
+    
+class SingleProfileView(APIView):
+    # ENDPOINT: GET /api/auth/profile/pk/
+    @exceptions
+    def get(self, request, pk):
+        profile = User.objects.get(pk=pk)
+        serialized_profile = UserSerializer(profile)
+        return Response(serialized_profile.data, status.HTTP_200_OK)

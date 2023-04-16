@@ -1,0 +1,47 @@
+@import './variables.scss';
+
+
+.profile-page{
+  @include flex-center();
+  width: 100vw;
+  min-height: 70vh;
+  align-items: flex-start;
+
+  .profile-container{
+    @include flex-center();
+    flex-direction: column;
+    width: 90%;
+    @media(min-width: 660px){
+      width: 80%;
+    }
+  }
+
+  .profile-top{
+    @include flex-center();
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px 0 30px;
+  }
+  
+  .profile-image{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 30px;
+    @media(min-width: 660px){
+      height: 100px;
+      width: 100px;
+    }
+  }
+
+  .profile-section{
+    min-height: 100px;
+    width: 100%;
+    padding: 20px 0;
+    div {
+      padding-bottom: 10px;
+      border-bottom: 1px solid gray;
+    }
+  }
+}
