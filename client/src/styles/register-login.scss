@@ -21,11 +21,15 @@
     @include flex-center();
     flex-direction: column;
 
-    input, button{
-      height: 40px;
-      width: 200px;
-      margin: 5px 0;
-      padding-left: 10px;
+    input, button, select{
+        height: 40px;
+        width: 220px;
+        margin: 5px 0;
+        padding-left: 10px;
     }
   }
+}
+
+.city-form{
+  height: 550px;
 }

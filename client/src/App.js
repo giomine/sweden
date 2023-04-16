@@ -7,6 +7,7 @@ import ProfilePage from './components/ProfilePage'
 import Register from './components/Register'
 import Login from './components/Login'
 import Footer from './components/Footer'
+import CreateCity from './components/CreateCity'
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
+          <Route path='createcity' element={<CreateCity />}/>
         </Routes>
         <Footer />
       </BrowserRouter>
