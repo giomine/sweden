@@ -82,7 +82,7 @@ const CreateCity = () => {
 
           <label htmlFor="musts"></label>
           <select className='select' name="musts" multiple>
-            <option className='big-option' disabled value="">-- Select Attractions --</option>
+            <option className='big-option' selected disabled value="">-- Select Attractions --</option>
             {attractions.length > 0 ? 
               attractions.map(attraction => {
                 const { id, name } = attraction

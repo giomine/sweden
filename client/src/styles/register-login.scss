@@ -38,15 +38,19 @@
 .city-form{
   height: 550px;
 
-  .select{
-    height: 70px;
-    option{
-      margin: 2px 0;
-    }
-    .big-option{
-      margin: 10px 0;
+  @media (min-width: 660px){
+    .select{
+      height: 70px;
+      option{
+        margin: 2px 0;
+      }
+      .big-option{
+        margin: 10px 0;
+        background-color: white;
+      }
     }
   }
+
 }
 
 .attraction{
