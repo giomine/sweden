@@ -9,7 +9,7 @@ const CreateAttraction = () => {
   const [ formFields, setFormFields ] = useState({
     name: '',
     description: '',
-
+    url: '',
   })
 
   const handleChange = async (e) => {
@@ -53,6 +53,10 @@ const CreateAttraction = () => {
 
           <label htmlFor="description"></label>
           <textarea name="description" style={{ width: '220px' }} rows="5" placeholder='Description' value={formFields.description} onChange={handleChange}></textarea>
+
+
+          <label htmlFor="url"></label>
+          <input type="url" name="url" placeholder='Add link to website or Google Maps pin' value={formFields.url} onChange={handleChange} />
 
 
           <button>Submit</button>
