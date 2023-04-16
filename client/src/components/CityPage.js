@@ -27,23 +27,32 @@ const CityPage = () => {
               <div className='city-image' style={{ backgroundImage: `url('${city.image}')` }}></div>
 
               <div className='text'>
-                <div>{city.name}</div>
-                <div>{city.description}</div>
-                <div>{city.owner}</div>
+                <div>Name: {city.name}</div>
+                <div>Region: {city.region}</div>
+                <div>Description: {city.description}</div>
+                <div>Owner: {city.owner}</div>
+
+                <div className='profile-section'>
+                  <div>Facts: {city.facts ? <p>{city.facts}</p> : 'no facts yet!'}</div>
+                </div>
+                
+                <div className='profile-section'>
+                  <div>Must-Sees: {city.musts ? <>{city.musts}</> : 'no attractions yet!'}</div>
+                </div>
               </div>
             </div>
 
-            <div className='profile-section'>
-              <div>{city.facts ? <p>{city.facts}</p> : 'no facts yet!'}</div>
-            </div>
+            {/* <div className='profile-section'>
+              <div>Facts: {city.facts ? <p>{city.facts}</p> : 'no facts yet!'}</div>
+            </div> */}
 
-            <div className='profile-section'>
-              <div>{city.musts ? <p>{city.musts}</p> : 'no attractions yet!'}</div>
-            </div>
+            {/* <div className='profile-section'>
+              <div>Must-Sees: {city.musts ? <p>{city.musts}</p> : 'no attractions yet!'}</div>
+            </div> */}
 
-            <div className='profile-section'>
-              <div>{city.region ? <p>{city.region}</p> : 'no region yet!'}</div>
-            </div>
+            {/* <div className='profile-section'>
+              <div>Region: {city.region ? <p>{city.region}</p> : 'no region yet!'}</div>
+            </div> */}
           </>
           : 'error'
         }

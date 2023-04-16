@@ -58,6 +58,8 @@
 
     .text{
       width: 100%;
+      flex-grow: 1; // delete if want short border
+      padding-top: 20px;
       @media(min-width: 750px){
         width: auto;
         height: 450px;
