@@ -12,7 +12,7 @@ const Home = () => {
       try {
         const { data } = await axios.get('/api/sweden/')
         setAllData(data)
-        console.log(data)
+        // console.log(data)
       } catch (err) {
         console.log(err)
       }
@@ -27,7 +27,7 @@ const Home = () => {
         {allData.length > 0 ? 
           allData.map(data => {
             const { id, image, name, description } = data
-            console.log(id, image, name, description)
+            // console.log(id, image, name, description)
             return (
               <div key={id}>
                 <Card

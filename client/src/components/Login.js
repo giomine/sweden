@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { setToken } from '../helpers/auth'
 
 
 const Login = () => {
@@ -20,8 +21,10 @@ const Login = () => {
     try {
       formFields.email = formFields.email[0]
       formFields.password = formFields.password[0]
-      console.log(formFields)
-      await axios.post('api/auth/login/', formFields)
+      // console.log(formFields)
+      const response = await axios.post('api/auth/login/', formFields)
+      // console.log(response.data.token)
+      setToken(response.data.token)
       navigate('/')
     } catch (err) {
       console.log(err)
