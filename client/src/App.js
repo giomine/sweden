@@ -19,7 +19,7 @@ const App = () => {
         <PageNavbar/>
         <Routes>
           <Route path='/' element={<Home />} />
-          <Route path='/city' element={<CityPage />} />
+          <Route path='/city/:id' element={<CityPage />} />
           <Route path='/profile' element={<ProfilePage />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />

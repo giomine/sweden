@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Card from './Card'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
 
@@ -30,11 +31,13 @@ const Home = () => {
             // console.log(id, image, name, description)
             return (
               <div key={id}>
-                <Card
-                  image={image}
-                  name={name}
-                  description={description}
-                />
+                <Link to={`/city/${id}`}>
+                  <Card
+                    image={image}
+                    name={name}
+                    description={description}
+                  />
+                </Link>
               </div>
             )
           })

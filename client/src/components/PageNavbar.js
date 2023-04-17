@@ -14,7 +14,7 @@ const PageNavbar = () => {
 
         <div>
           {/* TEMPORARY LINKS FOR DEBUGGING */}
-          <Link style={{ color: 'black', marginRight: '5px' }} to='/city'>Sgl</Link>
+          {/* <Link style={{ color: 'black', marginRight: '5px' }} to='/city/8'>Sgl</Link> */}
           <Link style={{ color: 'black', marginRight: '5px' }} to='/profile'>Prof</Link>
           <Link style={{ color: 'black', marginRight: '5px' }} to='/createcity'>CrCi</Link>
           <Link style={{ color: 'black', marginRight: '5px' }} to='/createattraction'>CrAtt</Link>

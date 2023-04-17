@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 
 const CityPage = () => {
+
+  const { id } = useParams()
 
   const [ city, setCity ] = useState('')
 
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get('api/sweden/8')
+        const { data } = await axios.get(`/api/sweden/${id}/`)
         setCity(data)
         console.log(data)
       } catch (err) {
