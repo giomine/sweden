@@ -33,7 +33,7 @@ class CitySingleView(APIView):
     @exceptions
     def get(self, request, pk):
         city = City.objects.get(pk=pk)
-        serialized_city = CitySerializer(city)
+        serialized_city = PopulatedCitySerializer(city)
         return Response(serialized_city.data, status.HTTP_200_OK)
     
 
