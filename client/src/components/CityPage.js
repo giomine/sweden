@@ -37,7 +37,7 @@ const CityPage = () => {
                 <div>Owner: {city.owner.username}</div>
 
                 <div className='profile-section'>
-                  <div>Facts: {city.facts ? <><p>Dialect: {city.facts[0].dialect}</p> <p>Notes: {city.facts[0].notes}</p></> : 'no facts yet!'}</div>
+                  <div>Facts: {city.facts.length > 0 ? <><p>Dialect: {city.facts[0].dialect}</p> <p>Notes: {city.facts[0].notes}</p></> : 'no facts yet!'}</div>
                 </div>
                 
                 <div className='profile-section'>
