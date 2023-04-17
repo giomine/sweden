@@ -28,7 +28,7 @@ class CitiesListView(APIView):
         return Response(city_to_create.data, status.HTTP_201_CREATED)
     
 class CitySingleView(APIView):
-    # permission_classes = (IsAuthenticated, )
+    permission_classes = (IsAuthenticatedOrReadOnly, )
     # ENDPOINT GET /api/sweden/<pk>
     @exceptions
     def get(self, request, pk):

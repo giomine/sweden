@@ -8,7 +8,6 @@ export const setToken = (token) => localStorage.setItem(tokenName, token)
 // decode payload
 export const getPayload = () => {
   const token = getToken()
-  console.log('Token --->', token)
   if (!token) return false
   const splitToken = token.split('.')
   const payloadString = splitToken[1]
@@ -18,7 +17,6 @@ export const getPayload = () => {
 // check expiration time
 export const isAuthenticated = () => {
   const payload = getPayload()
-  console.log('payload --->',payload)
   if (!payload) return false
   const timeNow = Date.now() / 1000
   return (payload.exp > timeNow) ? true : false
@@ -29,4 +27,3 @@ export const handleLogout = (navigate) => {
   localStorage.removeItem(tokenName)
   navigate('/login')
 }
-

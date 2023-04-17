@@ -29,4 +29,5 @@ class JWTAuthentication(BaseAuthentication):
             print(e)
             return None
         
+        # print('USER ---->', user)
         return (user, token)
