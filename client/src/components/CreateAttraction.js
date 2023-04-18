@@ -1,15 +1,18 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
+import { getToken } from '../helpers/auth'
+import { useNavigate } from 'react-router-dom'
 
 
 const CreateAttraction = () => {
 
+  const navigate = useNavigate()
 
   const [ attractions, setAttractions ] = useState('')
   const [ formFields, setFormFields ] = useState({
     name: '',
     description: '',
-    url: '',
+    // url: '',
   })
 
   const handleChange = async (e) => {
@@ -18,9 +21,17 @@ const CreateAttraction = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    formFields.name = formFields.name[0]
+    formFields.description = formFields.description[0]
+    // formFields.url = formFields.url[0]
     try {
-      await axios.post('/api/mustsee/', formFields)
-      console.log(formFields)
+      await axios.post('/api/mustsee/', formFields, {
+        headers: {
+          Authorization: `Bearer ${getToken()}`,
+        },
+      })
+      // console.log(formFields)
+      navigate('/createcity')
     } catch (err) {
       console.log(err)
     }
@@ -32,7 +43,7 @@ const CreateAttraction = () => {
       try {
         const { data } = await axios.get('/api/mustsee/')
         setAttractions(data)
-        console.log(data)
+        // console.log(data)
       } catch (err) {
         console.log(err)
       }
@@ -55,8 +66,8 @@ const CreateAttraction = () => {
           <textarea name="description" style={{ width: '220px' }} rows="5" placeholder='Description' value={formFields.description} onChange={handleChange}></textarea>
 
 
-          <label htmlFor="url"></label>
-          <input type="url" name="url" placeholder='Add link to website or Google Maps pin' value={formFields.url} onChange={handleChange} />
+          {/* <label htmlFor="url"></label>
+          <input type="url" name="url" placeholder='Add link to website or Google Maps pin' value={formFields.url} onChange={handleChange} /> */}
 
 
           <button>Submit</button>

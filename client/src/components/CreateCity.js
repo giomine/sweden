@@ -22,6 +22,18 @@ const CreateCity = () => {
     setFormFields({ ...formFields, [e.target.name]: [e.target.value] })
   }
 
+  const handleAttractions = async (e) => {
+    // console.log(e.target.selectedOptions)
+    const choices = Array.from(e.target.selectedOptions, option => option.value)
+    // console.log(choices)
+    formFields.musts = choices
+  }
+
+  const handleRegion = async (e) => {
+    console.log(e.target.value)
+    formFields.region = e.target.value
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     formFields.name = formFields.name[0]
@@ -39,19 +51,6 @@ const CreateCity = () => {
     } catch (err) {
       console.log(err)
     }
-  }
-
-
-  const handleAttractions = async (e) => {
-    // console.log(e.target.selectedOptions)
-    const choices = Array.from(e.target.selectedOptions, option => option.value)
-    // console.log(choices)
-    formFields.musts = choices
-  }
-
-  const handleRegion = async (e) => {
-    console.log(e.target.value)
-    formFields.region = e.target.value
   }
 
 
