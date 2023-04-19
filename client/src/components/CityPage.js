@@ -38,7 +38,24 @@ const CityPage = () => {
                 <div className='profile-section'>
                   <div>Attractions: {city.attractions ? <>{city.attractions.map(attraction => {
                     return (
-                      <p key={id}>{attraction.name} - {attraction.description} - {attraction.owner.username}</p>
+                      <p key={id}>
+                        <div style={{ display: 'flex' }}>
+                          <div 
+                            style={{ 
+                              backgroundImage: `url('${attraction.owner.profile_image}')`, 
+                              backgroundPosition: 'center', 
+                              backgroundSize: 'cover', 
+                              width: '50px', 
+                              height: '50px', 
+                              borderRadius: '50px', 
+                            }}>
+                          </div>
+                          {attraction.owner.username}
+                        </div>
+
+                        {attraction.name} - 
+                        {attraction.description}
+                      </p>
                     )
                   })}</> : 'no attractions yet!'}</div>
                 </div>
