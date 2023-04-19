@@ -40,7 +40,9 @@
     width: 100%;
     padding: 20px 0;
     div {
-      padding-bottom: 10px;
+      &:not(.tabs){
+        padding-bottom: 10px;
+      }
       border-bottom: 1px solid gray;
     }
   }
@@ -84,4 +86,29 @@
   }
 
 
+}
+
+
+.tabs-container{
+  @media(max-width: 660px){
+    @include flex-center();
+  }
+
+  .tabs{
+    height: 50px;
+    padding: 0 20px;
+    margin-right: 10px;
+    border-radius: 5px 5px 0 0;
+    @include flex-center();
+    text-align: center;
+    &:hover{
+      &:not(.active){
+        color: $blue;
+      }
+    }
+  }
+  .active{
+    background-color: $blue;
+    color: white;
+  }
 }

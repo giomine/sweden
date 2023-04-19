@@ -9,6 +9,17 @@ const ProfilePage = () => {
   const [ profile, setProfile ] = useState('')
   const [ attractions, setAttractions ] = useState()
   const [ cities, setCities ] = useState()
+  const [activeTab, setActiveTab] = useState('tab1')
+
+  const handleTab1 = () => {
+    setActiveTab('tab1')
+  }
+  const handleTab2 = () => {
+    setActiveTab('tab2')
+  }
+  const handleTab3 = () => {
+    setActiveTab('tab3')
+  }
 
   useEffect(() => {
     const getData = async () => {
@@ -72,53 +83,62 @@ const ProfilePage = () => {
                   </div>
                 </div>
 
-                <div style={{ display: 'flex' }} className='profile-section'>
-                  <div style={{ margin: '0 10px' }}>Cards added by {profile.username}</div>
-                  <div style={{ margin: '0 10px' }}>Attractions added by {profile.username}</div>
+                <div style={{ display: 'flex' }} className='profile-section tabs-container'>
+                  <div onClick={handleTab1} className={activeTab === 'tab1' ? 'active tabs' : 'tabs'} >Profile</div>
+                  <div onClick={handleTab2} className={activeTab === 'tab2' ? 'active tabs' : 'tabs'} >Cards</div>
+                  <div onClick={handleTab3} className={activeTab === 'tab3' ? 'active tabs' : 'tabs'} >Attractions</div>
                 </div>
 
-                <div className='grid-container'>
-                  <div className='card-container'>
-                    {attractions ? 
-                      attractions.map(attraction => {
-                        if (attraction.owner.id === profile.id) {
-                          const { id, city, name, description } = attraction
-                          return (
-                            <div className='card' key={id}>
-                              <Link to={`/city/${city.id}`}>
-                                <div>{city.name} - {name} - {description}</div>
-                              </Link>
-                            </div>
-                          )
-                        }
-                      })
-                      : 'No cards added yet!'
-                    }
-                  </div>
-                </div>
+                <div>        
+                  {activeTab === 'tab1' && 
+                  <div>No profile info</div>}
 
-                <div className='grid-container'>
-                  <div className='card-container'>
-                    {cities ? 
-                      cities.map(city => {
-                        if (city.owner.id === profile.id) {
-                          const { id, name, description, image } = city
-                          return (
-                            <div key={id}>
-                              <Link to={`/city/${city.id}`}>
-                                <Card 
-                                  name={name}
-                                  description={description}
-                                  image={image}
-                                />
-                              </Link>
-                            </div>
-                          )
-                        }
-                      })
-                      : 'No cards added yet!'
-                    }
-                  </div>
+                  {activeTab === 'tab2' && 
+                  <div className='grid-container'>
+                    <div className='card-container'>
+                      {attractions ? 
+                        attractions.map(attraction => {
+                          if (attraction.owner.id === profile.id) {
+                            const { id, city, name, description } = attraction
+                            return (
+                              <div className='card' key={id}>
+                                <Link to={`/city/${city.id}`}>
+                                  <div>{city.name} - {name} - {description}</div>
+                                </Link>
+                              </div>
+                            )
+                          }
+                        })
+                        : 'No cards added yet!'
+                      }
+                    </div>
+                  </div>}
+
+                  {activeTab === 'tab3' &&                 
+                  <div className='grid-container'>
+                    <div className='card-container'>
+                      {cities ? 
+                        cities.map(city => {
+                          if (city.owner.id === profile.id) {
+                            const { id, name, description, image } = city
+                            return (
+                              <div key={id}>
+                                <Link to={`/city/${city.id}`}>
+                                  <Card 
+                                    name={name}
+                                    description={description}
+                                    image={image}
+                                  />
+                                </Link>
+                              </div>
+                            )
+                          }
+                        })
+                        : 'No cards added yet!'
+                      }
+                    </div>
+                  </div>}
+
                 </div>
               </>
 

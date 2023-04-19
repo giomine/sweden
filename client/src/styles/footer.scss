@@ -5,11 +5,11 @@
   width: 100vw;
   height: 120px;
   background-color: rgb(48, 112, 91);
-  background-color: rgb(57, 140, 172);
+  background-color: $blue;
   a{
     color: white;
     &:hover{
-      color: yellow;
+      color: $yellow;
     }
   }
 
