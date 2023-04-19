@@ -34,11 +34,11 @@ const CityPage = () => {
                 <div>Name: {city.name}</div>
                 <div>Region: {city.region.name}</div>
                 <div>Description: {city.description}</div>
-                <div>Owner: {city.owner.username}</div>
+                {/* <div>Owner: {city.owner.username}</div> */}
 
-                <div className='profile-section'>
+                {/* <div className='profile-section'>
                   <div>Facts: {city.facts.length > 0 ? <><p>Dialect: {city.facts[0].dialect}</p> <p>Notes: {city.facts[0].notes}</p></> : 'no facts yet!'}</div>
-                </div>
+                </div> */}
                 
                 <div className='profile-section'>
                   <div>Must-Sees: {city.musts ? <>{city.musts.map(must => {
