@@ -3,6 +3,7 @@ import axios from 'axios'
 import { getToken, isAuthenticated } from '../helpers/auth'
 import { Link } from 'react-router-dom'
 import Card from './Card'
+import EditProfile from './EditProfile'
 
 const ProfilePage = () => {
 
@@ -10,6 +11,7 @@ const ProfilePage = () => {
   const [ attractions, setAttractions ] = useState()
   const [ cities, setCities ] = useState()
   const [ activeTab, setActiveTab ] = useState('tab1')
+  const [ editTab, setEditTab ] = useState(false)
 
   const handleTab1 = () => {
     setActiveTab('tab1')
@@ -19,6 +21,11 @@ const ProfilePage = () => {
   }
   const handleTab3 = () => {
     setActiveTab('tab3')
+  }
+
+  const handleClick = () => {
+    setEditTab(!editTab)
+    setActiveTab('tab1')
   }
 
   useEffect(() => {
@@ -75,7 +82,7 @@ const ProfilePage = () => {
 
               <>
                 <div className='profile-top'>
-                  <div className='profile-image' style={{ backgroundImage: `url('${profile.profile_image}')` }}></div>
+                  <div onClick={handleClick} className='profile-image' style={{ backgroundImage: `url('${profile.profile_image}')` }}></div>
                   
                   <div>
                     <p>{profile.username}</p>
@@ -89,9 +96,23 @@ const ProfilePage = () => {
                   <div onClick={handleTab2} className={activeTab === 'tab2' ? 'active tabs' : 'tabs'} >Attractions</div>
                 </div>
 
-                <div>        
+                <div className='edit-profile'>        
                   {activeTab === 'tab1' && 
-                  <div>No profile info</div>}
+                  <>
+                    {/* <div>No profile info</div> */}
+                    {editTab === false &&
+                    <>
+                      <button className='button' onClick={handleClick}>Upload new profile photo</button>
+                    </>
+                    }
+                    <div>
+                      {editTab === true &&
+                      <div>
+                        <EditProfile />
+                      </div>
+                      }
+                    </div>
+                  </>}
 
                   {activeTab === 'tab2' && 
                   <div className='grid-container'>

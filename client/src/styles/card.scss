@@ -5,13 +5,13 @@
   margin: 5px;
   border: 1px solid gray;
   @media(min-width: 660px){
-    min-width: 180px;
-    min-height: 180px;
+    width: 180px;
+    height: 180px;
   }
-  @media(min-width: 1200px){
-    min-width: 250px;
-    min-height: 250px;
-  }
+  // @media(min-width: 1200px){
+  //   min-width: 250px;
+  //   min-height: 250px;
+  // }
 }
 
 .card-image{
@@ -21,13 +21,13 @@
   min-height: 160px; 
   min-width: 160px; 
   @media(min-width: 660px){
-    min-width: 180px;
-    min-height: 180px;
+    width: 180px;
+    height: 180px;
   }
-  @media(min-width: 1000px){
-    min-width: 250px;
-    min-height: 250px;
-  }
+  // @media(min-width: 1000px){
+  //   min-width: 250px;
+  //   min-height: 250px;
+  // }
 }
 
 .card-bottom{

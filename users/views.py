@@ -45,11 +45,13 @@ class ProfileView(APIView):
         profile = User.objects.get(pk=request.user.id)
         serialized_profile = UserSerializer(profile)
         return Response(serialized_profile.data)
-    
-# class SingleProfileView(APIView):
-#     # ENDPOINT: GET /api/auth/profile/pk/
-#     @exceptions
-#     def get(self, request, pk):
-#         profile = User.objects.get(pk=pk)
-#         serialized_profile = UserSerializer(profile)
-#         return Response(serialized_profile.data, status.HTTP_200_OK)
+
+    # ENDPOINT: PUT /api/auth/profile/
+    @exceptions
+    def put(self, request):
+        profile_to_update = User.objects.get(pk=request.user.id)
+        print(request.user.id)
+        serialized_profile_to_update = UserSerializer(profile_to_update, request.data, partial=True)
+        serialized_profile_to_update.is_valid(raise_exception=True)
+        serialized_profile_to_update.save()
+        return Response(serialized_profile_to_update.data, status.HTTP_202_ACCEPTED)

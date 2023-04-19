@@ -50,6 +50,20 @@
     }
   }
 
+  .edit-profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    // height: 350px;
+
+    form {
+      @include flex-center();
+      flex-direction: column;
+      margin: 20px 0;
+    }
+  }
+
 
   .city-top{
     @include flex-center();
