@@ -2,11 +2,13 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { getToken, isAuthenticated } from '../helpers/auth'
 import { Link } from 'react-router-dom'
+import Card from './Card'
 
 const ProfilePage = () => {
 
   const [ profile, setProfile ] = useState('')
   const [ attractions, setAttractions ] = useState()
+  const [ cities, setCities ] = useState()
 
   useEffect(() => {
     const getData = async () => {
@@ -17,7 +19,6 @@ const ProfilePage = () => {
           },
         })
         setProfile(data)
-        // console.log('Original profile -->', profile)
       } catch (err) {
         console.log(err)
       }
@@ -32,6 +33,20 @@ const ProfilePage = () => {
         setAttractions(data)
         // console.log('ATTRACTIONS -->', attractions)
         // console.log('ATTRACTIONS OWNER -->', attractions.map(attraction => attraction.owner.username))
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getData()
+  },[])
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const { data } = await axios.get('/api/cities/')
+        setCities(data)
+        // console.log('CITIES -->', data)
+        // console.log('CITIES OWNER -->', cities.map(city => city.owner.username))
       } catch (err) {
         console.log(err)
       }
@@ -69,9 +84,33 @@ const ProfilePage = () => {
                         if (attraction.owner.id === profile.id) {
                           const { id, city, name, description } = attraction
                           return (
-                            <div style={{ marginRight: '50px' }} key={id}>
+                            <div className='card' key={id}>
                               <Link to={`/city/${city.id}`}>
                                 <div>{city.name} - {name} - {description}</div>
+                              </Link>
+                            </div>
+                          )
+                        }
+                      })
+                      : 'No cards added yet!'
+                    }
+                  </div>
+                </div>
+
+                <div className='grid-container'>
+                  <div className='card-container'>
+                    {cities ? 
+                      cities.map(city => {
+                        if (city.owner.id === profile.id) {
+                          const { id, name, description, image } = city
+                          return (
+                            <div key={id}>
+                              <Link to={`/city/${city.id}`}>
+                                <Card 
+                                  name={name}
+                                  description={description}
+                                  image={image}
+                                />
                               </Link>
                             </div>
                           )

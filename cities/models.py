@@ -8,6 +8,12 @@ class City(models.Model):
         on_delete=models.CASCADE,
         related_name='cities'
     )
+
+    owner = models.ForeignKey(
+        'users.User',
+        on_delete=models.CASCADE,
+        related_name='cities'
+    )
     
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=200)
