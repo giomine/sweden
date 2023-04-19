@@ -1,0 +1,104 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Gothenburg City Museum",
+        "description": "Elegant mid-18th century building housing collections related to 12,000 years of the area's history."
+      },
+      "geometry": {
+        "coordinates": [11.958367414838282, 57.73132862913136],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Borås Museum",
+        "description": "A lovely museum in the quiet town of Borås"
+      },
+      "geometry": {
+        "coordinates": [57.753317535598576, 12.92241771048023],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Medelhavsmuseet",
+        "description": "Ancient Greek & Roman antiquities, plus Egyptian mummies & Islamic artworks in a high-tech museum."
+      },
+      "geometry": {
+        "coordinates": [59.344544904401054, 18.068636519597817],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Brödernas",
+        "description": "Hamburger restaurant"
+      },
+      "geometry": {
+        "coordinates": [57.79465046954456, 12.982406564942666],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Destination Fitness - Gym Tranås",
+        "description": "Gym"
+      },
+      "geometry": {
+        "coordinates": [58.11095074388674, 14.979660537085703],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Haga",
+        "description": "Haga is a charming area of traditional wood buildings and cobbled streets, home to 17th-century fortress Skansen Kronan. Candlelit cafes and pubs with terraced courtyards create a bohemian vibe around Järntorget square and adjoining Långgatorna thoroughfares. The area is dotted with vegan bistros and bakeries known for cinnamon buns. Quaint stores sell books, crafts and knitwear."
+      },
+      "geometry": {
+        "coordinates": [57.69853269546395, 11.956136802946999],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Skansen Kronan",
+        "description": "Hillside conference & wedding venue in a one-time fortress with panoramic views of the city."
+      },
+      "geometry": {
+        "coordinates": [57.69701909616834, 11.955535988138106],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Westfield Mall of Scandinavia",
+        "description": "Shopping centre"
+      },
+      "geometry": {
+        "coordinates": [59.37798396347575, 18.006075680053037],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Skrapan",
+        "description": "Shopping mall with specialty stores, coffee shops & a top-floor restaurant with city views."
+      },
+      "geometry": {
+        "coordinates": [59.32057511442288, 18.078173457120286],
+        "type": "Point"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}
