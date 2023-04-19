@@ -16,16 +16,16 @@ const CreateAttraction = () => {
   })
 
   const handleChange = async (e) => {
-    setFormFields({ ...formFields, [e.target.name]: [e.target.value] })
+    setFormFields({ ...formFields, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    formFields.name = formFields.name[0]
-    formFields.description = formFields.description[0]
+    // formFields.name = formFields.name[0]
+    // formFields.description = formFields.description[0]
     // formFields.url = formFields.url[0]
     try {
-      await axios.post('/api/mustsee/', formFields, {
+      await axios.post('/api/attractions/', formFields, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
@@ -41,7 +41,7 @@ const CreateAttraction = () => {
   useEffect(() => {            
     const getData = async () => {
       try {
-        const { data } = await axios.get('/api/mustsee/')
+        const { data } = await axios.get('/api/attractions/')
         setAttractions(data)
         // console.log(data)
       } catch (err) {

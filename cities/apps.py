@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class MustSeeConfig(AppConfig):
+class CityConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'must_see'
+    name = 'cities'

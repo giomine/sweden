@@ -1,7 +1,7 @@
 from rest_framework.serializers import ModelSerializer
-from ..models import MustSee
+from ..models import Attraction
 
 class MustSerializer(ModelSerializer):
     class Meta:
-        model = MustSee
+        model = Attraction
         fields = '__all__'

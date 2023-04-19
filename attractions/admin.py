@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import MustSee
+from .models import Attraction
 
 # Register your models here.
-admin.site.register(MustSee)
+admin.site.register(Attraction)

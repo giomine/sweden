@@ -1,16 +1,21 @@
 from django.db import models
 
 # Create your models here.
-class MustSee(models.Model):
+class Attraction(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=300)
     
     owner = models.ForeignKey(
         'users.User',
         on_delete=models.CASCADE,
-        related_name='musts'
+        related_name='attractions'
     )
-    # in_cities = models.ManyToManyField('sweden.City', related_name='must_sees')
+    city = models.ForeignKey(
+        'cities.City',
+        on_delete=models.CASCADE,
+        related_name='attractions'
+    )
+    
 
     def __str__(self):
         return self.name

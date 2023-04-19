@@ -42,10 +42,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'users',
-    'sweden',
-    'facts',
+    'cities',
     'regions',
-    'must_see'
+    'attractions'
 ]
 
 MIDDLEWARE = [

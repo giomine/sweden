@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
 import mapboxgl from '!mapbox-gl'
-mapboxgl.accessToken = 'pk.eyJ1IjoiZ2lvcmdpYW1pbmVvIiwiYSI6ImNsZ205eWdiYjAzdTAzbW1tdWxrbTJzNmsifQ.PpAakCbm5jEU3_1Oq3_pdw'
+mapboxgl.accessToken = process.env.REACT_APP_MAP_TOKEN
 import axios from 'axios'
 import Card from './Card'
 import { Link } from 'react-router-dom'

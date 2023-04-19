@@ -1,19 +1,19 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
-from .models import MustSee
+from .models import Attraction
 from .serializers.common import MustSerializer
 from lib.exceptions import exceptions
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 from rest_framework.exceptions import PermissionDenied
 
 
-class MustSeeListView(APIView):
+class AttractionsListView(APIView):
     permission_classes = (IsAuthenticatedOrReadOnly, )
     # ENDPOINT GET /api/mustsee/
     @exceptions
     def get(self, request):
-        musts = MustSee.objects.all()
+        musts = Attraction.objects.all()
         serialized_musts = MustSerializer(musts, many=True)
         return Response(serialized_musts.data)
     
@@ -27,11 +27,11 @@ class MustSeeListView(APIView):
         return Response(must_to_create.data, status.HTTP_201_CREATED)
     
 
-class MustSingleView(APIView):
+class AttractionSingleView(APIView):
     # ENDPOINT GET /api/mustsee/<pk>/
     @exceptions
     def get(self, request, pk):
-        must = MustSee.objects.get(pk=pk)
+        must = Attraction.objects.get(pk=pk)
         serialized_must = MustSerializer(must)
         return Response(serialized_must.data, status.HTTP_200_OK)
     
@@ -40,7 +40,7 @@ class MustSingleView(APIView):
     # -- ONLY OWNER CAN UPDATE MUSTSEE --
     @exceptions
     def put(self, request, pk):
-        must_to_update = MustSee.objects.get(pk=pk)
+        must_to_update = Attraction.objects.get(pk=pk)
         if must_to_update.owner != request.user and not request.user.is_staff:
             raise PermissionDenied()
         serialized_must_to_update = MustSerializer(must_to_update, request.data, partial=True)
@@ -53,7 +53,7 @@ class MustSingleView(APIView):
     # -- ONLY OWNER CAN DELETE MUSTSEE --
     @exceptions
     def delete(self, request, pk):
-        must_to_delete = MustSee.objects.get(pk=pk)
+        must_to_delete = Attraction.objects.get(pk=pk)
         if must_to_delete.owner != request.user and not request.user.is_staff:
             raise PermissionDenied()
         must_to_delete.delete()
