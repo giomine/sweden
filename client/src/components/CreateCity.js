@@ -8,13 +8,13 @@ const CreateCity = () => {
   const navigate = useNavigate()
 
   const [ regions, setRegions ] = useState('')
-  const [ attractions, setAttractions ] = useState('')
+  // const [ attractions, setAttractions ] = useState('')
 
   const [ formFields, setFormFields ] = useState({
     name: '',
     description: '',
     region: '',
-    musts: [],
+    // musts: [],
     image: '',
   })
 
@@ -41,7 +41,7 @@ const CreateCity = () => {
     formFields.image = formFields.image[0]
     console.log(formFields)
     try {
-      await axios.post('/api/sweden/', formFields, {
+      await axios.post('/api/cities/', formFields, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
@@ -66,17 +66,17 @@ const CreateCity = () => {
     getData()
   },[])
 
-  useEffect(() => {
-    const getData = async () => {
-      try {
-        const { data } = await axios.get('/api/mustsee/')
-        setAttractions(data)
-      } catch (err) {
-        console.log(err)
-      }
-    }
-    getData()
-  },[])
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     try {
+  //       const { data } = await axios.get('/api/attractions/')
+  //       setAttractions(data)
+  //     } catch (err) {
+  //       console.log(err)
+  //     }
+  //   }
+  //   getData()
+  // },[])
 
   return (
     <div className='register'>
@@ -105,7 +105,7 @@ const CreateCity = () => {
           </select>
 
 
-          <label htmlFor="musts"></label>
+          {/* <label htmlFor="musts"></label>
           <select onChange={handleAttractions} className='select' name="musts" multiple>
             <option className='big-option' selected disabled value="">-- Select Attractions --</option>
             {attractions.length > 0 ? 
@@ -117,7 +117,7 @@ const CreateCity = () => {
               })
               : 'error'
             }
-          </select>
+          </select> */}
 
 
           <label htmlFor="description"></label>

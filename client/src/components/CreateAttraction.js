@@ -8,10 +8,11 @@ const CreateAttraction = () => {
 
   const navigate = useNavigate()
 
-  const [ attractions, setAttractions ] = useState('')
+  const [ cities, setCities ] = useState('')
   const [ formFields, setFormFields ] = useState({
     name: '',
     description: '',
+    city: '',
     // url: '',
   })
 
@@ -19,11 +20,12 @@ const CreateAttraction = () => {
     setFormFields({ ...formFields, [e.target.name]: e.target.value })
   }
 
+  const handleCity = async (e) => {
+    formFields.city = e.target.value
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault()
-    // formFields.name = formFields.name[0]
-    // formFields.description = formFields.description[0]
-    // formFields.url = formFields.url[0]
     try {
       await axios.post('/api/attractions/', formFields, {
         headers: {
@@ -31,19 +33,17 @@ const CreateAttraction = () => {
         },
       })
       // console.log(formFields)
-      navigate('/createcity')
+      navigate('/profile')
     } catch (err) {
       console.log(err)
     }
   }
 
-  {/* Get rid of this later or display on page for user to see what currently exists on the list  */}
   useEffect(() => {            
     const getData = async () => {
       try {
-        const { data } = await axios.get('/api/attractions/')
-        setAttractions(data)
-        // console.log(data)
+        const { data } = await axios.get('/api/cities/')
+        setCities(data)
       } catch (err) {
         console.log(err)
       }
@@ -57,6 +57,20 @@ const CreateAttraction = () => {
 
         <form action="" onSubmit={handleSubmit}>
           <h1>Create attraction</h1>
+
+          <label htmlFor="city"></label>
+          <select onChange={handleCity} name="city">
+            <option selected disabled value="">-- Select City --</option>
+            {cities.length > 0 ? 
+              cities.map(city => {
+                const { id, name } = city
+                return (
+                  <option key={id} value={id} onChange={handleChange}>{name}</option>
+                )
+              })
+              : 'error'
+            }
+          </select>
 
           <label htmlFor="name"></label>
           <input type="text" name="name" placeholder='Add new attraction' value={formFields.name} onChange={handleChange} />

@@ -38,7 +38,7 @@ const Home = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const { data } = await axios.get('/api/sweden/')
+        const { data } = await axios.get('/api/cities/')
         setAllData(data)
         // console.log(data)
       } catch (err) {
