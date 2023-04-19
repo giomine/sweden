@@ -9,7 +9,7 @@ const ProfilePage = () => {
   const [ profile, setProfile ] = useState('')
   const [ attractions, setAttractions ] = useState()
   const [ cities, setCities ] = useState()
-  const [activeTab, setActiveTab] = useState('tab1')
+  const [ activeTab, setActiveTab ] = useState('tab1')
 
   const handleTab1 = () => {
     setActiveTab('tab1')
@@ -85,8 +85,8 @@ const ProfilePage = () => {
 
                 <div style={{ display: 'flex' }} className='profile-section tabs-container'>
                   <div onClick={handleTab1} className={activeTab === 'tab1' ? 'active tabs' : 'tabs'} >Profile</div>
-                  <div onClick={handleTab2} className={activeTab === 'tab2' ? 'active tabs' : 'tabs'} >Cards</div>
-                  <div onClick={handleTab3} className={activeTab === 'tab3' ? 'active tabs' : 'tabs'} >Attractions</div>
+                  <div onClick={handleTab3} className={activeTab === 'tab3' ? 'active tabs' : 'tabs'} >Cards</div>
+                  <div onClick={handleTab2} className={activeTab === 'tab2' ? 'active tabs' : 'tabs'} >Attractions</div>
                 </div>
 
                 <div>        
@@ -96,7 +96,7 @@ const ProfilePage = () => {
                   {activeTab === 'tab2' && 
                   <div className='grid-container'>
                     <div className='card-container'>
-                      {attractions ? 
+                      {attractions.length > 0 ? 
                         attractions.map(attraction => {
                           if (attraction.owner.id === profile.id) {
                             const { id, city, name, description } = attraction
@@ -109,7 +109,7 @@ const ProfilePage = () => {
                             )
                           }
                         })
-                        : 'No cards added yet!'
+                        : <><div></div><div>No attractions added yet!</div></>
                       }
                     </div>
                   </div>}
@@ -117,16 +117,15 @@ const ProfilePage = () => {
                   {activeTab === 'tab3' &&                 
                   <div className='grid-container'>
                     <div className='card-container'>
-                      {cities ? 
+                      {cities.length > 0 ? 
                         cities.map(city => {
                           if (city.owner.id === profile.id) {
-                            const { id, name, description, image } = city
+                            const { id, name, image } = city
                             return (
                               <div key={id}>
                                 <Link to={`/city/${city.id}`}>
                                   <Card 
                                     name={name}
-                                    description={description}
                                     image={image}
                                   />
                                 </Link>
@@ -134,7 +133,7 @@ const ProfilePage = () => {
                             )
                           }
                         })
-                        : 'No cards added yet!'
+                        : <><div></div><div>No cards added yet!</div></>
                       }
                     </div>
                   </div>}

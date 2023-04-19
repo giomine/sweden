@@ -1,0 +1,177 @@
+[
+{
+  "model": "regions.region",
+  "pk": 3,
+  "fields": {
+    "name": "Ångermanland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 4,
+  "fields": {
+    "name": "Blekinge"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 5,
+  "fields": {
+    "name": "Bohuslän"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 6,
+  "fields": {
+    "name": "Dalarna"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 7,
+  "fields": {
+    "name": "Dalsland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 8,
+  "fields": {
+    "name": "Gästrikland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 9,
+  "fields": {
+    "name": "Gotland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 10,
+  "fields": {
+    "name": "Halland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 11,
+  "fields": {
+    "name": "Hälsingland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 12,
+  "fields": {
+    "name": "Härjedalen"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 13,
+  "fields": {
+    "name": "Jämtland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 14,
+  "fields": {
+    "name": "Lappland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 15,
+  "fields": {
+    "name": "Medelpad"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 16,
+  "fields": {
+    "name": "Närke"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 17,
+  "fields": {
+    "name": "Norrbotten"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 18,
+  "fields": {
+    "name": "Öland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 19,
+  "fields": {
+    "name": "Östergötland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 20,
+  "fields": {
+    "name": "Skåne"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 21,
+  "fields": {
+    "name": "Småland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 22,
+  "fields": {
+    "name": "Södermanland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 23,
+  "fields": {
+    "name": "Uppland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 24,
+  "fields": {
+    "name": "Värmland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 25,
+  "fields": {
+    "name": "Västerbotten"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 26,
+  "fields": {
+    "name": "Västergötland"
+  }
+},
+{
+  "model": "regions.region",
+  "pk": 27,
+  "fields": {
+    "name": "Västmanland"
+  }
+}
+]

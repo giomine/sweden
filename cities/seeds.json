@@ -1,42 +1,167 @@
 [
 {
   "model": "cities.city",
-  "pk": 4,
+  "pk": 15,
   "fields": {
-    "name": "Lund",
-    "description": "Student city",
-    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1",
-    "region": 1
-  }
-},
-{
-  "model": "cities.city",
-  "pk": 6,
-  "fields": {
-    "name": "Gothenburg",
-    "description": "Lovely coastal town",
-    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1",
-    "region": 2
-  }
-},
-{
-  "model": "cities.city",
-  "pk": 7,
-  "fields": {
+    "region": 22,
+    "owner": 1,
     "name": "Stockholm",
-    "description": "Capital city",
-    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1",
-    "region": 1
+    "description": "Stockholm is the capital and largest city of Sweden as well as the largest urban area in Scandinavia. Approximately 990,000 people live in the municipality,[9] w",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
   }
 },
 {
   "model": "cities.city",
-  "pk": 8,
+  "pk": 16,
   "fields": {
+    "region": 26,
+    "owner": 1,
+    "name": "Gothenburg",
+    "description": "Gothenburg is the second-largest city in Sweden, and capital of the Västra Götaland County. It has a population of approx. 1.1 million inhabitants in the metropolitan area.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 17,
+  "fields": {
+    "region": 20,
+    "owner": 1,
     "name": "Malmö",
-    "description": "Port town",
-    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1",
-    "region": 2
+    "description": "Malmö is the largest city in the Swedish county of Skåne. It is the third-largest city in Sweden, after Stockholm and Gothenburg, with a municipal population of 357,377 in 2022.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 18,
+  "fields": {
+    "region": 23,
+    "owner": 1,
+    "name": "Uppsala",
+    "description": "Uppsala is the county seat of Uppsala County and the fourth-largest city in Sweden, after Stockholm, Gothenburg, and Malmö. It had 177,074 inhabitants in 2019.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 19,
+  "fields": {
+    "region": 23,
+    "owner": 1,
+    "name": "Upplands Väsby",
+    "description": "Upplands Väsby is a locality and the seat of Upplands Väsby Municipality, Stockholm County, Sweden with 48,907 inhabitants in 2020.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 20,
+  "fields": {
+    "region": 16,
+    "owner": 1,
+    "name": "Örebro",
+    "description": "Örebro is the sixth-largest city in Sweden, and capital of the Örebro County. It has a population of approximately 126,000 in the city proper.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 21,
+  "fields": {
+    "region": 19,
+    "owner": 1,
+    "name": "Linköping",
+    "description": "Linköping is a city in southern Sweden, with around 105,000 inhabitants as of 2021.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 22,
+  "fields": {
+    "region": 20,
+    "owner": 1,
+    "name": "Helsingborg",
+    "description": "Helsingborg is the second-largest city in Skåne (after Malmö) and ninth-largest in Sweden, with a population of 113,816 (2020). Helsingborg is Sweden's closest point to Denmark.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 23,
+  "fields": {
+    "region": 21,
+    "owner": 1,
+    "name": "Jönköping",
+    "description": "Jönköping is a city in southern Sweden with 112,766 inhabitants (2022).",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 24,
+  "fields": {
+    "region": 19,
+    "owner": 1,
+    "name": "Norrköping",
+    "description": "Norrköping lies about 160 km southwest of the national capital Stockholm. The city has a population of 95,618 inhabitants in 2016.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 25,
+  "fields": {
+    "region": 20,
+    "owner": 1,
+    "name": "Lund",
+    "description": "Lund is a city in the southern Swedish province of Skåne, across the Öresund strait from Copenhagen. The town had 91,940 inhabitants in 2018.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 26,
+  "fields": {
+    "region": 25,
+    "owner": 1,
+    "name": "Umeå",
+    "description": "Umeå is a city in northeast Sweden.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 27,
+  "fields": {
+    "region": 8,
+    "owner": 1,
+    "name": "Gävle",
+    "description": "Gävle had 77,586 inhabitants in 2020, which makes it the 13th most populated city in Sweden. It is the oldest city in the historical Norrland.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 28,
+  "fields": {
+    "region": 22,
+    "owner": 1,
+    "name": "Södertälje",
+    "description": "As of 2017, Södertälje has 72,704 inhabitants. Södertälje is located at Mälarens confluence in to the Baltic Sea through the lock in the Södertälje Canal.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
+  }
+},
+{
+  "model": "cities.city",
+  "pk": 29,
+  "fields": {
+    "region": 26,
+    "owner": 1,
+    "name": "Borås",
+    "description": "Borås had 66,273 inhabitants in 2010. It is located at the point of two crossing railways, among them the railway between Gothenburg and Kalmar.",
+    "image": "https://i0.wp.com/www.mymorningtravelguide.com/wp-content/uploads/2016/11/NIK_9178-2.jpg?w=2000&ssl=1"
   }
 }
 ]

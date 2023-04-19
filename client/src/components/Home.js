@@ -70,7 +70,7 @@ const Home = () => {
                   <Card
                     image={image}
                     name={name}
-                    description={description}
+                    // description={description}
                   />
                 </Link>
               </div>

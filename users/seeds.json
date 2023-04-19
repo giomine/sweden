@@ -1,0 +1,21 @@
+[
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$TXrlXGoTn7Ze5EI9rSxq0z$h8LDx4xV1j0A7GcqFZNY1oTn8b9/B9AXXKCk9INR5C4=",
+    "last_login": "2023-04-19T14:43:25.625Z",
+    "is_superuser": true,
+    "username": "gio",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-04-19T14:43:18.776Z",
+    "email": "gio@gio.com",
+    "profile_image": "",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]

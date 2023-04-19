@@ -1,13 +1,16 @@
 .card{
-  // width: 160px;
+  width: 160px;
+  height: 160px;
   border-radius: 2px;
   margin: 5px;
   border: 1px solid gray;
   @media(min-width: 660px){
     min-width: 180px;
+    min-height: 180px;
   }
   @media(min-width: 1200px){
     min-width: 250px;
+    min-height: 250px;
   }
 }
 
@@ -15,11 +18,11 @@
   background-position: center; 
   background-size: cover; 
   background-repeat: no-repeat; 
-  height: 160px; 
-  width: 160px; 
+  min-height: 160px; 
+  min-width: 160px; 
   @media(min-width: 660px){
-    min-width: 100%;
-    min-height: 100%;
+    min-width: 180px;
+    min-height: 180px;
   }
   @media(min-width: 1000px){
     min-width: 250px;
@@ -28,5 +31,11 @@
 }
 
 .card-bottom{
-  padding: 5px 8px;
+  @include flex-center();
+  justify-content: flex-start;
+  color: white;
+  padding: 10px 8px;
+  position: relative;
+  bottom: 38px;
+  background-color: rgba(0,0,0,0.5);
 }
