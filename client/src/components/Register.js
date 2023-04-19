@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import ProfileUpload from './ProfileUpload'
 
 
 const Register = () => {
@@ -12,21 +13,17 @@ const Register = () => {
     email: '',
     password: '',
     password_confirmation: '',
-    profile_image: 'http://localhost.lulu.png',
+    profile_image: '',
   })
 
 
   const handleChange = (e) => {
-    setFormFields({ ...formFields, [e.target.name]: [e.target.value] })
+    setFormFields({ ...formFields, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = async(e) => {
     e.preventDefault()
     try {
-      formFields.username = formFields.username[0]
-      formFields.email = formFields.email[0]
-      formFields.password = formFields.password[0]
-      formFields.password_confirmation = formFields.password_confirmation[0]
       console.log(formFields)
       await axios.post('/api/auth/register/', formFields)
       navigate('/login')
@@ -49,6 +46,10 @@ const Register = () => {
           <input type="password" name="password" placeholder="password" onChange={handleChange} value={formFields.password} />
           <label htmlFor="password_confirmation"></label>
           <input type="password" name="password_confirmation" placeholder="confirm password" onChange={handleChange} value={formFields.password_confirmation} />
+          <ProfileUpload 
+            setFormFields={setFormFields}
+            formFields={formFields}
+          />
           <button>Register</button>
         </form>     
       </div>
