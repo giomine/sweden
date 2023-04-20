@@ -45,14 +45,41 @@ const Home = () => {
           width: '100vw',
         }}>
 
-        <Marker
+        {allData.length > 0 &&
+          allData.map(data => {
+            const { id, image, name, description } = data
+            const shortDescription = description.slice(0,50) + '....'
+            console.log(data)
+            return (
+              <div key={id}>
+                <Marker
+                  onClick={handlePopup}
+                  coordinates={[14.66, 58.63]}
+                  anchor="bottom">
+                  <i style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
+                </Marker>
+                { showPopup === true &&
+                  <Popup
+                    coordinates={[14.66, 58.63]}
+                    offset={{
+                      'bottom-left': [12, -38],  'bottom': [0, -38], 'bottom-right': [-12, -38],
+                    }}>
+                    <h1>City name</h1>
+                  </Popup>
+                }
+              </div>
+            )
+          })
+        }
+
+        {/* <Marker
           onClick={handlePopup}
           coordinates={[14.66, 58.63]}
           anchor="bottom">
           <i style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
-        </Marker>
+        </Marker> */}
 
-        { showPopup === true &&
+        {/* { showPopup === true &&
         <Popup
           coordinates={[14.66, 58.63]}
           offset={{
@@ -60,7 +87,7 @@ const Home = () => {
           }}>
           <h1>City name</h1>
         </Popup>
-        }
+        } */}
 
       </Map>
 
