@@ -8,6 +8,8 @@ const CreateCity = () => {
   const navigate = useNavigate()
 
   const [ regions, setRegions ] = useState('')
+  const [ update, setUpdate ] = useState(false)
+  const [ cities, setCities ] = useState()
 
   const [ formFields, setFormFields ] = useState({
     name: '',
@@ -28,25 +30,41 @@ const CreateCity = () => {
   // }
 
   const handleRegion = async (e) => {
-    console.log(e.target.value)
     formFields.region = e.target.value
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    console.log(formFields)
     try {
       await axios.post('/api/cities/', formFields, {
         headers: {
           Authorization: `Bearer ${getToken()}`,
         },
       })
-      console.log(formFields)
-      navigate('/')
+      // console.log(formFields)
+      setUpdate(true)
     } catch (err) {
       console.log(err)
     }
   }
+
+  useEffect(() => {
+    const getCities = async () => {
+      try {
+        const { data } = await axios.get('/api/cities/')
+        setCities(data)
+        data.map(item => {
+          if (item.name === formFields.name) {
+            // console.log(formFields.name, item.id)
+            navigate(`/city/${item.id}`)
+          }
+        })
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getCities()
+  }, [update])
 
 
   useEffect(() => {
@@ -78,7 +96,6 @@ const CreateCity = () => {
             {regions.length > 0 ? 
               regions.map(region => {
                 const { id, name } = region
-                // console.log(region.id)
                 return (
                   <option key={id} value={region.id} onChange={handleChange}>{name}</option>
                 )

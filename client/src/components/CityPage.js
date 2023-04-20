@@ -13,7 +13,7 @@ const CityPage = () => {
       try {
         const { data } = await axios.get(`/api/cities/${id}/`)
         setCity(data)
-        console.log(data)
+        // console.log(data)
       } catch (err) {
         console.log(err)
       }
@@ -59,7 +59,6 @@ const CityPage = () => {
                 {city.attractions.length > 0 ? 
                   city.attractions.map(attraction => {
                     const { id, name, description, owner } = attraction
-                    console.log(attraction)
                     return (
                       <div key={id}>
                         <div className='city-attraction-cards'>
