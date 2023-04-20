@@ -13,19 +13,17 @@ const Login = () => {
   })
 
   const handleChange = (e) => {
-    setFormFields({ ...formFields, [e.target.name]: [e.target.value] })
+    setFormFields({ ...formFields, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      formFields.email = formFields.email[0]
-      formFields.password = formFields.password[0]
       // console.log(formFields)
       const response = await axios.post('api/auth/login/', formFields)
       // console.log(response.data.token)
       setToken(response.data.token)
-      navigate('/')
+      navigate('/profile/')
     } catch (err) {
       console.log(err)
     }
