@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
-import ReactMapboxGl, { Layer, Feature, Marker } from 'react-mapbox-gl'
+import ReactMapboxGl, { Marker } from 'react-mapbox-gl'
 import axios from 'axios'
 import Card from './Card'
 import { Link } from 'react-router-dom'
@@ -38,6 +38,11 @@ const Home = () => {
           width: '100vw',
         }}
       >
+        <Marker
+          coordinates={[14.66, 58.63]}
+          anchor="bottom">
+          <i style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
+        </Marker>
       </Map>
 
       <div className='card-container'>
