@@ -1,12 +1,19 @@
 import { useEffect, useState, useRef } from 'react'
-import ReactMapboxGl, { Marker } from 'react-mapbox-gl'
+import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 import axios from 'axios'
 import Card from './Card'
 import { Link } from 'react-router-dom'
 
+const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
+
 const Home = () => {
 
-  const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
+  const [ showPopup, setShowPopup ] = useState(false)
+
+  const handlePopup = () => {
+    setShowPopup(!showPopup)
+    console.log(showPopup)
+  }
 
   const [ allData, setAllData ] = useState('')
 
@@ -36,13 +43,25 @@ const Home = () => {
         containerStyle={{
           height: '70vh',
           width: '100vw',
-        }}
-      >
+        }}>
+
         <Marker
+          onClick={handlePopup}
           coordinates={[14.66, 58.63]}
           anchor="bottom">
           <i style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
         </Marker>
+
+        { showPopup === true &&
+        <Popup
+          coordinates={[14.66, 58.63]}
+          offset={{
+            'bottom-left': [12, -38],  'bottom': [0, -38], 'bottom-right': [-12, -38],
+          }}>
+          <h1>City name</h1>
+        </Popup>
+        }
+
       </Map>
 
       <div className='card-container'>
