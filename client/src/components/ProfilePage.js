@@ -7,6 +7,14 @@ import EditProfile from './EditProfile'
 
 const ProfilePage = () => {
 
+  const handleScroll = () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      // behavior: 'smooth',
+    })
+  }
+
   const navigate = useNavigate()
 
   const [ profile, setProfile ] = useState('')
@@ -40,6 +48,7 @@ const ProfilePage = () => {
     setEditModal(!editModel)
     setCardId(e.target.id)
     console.log(editModel)
+    handleScroll()
   }
 
   const editEntry = () => {
@@ -51,6 +60,7 @@ const ProfilePage = () => {
     setDeleteModal(!deleteModal)
     console.log(e.target.id)
     setCardId(e.target.id)
+    handleScroll()
   }
 
   const deleteEntry = async (e) => {
@@ -69,6 +79,7 @@ const ProfilePage = () => {
     setEditModalAttr(!editModelAttr)
     setCardId(e.target.id)
     console.log(editModelAttr)
+    handleScroll()
   }
 
   const editEntryAttr = () => {
@@ -80,6 +91,7 @@ const ProfilePage = () => {
     setDeleteModalAttr(!deleteModalAttr)
     console.log(e.target.id)
     setCardId(e.target.id)
+    handleScroll()
   }
 
   const deleteEntryAttr = async (e) => {
@@ -189,7 +201,7 @@ const ProfilePage = () => {
                             return (
                               <div className='card' key={id}>
                                 <div className='edit-delete'>
-                                  <div id={id} onClick={handleEditAttraction}>✏️</div>  {/*  //! Here!  */}
+                                  <div id={id} onClick={handleEditAttraction}>✏️</div>
                                   <div id={id} onClick={handleDeleteAttraction}>🗑️</div>
                                 </div>
                                 <Link to={`/city/${city.id}`}>
