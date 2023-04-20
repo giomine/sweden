@@ -9,11 +9,21 @@ const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 const Home = () => {
 
   const [ showPopup, setShowPopup ] = useState(false)
+  const [ popupId, setPopupId ] = useState()
+  // const [ clickedCity, setClickedCity ] = useState({
+  //   long: '',
+  //   lat: '',
+  //   name: '',
+  // })
 
-  const handlePopup = () => {
-    setShowPopup(!showPopup)
+  const handlePopup = (e) => {
+    // setShowPopup(!showPopup)
+    setShowPopup(true)
     console.log(showPopup)
+    setPopupId(Number(e.target.id))
+    console.log('POPUPID --->', popupId)
   }
+
 
   const [ allData, setAllData ] = useState('')
 
@@ -22,13 +32,20 @@ const Home = () => {
       try {
         const { data } = await axios.get('/api/cities/')
         setAllData(data)
-        // console.log(data)
+
+        data.map(data => {
+          if (data.id === popupId){
+            console.log('match!!!', data.name)
+            // setClickedCity()
+          }
+        })
       } catch (err) {
         console.log(err)
       }
     }
     getData()
-  },[])
+  },[popupId])
+
 
   return (
     <div className='grid-container'>
@@ -47,47 +64,57 @@ const Home = () => {
 
         {allData.length > 0 &&
           allData.map(data => {
-            const { id, image, name, description } = data
-            const shortDescription = description.slice(0,50) + '....'
-            console.log(data)
+            const { id, lat, long } = data
+            // const shortDescription = description.slice(0,50) + '....'
+            // console.log(popupId, id)
+            // console.log(data)
             return (
               <div key={id}>
-                <Marker
-                  onClick={handlePopup}
-                  coordinates={[14.66, 58.63]}
-                  anchor="bottom">
-                  <i style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
-                </Marker>
-                { showPopup === true &&
-                  <Popup
-                    coordinates={[14.66, 58.63]}
-                    offset={{
-                      'bottom-left': [12, -38],  'bottom': [0, -38], 'bottom-right': [-12, -38],
-                    }}>
-                    <h1>City name</h1>
-                  </Popup>
-                }
+                <>
+                  <Marker
+                    onClick={handlePopup}
+                    coordinates={[long, lat]}
+                    anchor="bottom">
+                    <i id={id} style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
+                  </Marker>
+                </>
+                {/* { showPopup === true &&
+                  // popupId === id ?
+                  allData.map(data => {
+                    const { id, image, name, description, lat, long } = data
+                    const shortDescription = description.slice(0,50) + '....'
+                    console.log(lat, long)
+                    popupId === data.id ?
+                      <Popup
+                        id={data.id}
+                        coordinates={[data.long, data.lat]}
+                        style={{ width: '200px' }}
+                      >
+                        <h3>{name}</h3>
+                        <p>{shortDescription}</p>
+                        <div style={{ backgroundImage: `url('${image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
+                      </Popup>
+                      : ''
+                  })
+                } */}
               </div>
             )
           })
         }
 
-        {/* <Marker
-          onClick={handlePopup}
-          coordinates={[14.66, 58.63]}
-          anchor="bottom">
-          <i style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
-        </Marker> */}
-
-        {/* { showPopup === true &&
-        <Popup
-          coordinates={[14.66, 58.63]}
-          offset={{
-            'bottom-left': [12, -38],  'bottom': [0, -38], 'bottom-right': [-12, -38],
-          }}>
-          <h1>City name</h1>
-        </Popup>
-        } */}
+        {/* //! this gets one hard-coded popup to show */}
+        { showPopup === true &&
+              <Popup
+                coordinates={[allData[0].long, allData[0].lat]}
+                style={{ width: '200px' }}
+              >
+                <h3>{allData[0].name}</h3>
+                <p>{allData[0].description.slice(0,50)}....</p>
+                <div style={{ backgroundImage: `url('${allData[0].image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
+              </Popup>
+          //   )
+          // })
+        }
 
       </Map>
 

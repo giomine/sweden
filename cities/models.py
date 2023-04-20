@@ -18,6 +18,9 @@ class City(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField(max_length=200)
     image = models.URLField(validators=[URLValidator()])
+    
+    lat = models.FloatField()
+    long = models.FloatField()
 
 
     def __str__(self):
