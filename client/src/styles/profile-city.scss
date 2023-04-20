@@ -141,29 +141,32 @@
   }
 }
 
-
-.edit-delete{
-  display: flex;
-  justify-content: space-between;
-  padding: 0 10px;
-  width: 100%;
-  position: relative;
-  top: 40px;
-  div{
-    @include flex-center();
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 3px;
-    height: 30px;
-    width: 30px;
+div{
+  .edit-delete{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    top: 40px;
+    div{
+      @include flex-center();
+      background-color: rgba(255, 255, 255, 1);
+      border-radius: 3px;
+      height: 30px;
+      width: 30px;
+    }
   }
 }
-
+  
 .delete-modal{
   height: 30vh;
   width: 90vw;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.98);
   color: white;
   position: absolute;
+  z-index: 3;
   @include flex-center();
   flex-direction: column;
   justify-content: space-around;
@@ -192,4 +195,29 @@
         color: red;
       }
     }
+}
+
+.attraction-content{
+  @include flex-center();
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 60px 20px 20px;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  height: 100%;
+}
+.attraction-card:hover::after {
+  position: absolute;
+  margin: -120px 0;
+  width: 140px;
+  height: 120px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  
+  @media (min-width: 660px){
+    width: 160px;
+    height: 110px;
+    margin: -130px 0;
+  }
 }

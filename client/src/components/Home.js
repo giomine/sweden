@@ -63,6 +63,7 @@ const Home = () => {
         {allData.length > 0 ? 
           allData.map(data => {
             const { id, image, name, description } = data
+            const shortDescription = description.slice(0,50) + '....'
             // console.log(id, image, name, description)
             return (
               <div key={id}>
@@ -70,7 +71,7 @@ const Home = () => {
                   <Card
                     image={image}
                     name={name}
-                    // description={description}
+                    text={shortDescription}
                   />
                 </Link>
               </div>

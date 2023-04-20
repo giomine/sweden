@@ -198,14 +198,21 @@ const ProfilePage = () => {
                         attractions.map(attraction => {
                           if (attraction.owner.id === profile.id) {
                             const { id, city, name, description } = attraction
+                            const shortDescription = description.slice(0,15) + '....'
                             return (
-                              <div className='card' key={id}>
+                              <div key={id}>
                                 <div className='edit-delete'>
                                   <div id={id} onClick={handleEditAttraction}>✏️</div>
                                   <div id={id} onClick={handleDeleteAttraction}>🗑️</div>
                                 </div>
                                 <Link to={`/city/${city.id}`}>
-                                  <div>{city.name} - {name} - {description}</div>
+                                  <div className="card attraction-card">
+                                    <div className='attraction-content'>
+                                      <div>{city.name}</div>
+                                      <div>{name}</div>
+                                      <div>{shortDescription}</div>
+                                    </div>
+                                  </div>
                                 </Link>
                               </div>
                             )
@@ -223,6 +230,7 @@ const ProfilePage = () => {
                         cities.map(city => {
                           if (city.owner.id === profile.id) {
                             const { id, name, image, description } = city
+                            const shortDescription = description.slice(0,50) + '....'
                             return (
                               <div key={id}>
                                 <div className='edit-delete'>
@@ -233,7 +241,7 @@ const ProfilePage = () => {
                                   <Card 
                                     name={name}
                                     image={image}
-                                    text={description}
+                                    text={shortDescription}
                                   />
                                 </Link>
                               </div>
