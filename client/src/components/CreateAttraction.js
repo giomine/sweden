@@ -33,7 +33,7 @@ const CreateAttraction = () => {
         },
       })
       // console.log(formFields)
-      navigate('/profile')
+      navigate(`/city/${formFields.city}`)
     } catch (err) {
       console.log(err)
     }
