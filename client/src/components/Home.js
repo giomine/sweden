@@ -64,7 +64,6 @@ const Home = () => {
           allData.map(data => {
             const { id, image, name, description } = data
             const shortDescription = description.slice(0,50) + '....'
-            // console.log(id, image, name, description)
             return (
               <div key={id}>
                 <Link to={`/city/${id}`}>

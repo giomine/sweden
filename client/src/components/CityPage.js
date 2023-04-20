@@ -31,35 +31,55 @@ const CityPage = () => {
               <div className='city-image' style={{ backgroundImage: `url('${city.image}')` }}></div>
 
               <div className='text'>
-                <div>Name: {city.name}</div>
-                <div>Region: {city.region.name}</div>
-                <div>Description: {city.description}</div>
+                <h2>{city.name}</h2>
+                <h4>{city.region.name} municipality</h4>
+                <p>{city.description}</p>
                 
                 <div className='profile-section'>
-                  <div>Attractions: {city.attractions ? <>{city.attractions.map(attraction => {
-                    return (
-                      <p key={id}>
-                        <div style={{ display: 'flex' }}>
-                          <div 
-                            style={{ 
-                              backgroundImage: `url('${attraction.owner.profile_image}')`, 
-                              backgroundPosition: 'center', 
-                              backgroundSize: 'cover', 
-                              width: '50px', 
-                              height: '50px', 
-                              borderRadius: '50px', 
-                            }}>
-                          </div>
-                          {attraction.owner.username}
-                        </div>
-
-                        {attraction.name} - 
-                        {attraction.description}
-                      </p>
-                    )
-                  })}</> : 'no attractions yet!'}</div>
+                  <div><h3>Latest Attraction:</h3> {city.attractions.length > 0 ? 
+                    <div key={id}>
+                      <div className='user-attractions'>
+                        <div className='profile' style={{ backgroundImage: `url('${city.attractions[0].owner.profile_image}')`  }}></div>
+                        {city.attractions[0].owner.username}
+                      </div>
+                      <div>{city.attractions[0].name}</div>
+                      <div>{city.attractions[0].description}</div>
+                    </div>
+                    : 'No attractions added yet!'}
+                  </div>
                 </div>
 
+              </div>
+            </div>
+
+            <div className='city-bottom-container'>
+              <h3>All Attractions</h3>
+
+              <div className='city-bottom'>
+                {city.attractions.length > 0 ? 
+                  city.attractions.map(attraction => {
+                    const { id, name, description, owner } = attraction
+                    console.log(attraction)
+                    return (
+                      <div key={id}>
+                        <div className='city-attraction-cards'>
+                          <div className='user-attractions'>
+                            <div className='profile' style={{ backgroundImage: `url('${owner.profile_image}')`  }}></div>
+                            {owner.username}
+                          </div>
+                          <div>
+                            <div>
+                              <div>{name}</div>
+                              <div>{description}</div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )
+                    
+                  })
+                  : <><div></div><div>No attractions added yet!</div></>
+                }
               </div>
             </div>
           </>

@@ -40,13 +40,14 @@
 
   .profile-section{
     min-height: 100px;
+    max-height: 450px;
     width: 100%;
     padding: 20px 0;
+    overflow: scroll;
     div {
       &:not(.tabs){
         padding-bottom: 10px;
       }
-      border-bottom: 1px solid gray;
     }
   }
 
@@ -56,6 +57,10 @@
     align-items: center;
     justify-content: space-between;
     // height: 350px;
+
+    .card-container{
+      margin-top: 0;
+    }
 
     form {
       @include flex-center();
@@ -69,8 +74,9 @@
     @include flex-center();
     flex-direction: column;
     // width: 100%;
-    padding: 20px 0 30px;
+    padding: 20px 0 0;
     @media(min-width: 750px){
+      padding-bottom: 30px;
       flex-direction: row;
       justify-content: flex-start;
     }
@@ -90,15 +96,10 @@
     }
 
     .text{
-      // width: 100%;
-      // max-width: 300px;
-      // flex-grow: 1; // delete if want short border
-      padding-top: 20px;
       @media(min-width: 660px){
         width: 50%;
         max-width: 300px;
         height: 450px;
-        padding-top: 40px;
       }
       @media(min-width: 1200px){
         max-width: 400px;
@@ -110,10 +111,6 @@
 
     }
   }
-
-
-
-
 }
 
 
@@ -219,5 +216,36 @@ div{
     width: 160px;
     height: 110px;
     margin: -130px 0;
+  }
+}
+
+.user-attractions{
+  @include flex-center();
+  justify-content: flex-start;
+  .profile{
+    background-position: center; 
+    background-size: cover; 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50px;
+    margin-right: 10px; 
+  }
+}
+
+.city-bottom-container{
+  margin-bottom: 50px;
+  width: 100%;
+  
+  @media (min-width: 660px){
+    padding: 20px 0;
+  }
+  .city-bottom{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px 5px;
+    @media(min-width: 660px){
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }
