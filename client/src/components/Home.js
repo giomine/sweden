@@ -1,37 +1,12 @@
 import { useEffect, useState, useRef } from 'react'
-import mapboxgl from '!mapbox-gl'
-mapboxgl.accessToken = process.env.REACT_APP_MAP_TOKEN
+import ReactMapboxGl, { Layer, Feature, Marker } from 'react-mapbox-gl'
 import axios from 'axios'
 import Card from './Card'
 import { Link } from 'react-router-dom'
 
 const Home = () => {
 
-  const mapContainer = useRef(null)
-  const map = useRef(null)
-  const [lng, setLng] = useState(14.66)
-  const [lat, setLat] = useState(58.63)
-  const [zoom, setZoom] = useState(4.4)
-
-  useEffect(() => {
-    if (map.current) return // initialize map only once
-    map.current = new mapboxgl.Map({
-      container: mapContainer.current,
-      // style: 'mapbox://styles/mapbox/streets-v12',
-      style: 'mapbox://styles/giorgiamineo/clgmck52m00ci01qybnxh2gw8',
-      center: [lng, lat],
-      zoom: zoom,
-    })
-  })
-
-  useEffect(() => {
-    if (!map.current) return // wait for map to initialize
-    map.current.on('move', () => {
-      setLng(map.current.getCenter().lng.toFixed(4))
-      setLat(map.current.getCenter().lat.toFixed(4))
-      setZoom(map.current.getZoom().toFixed(2))
-    })
-  })
+  const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 
   const [ allData, setAllData ] = useState('')
 
@@ -52,12 +27,18 @@ const Home = () => {
     <div className='grid-container'>
       <div className='hero'><h1>Home</h1></div>
 
-      <div>
-        <div className="sidebar">
-        Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
-        </div>
-        <div ref={mapContainer} className="map-container" />
-      </div>
+      <Map
+        center={[14.66, 58.63]}
+        zoom={[5]}
+        mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
+        // style='mapbox://styles/giorgiamineo/clgmck52m00ci01qybnxh2gw8'
+        style="mapbox://styles/mapbox/streets-v8"
+        containerStyle={{
+          height: '70vh',
+          width: '100vw',
+        }}
+      >
+      </Map>
 
       <div className='card-container'>
         {allData.length > 0 ? 
