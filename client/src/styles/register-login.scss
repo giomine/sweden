@@ -2,20 +2,15 @@
 
 .register{
   @include flex-center();
-  height: 90vh;
-  padding: 0 10px;
+  padding: 40px 10px;
 }
 
 .register-border{
   border: 1px solid gray;
-  height: 450px;
+  padding: 20px 0;
   width: 90vw;
   max-width: 400px;
   @include flex-center();
-
-  h1{
-    margin-bottom: 40px;
-  }
 
   form{
     @include flex-center();
@@ -36,8 +31,6 @@
 }
 
 .city-form{
-  height: 550px;
-
   @media (min-width: 660px){
     .select{
       height: 70px;
@@ -51,9 +44,5 @@
     }
   }
 
-}
-
-.attraction{
-  height: 400px;
 }
 

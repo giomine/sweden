@@ -5,11 +5,33 @@ import { useNavigate } from 'react-router-dom'
 
 const CreateCity = () => {
 
+  // ! cloudinary
+  const [ error, setError ] = useState('')
+
+  const handleUpload = async (e) => {
+    const cloudName = 'duhpvaov2'
+    const uploadPreset = 'sweden_image'
+
+    const image = e.target.files[0]
+    console.log(image)
+    const formData = new FormData()
+    formData.append('file', image)
+    formData.append('upload_preset', uploadPreset)
+
+    try {
+      const { data } = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, formData)
+      // console.log(data)
+      setFormFields({ ...formFields, image: data.secure_url })
+    } catch (err) { 
+      setError(err)
+    }
+  }
+  // ! end of cloudinary
+
   const navigate = useNavigate()
 
   const [ regions, setRegions ] = useState('')
   const [ update, setUpdate ] = useState(false)
-  const [ cities, setCities ] = useState()
 
   const [ formFields, setFormFields ] = useState({
     name: '',
@@ -35,6 +57,7 @@ const CreateCity = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    console.log(formFields)
     try {
       await axios.post('/api/cities/', formFields, {
         headers: {
@@ -52,7 +75,6 @@ const CreateCity = () => {
     const getCities = async () => {
       try {
         const { data } = await axios.get('/api/cities/')
-        setCities(data)
         data.map(item => {
           if (item.name === formFields.name) {
             // console.log(formFields.name, item.id)
@@ -109,9 +131,21 @@ const CreateCity = () => {
           <textarea name="description" style={{ width: '220px' }} rows="5" placeholder='Description' value={formFields.description} onChange={handleChange}></textarea>
 
 
-          <label htmlFor="image"></label>
-          <input type="url" name="image" placeholder='image url' value={formFields.image} onChange={handleChange} />
-
+          <div className='image-box'>
+            <p>Upload or enter image url</p>
+            <label htmlFor="image"></label>
+            <input className='input' type="url" name="image" placeholder='image url' value={formFields.image} onChange={handleChange} />
+            {/* //! cloudinary */}
+            <div className='field'>
+              { formFields.image ? 
+                <img style={{ height: '180px' }} src={formFields.image} /> 
+                : 
+                <input style={{ fontSize: '14px', width: '200px', margin: '10px 0', padding: '0' }} type="file" onChange={handleUpload}/>
+              }
+              {error && <p className='text-center'>{error}</p>}
+            </div>
+            {/* //! end of cloudinary */}
+          </div>
 
           <button>Submit</button>
 
