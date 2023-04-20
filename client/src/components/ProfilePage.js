@@ -1,17 +1,22 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { getToken, isAuthenticated } from '../helpers/auth'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Card from './Card'
 import EditProfile from './EditProfile'
 
 const ProfilePage = () => {
+
+  const navigate = useNavigate()
 
   const [ profile, setProfile ] = useState('')
   const [ attractions, setAttractions ] = useState()
   const [ cities, setCities ] = useState()
   const [ activeTab, setActiveTab ] = useState('tab1')
   const [ editTab, setEditTab ] = useState(false)
+  const [ deleteModal, setDeleteModal ] = useState(false)
+  const [ cardId, setCardId ] = useState()
+  const [ editModel, setEditModal ] = useState(false)
 
   const handleTab1 = () => {
     setActiveTab('tab1')
@@ -28,6 +33,34 @@ const ProfilePage = () => {
     setActiveTab('tab1')
   }
 
+  const handleEdit = (e) => {
+    setEditModal(!editModel)
+    setCardId(e.target.id)
+    console.log(editModel)
+  }
+
+  const editEntry = () => {
+    setEditModal(!editModel)
+    navigate(`/editcity/${cardId}`)
+  }
+
+  const handleDelete = (e) => {
+    setDeleteModal(!deleteModal)
+    console.log(e.target.id)
+    setCardId(e.target.id)
+  }
+
+  const deleteEntry = async (e) => {
+    console.log('deleted', e.target)
+    // setCardId(e.target.value)
+    await axios.delete(`/api/cities/${cardId}`, {
+      headers: {
+        Authorization: `Bearer ${getToken()}`,
+      },
+    })
+    setDeleteModal(false)
+  }
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -42,7 +75,7 @@ const ProfilePage = () => {
       }
     }
     getData()
-  },[])
+  },[deleteModal])
 
   useEffect(() => {
     const getData = async () => {
@@ -70,7 +103,7 @@ const ProfilePage = () => {
       }
     }
     getData()
-  },[])
+  },[deleteModal])
 
   return (
     <>
@@ -141,13 +174,18 @@ const ProfilePage = () => {
                       {cities.length > 0 ? 
                         cities.map(city => {
                           if (city.owner.id === profile.id) {
-                            const { id, name, image } = city
+                            const { id, name, image, description } = city
                             return (
                               <div key={id}>
-                                <Link to={`/city/${city.id}`}>
+                                <div className='edit-delete'>
+                                  <div id={id} onClick={handleEdit}>✏️</div>
+                                  <div id={id} onClick={handleDelete}>🗑️</div>
+                                </div>
+                                <Link to={`/city/${id}`}>
                                   <Card 
                                     name={name}
                                     image={image}
+                                    text={description}
                                   />
                                 </Link>
                               </div>
@@ -158,6 +196,27 @@ const ProfilePage = () => {
                       }
                     </div>
                   </div>}
+
+
+                  {deleteModal &&
+                  <div className='delete-modal'>
+                    <div className='modal-container'>Are you sure you want to delete this card?</div>
+                    <div className='button-container'>
+                      <div onClick={deleteEntry} className='button-sm'>Yes, confirm</div>
+                      <div onClick={handleDelete} className='button-sm'>Cancel</div>
+                    </div>
+                  </div>
+                  }
+
+                  {editModel &&
+                  <div className='delete-modal'>
+                    <div className='modal-container'>Do you want to edit this card?</div>
+                    <div className='button-container'>
+                      <div onClick={editEntry} className='button-sm'>Yes, edit</div>
+                      <div onClick={handleEdit} className='button-sm'>Cancel</div>
+                    </div>
+                  </div>
+                  }
 
                 </div>
               </>

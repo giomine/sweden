@@ -39,3 +39,25 @@
   bottom: 38px;
   background-color: rgba(0,0,0,0.5);
 }
+
+.card:hover::after {
+  content: attr(data-textafter);
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+  z-index: 1;
+  @include flex-center();
+  // bottom: 228px;
+  // opacity: 0.9;
+  @media (min-width: 660px){
+    width: 160px;
+    height: 160px;
+  }
+}
+
+.card > * {
+  z-index: 100;
+}

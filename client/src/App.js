@@ -9,6 +9,7 @@ import Login from './components/Login'
 import Footer from './components/Footer'
 import CreateCity from './components/CreateCity'
 import CreateAttraction from './components/CreateAttraction'
+import EditCity from './components/EditCity'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
           <Route path='/createcity' element={<CreateCity />}/>
+          <Route path='/editcity/:id' element={<EditCity />}/>
           <Route path='/createattraction' element={<CreateAttraction />}/>
         </Routes>
         <Footer />
