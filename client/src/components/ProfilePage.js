@@ -17,6 +17,8 @@ const ProfilePage = () => {
   const [ deleteModal, setDeleteModal ] = useState(false)
   const [ cardId, setCardId ] = useState()
   const [ editModel, setEditModal ] = useState(false)
+  const [ editModelAttr, setEditModalAttr ] = useState(false)
+  const [ deleteModalAttr, setDeleteModalAttr ] = useState(false)
 
   const handleTab1 = () => {
     setActiveTab('tab1')
@@ -33,6 +35,7 @@ const ProfilePage = () => {
     setActiveTab('tab1')
   }
 
+  //! CRUD for city cards
   const handleEdit = (e) => {
     setEditModal(!editModel)
     setCardId(e.target.id)
@@ -59,6 +62,35 @@ const ProfilePage = () => {
       },
     })
     setDeleteModal(false)
+  }
+
+  //! CRUD for attraction cards
+  const handleEditAttraction = (e) => {
+    setEditModalAttr(!editModelAttr)
+    setCardId(e.target.id)
+    console.log(editModelAttr)
+  }
+
+  const editEntryAttr = () => {
+    setEditModalAttr(!editModelAttr)
+    navigate(`/editattraction/${cardId}`)
+  }
+
+  const handleDeleteAttraction = (e) => {
+    setDeleteModalAttr(!deleteModalAttr)
+    console.log(e.target.id)
+    setCardId(e.target.id)
+  }
+
+  const deleteEntryAttr = async (e) => {
+    console.log('deleted', e.target)
+    // setCardId(e.target.value)
+    await axios.delete(`/api/attractions/${cardId}`, {
+      headers: {
+        Authorization: `Bearer ${getToken()}`,
+      },
+    })
+    setDeleteModalAttr(false)
   }
 
   useEffect(() => {
@@ -89,7 +121,7 @@ const ProfilePage = () => {
       }
     }
     getData()
-  },[])
+  },[deleteModalAttr])
 
   useEffect(() => {
     const getData = async () => {
@@ -156,6 +188,10 @@ const ProfilePage = () => {
                             const { id, city, name, description } = attraction
                             return (
                               <div className='card' key={id}>
+                                <div className='edit-delete'>
+                                  <div id={id} onClick={handleEditAttraction}>✏️</div>  {/*  //! Here!  */}
+                                  <div id={id} onClick={handleDeleteAttraction}>🗑️</div>
+                                </div>
                                 <Link to={`/city/${city.id}`}>
                                   <div>{city.name} - {name} - {description}</div>
                                 </Link>
@@ -198,6 +234,7 @@ const ProfilePage = () => {
                   </div>}
 
 
+                  {/* //! City modals */}
                   {deleteModal &&
                   <div className='delete-modal'>
                     <div className='modal-container'>Are you sure you want to delete this card?</div>
@@ -214,6 +251,27 @@ const ProfilePage = () => {
                     <div className='button-container'>
                       <div onClick={editEntry} className='button-sm'>Yes, edit</div>
                       <div onClick={handleEdit} className='button-sm'>Cancel</div>
+                    </div>
+                  </div>
+                  }
+
+                  {/* //! Attraction modals */} 
+                  {deleteModalAttr &&
+                  <div className='delete-modal'>
+                    <div className='modal-container'>Are you sure you want to delete this attraction?</div>
+                    <div className='button-container'>
+                      <div onClick={deleteEntryAttr} className='button-sm'>Yes, confirm</div>
+                      <div onClick={handleDeleteAttraction} className='button-sm'>Cancel</div>
+                    </div>
+                  </div>
+                  }
+
+                  {editModelAttr &&
+                  <div className='delete-modal'>
+                    <div className='modal-container'>Do you want to edit this attraction?</div>
+                    <div className='button-container'>
+                      <div onClick={editEntryAttr} className='button-sm'>Yes, edit</div>
+                      <div onClick={handleEditAttraction} className='button-sm'>Cancel</div>
                     </div>
                   </div>
                   }
