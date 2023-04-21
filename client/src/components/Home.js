@@ -22,6 +22,12 @@ const Home = () => {
     setShowPopup(false)
   }
 
+  // get lngLat on dblClick for dropping pins - use on create city page?
+  const handleDblClick = (map, event) => {
+    const lngLat = event.lngLat
+    console.log(lngLat, lngLat.lat, lngLat.lng)
+  }
+
 
   const [ allData, setAllData ] = useState('')
 
@@ -53,6 +59,7 @@ const Home = () => {
 
       <Map
         onClick={removePopup}
+        onDblClick={handleDblClick}
         center={[14.66, 60.23]}
         zoom={[4.3]}
         mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
