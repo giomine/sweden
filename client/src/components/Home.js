@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useState } from 'react'
 import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 import axios from 'axios'
 import Card from './Card'
@@ -10,18 +10,13 @@ const Home = () => {
 
   const [ showPopup, setShowPopup ] = useState(false)
   const [ popupId, setPopupId ] = useState()
-  // const [ clickedCity, setClickedCity ] = useState({
-  //   long: '',
-  //   lat: '',
-  //   name: '',
-  // })
+  const [ popupData, setPopupData ] = useState()
 
   const handlePopup = (e) => {
     // setShowPopup(!showPopup)
     setShowPopup(true)
     console.log(showPopup)
     setPopupId(Number(e.target.id))
-    console.log('POPUPID --->', popupId)
   }
 
 
@@ -30,13 +25,15 @@ const Home = () => {
   useEffect(() => {
     const getData = async () => {
       try {
+        // this capture the whole cities data
         const { data } = await axios.get('/api/cities/')
         setAllData(data)
 
+        // this captures only the city for the clicked pin
         data.map(data => {
           if (data.id === popupId){
-            console.log('match!!!', data.name)
-            // setClickedCity()
+            // console.log('match!!!', popupId, data)
+            setPopupData(data)
           }
         })
       } catch (err) {
@@ -52,8 +49,8 @@ const Home = () => {
       <div className='hero'><h1>Home</h1></div>
 
       <Map
-        center={[14.66, 58.63]}
-        zoom={[5]}
+        center={[14.66, 60.23]}
+        zoom={[4.3]}
         mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
         // style='mapbox://styles/giorgiamineo/clgmck52m00ci01qybnxh2gw8'
         style="mapbox://styles/mapbox/streets-v8"
@@ -65,9 +62,6 @@ const Home = () => {
         {allData.length > 0 &&
           allData.map(data => {
             const { id, lat, long } = data
-            // const shortDescription = description.slice(0,50) + '....'
-            // console.log(popupId, id)
-            // console.log(data)
             return (
               <div key={id}>
                 <>
@@ -78,42 +72,21 @@ const Home = () => {
                     <i id={id} style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
                   </Marker>
                 </>
-                {/* { showPopup === true &&
-                  // popupId === id ?
-                  allData.map(data => {
-                    const { id, image, name, description, lat, long } = data
-                    const shortDescription = description.slice(0,50) + '....'
-                    console.log(lat, long)
-                    popupId === data.id ?
-                      <Popup
-                        id={data.id}
-                        coordinates={[data.long, data.lat]}
-                        style={{ width: '200px' }}
-                      >
-                        <h3>{name}</h3>
-                        <p>{shortDescription}</p>
-                        <div style={{ backgroundImage: `url('${image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
-                      </Popup>
-                      : ''
-                  })
-                } */}
               </div>
             )
           })
         }
 
-        {/* //! this gets one hard-coded popup to show */}
         { showPopup === true &&
-              <Popup
-                coordinates={[allData[0].long, allData[0].lat]}
-                style={{ width: '200px' }}
-              >
-                <h3>{allData[0].name}</h3>
-                <p>{allData[0].description.slice(0,50)}....</p>
-                <div style={{ backgroundImage: `url('${allData[0].image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
-              </Popup>
-          //   )
-          // })
+          popupData ?
+          <Popup
+            coordinates={[popupData.long, popupData.lat]}
+            style={{ width: '200px' }}>
+            <h3>{popupData.name}</h3>
+            <p>{popupData.description.slice(0,50)}....</p>
+            <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
+          </Popup>
+          : ''
         }
 
       </Map>
