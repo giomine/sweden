@@ -199,6 +199,7 @@ const ProfilePage = () => {
                           if (attraction.owner.id === profile.id) {
                             const { id, city, name, description, image } = attraction
                             const shortDescription = description.slice(0,55) + '....'
+                            const title = `${name} - ${city.name}`
                             return (
                               <div key={id}>
                                 <div className='edit-delete'>
@@ -214,7 +215,7 @@ const ProfilePage = () => {
                                     </div>
                                   </div> */}
                                   <Card 
-                                    name={city.name}
+                                    name={title}
                                     image={image}
                                     text={shortDescription}
                                   />

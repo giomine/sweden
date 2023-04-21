@@ -4,7 +4,7 @@
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$600000$TXrlXGoTn7Ze5EI9rSxq0z$h8LDx4xV1j0A7GcqFZNY1oTn8b9/B9AXXKCk9INR5C4=",
-    "last_login": "2023-04-19T14:43:25.625Z",
+    "last_login": "2023-04-21T17:54:34.640Z",
     "is_superuser": true,
     "username": "gio",
     "first_name": "",
@@ -13,6 +13,25 @@
     "is_active": true,
     "date_joined": "2023-04-19T14:43:18.776Z",
     "email": "gio@gio.com",
+    "profile_image": "https://t3.ftcdn.net/jpg/05/16/27/58/240_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$TXrlXGoTn7Ze5EI9rSxq0z$h8LDx4xV1j0A7GcqFZNY1oTn8b9/B9AXXKCk9INR5C4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "giorgia",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-04-21T17:54:43Z",
+    "email": "giomineo@gmail.com",
     "profile_image": "https://t3.ftcdn.net/jpg/05/16/27/58/240_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg",
     "groups": [],
     "user_permissions": []
