@@ -169,7 +169,7 @@ const ProfilePage = () => {
 
                 <div style={{ display: 'flex' }} className='profile-section tabs-container'>
                   <div onClick={handleTab1} className={activeTab === 'tab1' ? 'active tabs' : 'tabs'} >Profile</div>
-                  <div onClick={handleTab3} className={activeTab === 'tab3' ? 'active tabs' : 'tabs'} >Cards</div>
+                  <div onClick={handleTab3} className={activeTab === 'tab3' ? 'active tabs' : 'tabs'} >Cities</div>
                   <div onClick={handleTab2} className={activeTab === 'tab2' ? 'active tabs' : 'tabs'} >Attractions</div>
                 </div>
 
