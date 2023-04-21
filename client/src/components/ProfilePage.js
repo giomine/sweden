@@ -199,7 +199,8 @@ const ProfilePage = () => {
                           if (attraction.owner.id === profile.id) {
                             const { id, city, name, description, image } = attraction
                             const shortDescription = description.slice(0,55) + '....'
-                            const title = `${name} - ${city.name}`
+                            let title = `${city.name} - ${name}`
+                            title = title.slice(0,18) + '....'
                             return (
                               <div key={id}>
                                 <div className='edit-delete'>
