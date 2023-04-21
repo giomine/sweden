@@ -16,6 +16,8 @@ class Attraction(models.Model):
         related_name='attractions'
     )
     
+    lat = models.FloatField()
+    long = models.FloatField()
 
     def __str__(self):
-        return self.name
+        return f'{self.name} - {self.city}'
