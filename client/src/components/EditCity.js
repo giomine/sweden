@@ -3,9 +3,37 @@ import { useParams } from 'react-router-dom'
 import { getToken } from '../helpers/auth'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 
+const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 
 const EditCity = () => {
+  const [ lat, setLat ] = useState()
+  const [ lng, setLng ] = useState()
+
+  // ! cloudinary
+  const [ error, setError ] = useState('')
+
+  const handleUpload = async (e) => {
+    const cloudName = 'duhpvaov2'
+    const uploadPreset = 'sweden_image'
+
+    const image = e.target.files[0]
+    // console.log(image)
+    const formData = new FormData()
+    formData.append('file', image)
+    formData.append('upload_preset', uploadPreset)
+
+    try {
+      const { data } = await axios.post(`https://api.cloudinary.com/v1_1/${cloudName}/image/upload`, formData)
+      // console.log(data)
+      setFormFields({ ...formFields, image: data.secure_url })
+    } catch (err) { 
+      setError(err)
+    }
+  }
+  // ! end of cloudinary
+
   const navigate = useNavigate()
 
   const { id } = useParams()
@@ -26,6 +54,13 @@ const EditCity = () => {
   const handleRegion = async (e) => {
     console.log(e.target.value)
     formFields.region = e.target.value
+  }
+
+  const handleDblClick = (map, event) => {
+    const lngLat = event.lngLat
+    // console.log(lngLat, lngLat.lat, lngLat.lng)
+    setLat(lngLat.lat)
+    setLng(lngLat.lng)
   }
 
   const handleSubmit = async (e) => {
@@ -82,6 +117,7 @@ const EditCity = () => {
 
         <form action="" onSubmit={handleSubmit}>
           <h1>Edit city</h1>
+          ** All fields optional **
 
           {cityData &&
             <>
@@ -107,8 +143,41 @@ const EditCity = () => {
               <textarea name="description" style={{ width: '220px' }} rows="5" placeholder={cityData.description} value={formFields.description} onChange={handleChange}></textarea>
     
     
-              <label htmlFor="image"></label>
-              <input type="url" name="image" placeholder='image url' value={formFields.image} onChange={handleChange} />
+              <div className='image-box'>
+                <p>Upload or enter image url</p>
+                <label htmlFor="image"></label>
+                <input className='input' type="url" name="image" placeholder='image url' value={formFields.image} onChange={handleChange} />
+                {/* //! cloudinary */}
+                <div className='field'>
+                  { formFields.image ? 
+                    <img style={{ height: '180px' }} src={formFields.image} /> 
+                    : 
+                    <input style={{ fontSize: '14px', width: '200px', margin: '10px 0', padding: '0' }} type="file" onChange={handleUpload}/>
+                  }
+                  {error && <p className='text-center'>{error}</p>}
+                </div>
+                {/* //! end of cloudinary */}
+              </div>
+
+              Double click to drop new pin
+              <Map
+                onDblClick={handleDblClick}
+                center={[14.66, 60.23]}
+                zoom={[4.3]}
+                mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
+                style="mapbox://styles/mapbox/streets-v8"
+                containerStyle={{
+                  height: '300px',
+                  width: '398px',
+                }}>
+                {lng && 
+                  <Marker
+                    coordinates={[lng, lat]}
+                    anchor="bottom">
+                    <i style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
+                  </Marker>
+                }
+              </Map>
             </> 
           }
 
