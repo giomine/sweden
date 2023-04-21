@@ -272,3 +272,9 @@ div{
     margin: 10px 0;
   }
 }
+
+.mapboxgl-ctrl-bottom-right {
+  right: 0;
+  bottom: 0;
+  display: none
+}

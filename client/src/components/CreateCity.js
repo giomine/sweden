@@ -2,11 +2,16 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { getToken } from '../helpers/auth'
 import { useNavigate } from 'react-router-dom'
+import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
+
+const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 
 const CreateCity = () => {
 
   // ! cloudinary
   const [ error, setError ] = useState('')
+  const [ lat, setLat ] = useState()
+  const [ lng, setLng ] = useState()
 
   const handleUpload = async (e) => {
     const cloudName = 'duhpvaov2'
@@ -38,6 +43,8 @@ const CreateCity = () => {
     description: '',
     region: '',
     image: '',
+    lat: '',
+    long: '',
   })
 
   const handleChange = async (e) => {
@@ -57,6 +64,8 @@ const CreateCity = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    formFields.lat = lat
+    formFields.long = lng
     console.log(formFields)
     try {
       await axios.post('/api/cities/', formFields, {
@@ -69,6 +78,13 @@ const CreateCity = () => {
     } catch (err) {
       console.log(err)
     }
+  }
+
+  const handleDblClick = (map, event) => {
+    const lngLat = event.lngLat
+    // console.log(lngLat, lngLat.lat, lngLat.lng)
+    setLat(lngLat.lat)
+    setLng(lngLat.lng)
   }
 
   useEffect(() => {
@@ -86,7 +102,7 @@ const CreateCity = () => {
       }
     }
     getCities()
-  }, [update])
+  }, [update, lat, lng])
 
 
   useEffect(() => {
@@ -146,6 +162,26 @@ const CreateCity = () => {
             </div>
             {/* //! end of cloudinary */}
           </div>
+
+          Double click to drop pin
+          <Map
+            onDblClick={handleDblClick}
+            center={[14.66, 60.23]}
+            zoom={[4.3]}
+            mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
+            style="mapbox://styles/mapbox/streets-v8"
+            containerStyle={{
+              height: '300px',
+              width: '398px',
+            }}>
+            {lng && 
+              <Marker
+                coordinates={[lng, lat]}
+                anchor="bottom">
+                <i style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
+              </Marker>
+            }
+          </Map>
 
           <button>Submit</button>
 
