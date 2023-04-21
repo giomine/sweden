@@ -5,7 +5,7 @@
   "fields": {
     "name": "Borås Zoo",
     "description": "Zoo with naturalistic enclosures, for 65 species including African savannah beasts & Nordic animals.",
-    "owner": 2,
+    "owner": 1,
     "city": 29,
     "lat": 57.74097731589167,
     "long": 12.9414630109991,
@@ -31,7 +31,7 @@
   "fields": {
     "name": "Navet Science Center",
     "description": "Second floor is gets your imagination running wild with an impressive display of Meccano structures, and a DIY area for wood, fabric, paper and pearls generously laid out in a bright and airy room.",
-    "owner": 2,
+    "owner": 3,
     "city": 29,
     "lat": 57.72466644271169,
     "long": 12.936755882162423,
@@ -44,7 +44,7 @@
   "fields": {
     "name": "Upzone Adventure Park",
     "description": "Our family had a blast here!",
-    "owner": 2,
+    "owner": 4,
     "city": 29,
     "lat": 61.30840952766971,
     "long": 16.605360353574213,
@@ -57,7 +57,7 @@
   "fields": {
     "name": "Textilmuseet",
     "description": "The museum is great with both permanent exhibit and very interesting temporary ones.",
-    "owner": 2,
+    "owner": 5,
     "city": 29,
     "lat": 57.72546315290897,
     "long": 12.93724852634099,
@@ -70,7 +70,7 @@
   "fields": {
     "name": "Kypegårdens walking trail",
     "description": "There are different trails for different walkers, well signposted. Many species of birds in the trees too.",
-    "owner": 2,
+    "owner": 6,
     "city": 29,
     "lat": 57.74196425828478,
     "long": 12.95794872188037,
@@ -83,7 +83,7 @@
   "fields": {
     "name": "Virtual Lion",
     "description": "Amazing virtual reality games centre! We had so much fun here",
-    "owner": 2,
+    "owner": 7,
     "city": 29,
     "lat": 57.71993698088594,
     "long": 12.943008309147954,
@@ -96,7 +96,7 @@
   "fields": {
     "name": "Aroma Spa",
     "description": "We had dinner in the restaurant after the spa. Cozy restaurant with well cooked food.",
-    "owner": 2,
+    "owner": 8,
     "city": 29,
     "lat": 57.72018065043124,
     "long": 12.941060539833543,
@@ -109,7 +109,7 @@
   "fields": {
     "name": "Sankta Ragnhilds Kyrka",
     "description": "Beautiful church, worth checking out",
-    "owner": 1,
+    "owner": 9,
     "city": 28,
     "lat": 59.198646133038096,
     "long": 17.625860226428294,
@@ -122,7 +122,7 @@
   "fields": {
     "name": "Södertälje City Library",
     "description": "Lovely place to relax",
-    "owner": 1,
+    "owner": 10,
     "city": 28,
     "lat": 59.19740142793008,
     "long": 17.631030937052532,
@@ -135,7 +135,7 @@
   "fields": {
     "name": "Södertälje Stadsscen",
     "description": "Really cool independent theatre with great selection of lesser-known films.",
-    "owner": 1,
+    "owner": 11,
     "city": 28,
     "lat": 59.19124305052705,
     "long": 17.62557142827777,
@@ -148,7 +148,7 @@
   "fields": {
     "name": "Torekällbergets open-air museum",
     "description": "This is a perfect place to visit together with your children. There’s a whole village of old buildings which will send you back in time. There are also animals walking around in one part of the area which you can pet if they are in the right mood.",
-    "owner": 1,
+    "owner": 12,
     "city": 28,
     "lat": 59.192912985555395,
     "long": 17.612744855263724,
@@ -161,7 +161,7 @@
   "fields": {
     "name": "Marcus Wallenberg Hallen",
     "description": "It is very nice, well maintained and an extremely interesting museum exhibiting Scania history and products from the very beginning until today.",
-    "owner": 1,
+    "owner": 13,
     "city": 28,
     "lat": 59.18261481370544,
     "long": 17.638382528277234,
@@ -200,7 +200,7 @@
   "fields": {
     "name": "Gävle Konserthus",
     "description": "Philharmonic hall in a great location by the river, located almost in the centre of Gävle so great place to visit if you are in the area.",
-    "owner": 2,
+    "owner": 3,
     "city": 27,
     "lat": 60.672401940650545,
     "long": 17.13348348418855,
@@ -213,7 +213,7 @@
   "fields": {
     "name": "Bönan Fiskeläge",
     "description": "It was a lovely to visit this place. Can’t wait to get back here in summers & swim & chill here. The cafe here was so cute & a must visit!",
-    "owner": 2,
+    "owner": 4,
     "city": 27,
     "lat": 60.73741869719892,
     "long": 17.308482955356872,
@@ -226,7 +226,7 @@
   "fields": {
     "name": "Mackmyra Whisky",
     "description": "Modern distillery with great single malt whisky. The tasting in the 7th floor room offers a stunning view of the surroundings. Comfortable venue, knowledgeable and helpful staff made the tasting even more memorable! Well worth a visit!",
-    "owner": 2,
+    "owner": 5,
     "city": 27,
     "lat": 60.66476971302794,
     "long": 17.10031635720229,
@@ -239,7 +239,7 @@
   "fields": {
     "name": "Guitars the Museum",
     "description": "The Guitars Museum is a amazing place, not only for guitar players. If you love pop or rock music this is a place you must visit. Take a guided tour and you will learn a lot and hear some very interesting stories from one of the collectors. Their passion for guitars are genuine.",
-    "owner": 2,
+    "owner": 6,
     "city": 26,
     "lat": 63.82693669117875,
     "long": 20.266543769040936,
@@ -252,7 +252,7 @@
   "fields": {
     "name": "Västerbotten museum",
     "description": "This is an open-air museum, just slightly off the city centre.",
-    "owner": 2,
+    "owner": 7,
     "city": 26,
     "lat": 63.82956871466692,
     "long": 20.289192497876734,
@@ -265,7 +265,7 @@
   "fields": {
     "name": "Bildmuseet",
     "description": "This Art Museum is located by the river and is part of the Umeå Arts Campus. The 7-story wooden building has an interesting architecture.",
-    "owner": 2,
+    "owner": 8,
     "city": 26,
     "lat": 63.82066717796716,
     "long": 20.275687311369108,
@@ -278,7 +278,7 @@
   "fields": {
     "name": "Molinders Mysterium",
     "description": "Brilliant escape rooms! We've been several times and will keep coming back, it's too fun!!",
-    "owner": 2,
+    "owner": 9,
     "city": 26,
     "lat": 63.824599287827596,
     "long": 20.26429509972636,
@@ -291,7 +291,7 @@
   "fields": {
     "name": "Umedalen Skulptur",
     "description": "A great way to display art and also use an old psychiatric hospital grounds. It’s fun to walk around and find the sculptures. We walked out from town 1 hour straight road and back by river! A lovely day out!",
-    "owner": 2,
+    "owner": 10,
     "city": 26,
     "lat": 63.83925918210047,
     "long": 20.159787069041688,
@@ -304,7 +304,7 @@
   "fields": {
     "name": "Arboretum Norr",
     "description": "Botanical gardens and a beautiful mansion. It was a beautiful setting to enjoy our own glass of wine and the breeze! Hiking on both sides of the river was invigorating and enjoyable.",
-    "owner": 2,
+    "owner": 11,
     "city": 26,
     "lat": 63.84029242908195,
     "long": 20.11421559787749,
@@ -317,7 +317,7 @@
   "fields": {
     "name": "Umeå university",
     "description": "Really nice campus, I like walking around the public areas. Great library too!",
-    "owner": 2,
+    "owner": 12,
     "city": 26,
     "lat": 63.8232423658365,
     "long": 20.306189369670715,
@@ -330,7 +330,7 @@
   "fields": {
     "name": "Umeå Folkets Hus",
     "description": "Always something happening here. It could be a conference or a concert, a play or jazz evening. There are two music festivals every winter, with many artists playing on many different stages.",
-    "owner": 2,
+    "owner": 13,
     "city": 26,
     "lat": 63.8266939272085,
     "long": 20.26597609787661,
@@ -343,7 +343,7 @@
   "fields": {
     "name": "Lund Cathedral",
     "description": "We went on the tour, which included a brief film in English, a few minutes in the Cathedral; then a viewing of the Astronomical Clock \"performing\" at 1pm, then we continued our tour for another 20 minutes, down into the Crypt. It was absolutely wonderful!",
-    "owner": 2,
+    "owner": 1,
     "city": 25,
     "lat": 55.704169689110344,
     "long": 13.193700397388085,
@@ -369,7 +369,7 @@
   "fields": {
     "name": "Botanical Garden",
     "description": "A beautiful park with lots of varied planting, ponds and mature trees. A lovely area dedicated to planting of various vegetables and grains do you can see how the plants grow. A large glasshouse is home to many tropical and desert plants, educational and entertaining at the same time.",
-    "owner": 2,
+    "owner": 3,
     "city": 25,
     "lat": 55.70400217108906,
     "long": 13.20335246855237,
@@ -382,7 +382,7 @@
   "fields": {
     "name": "Skissernas Museum",
     "description": "A very nice experience - first time I visited this kind of museum and it is a must see in Lund. The restaurant is also excellent and has good local food with good and luxurious dining at an affordable price.",
-    "owner": 2,
+    "owner": 4,
     "city": 25,
     "lat": 55.70809786766046,
     "long": 13.198120639716914,
@@ -395,7 +395,7 @@
   "fields": {
     "name": "All Saints Church",
     "description": "I visited different churches in Europe. But the All Saints Church in Lund is one of the best. Although it does not as grand as the cathedral in Milan or the cathedral in Stockholm, it is a silent, peaceful church to visit.",
-    "owner": 2,
+    "owner": 5,
     "city": 25,
     "lat": 55.70972361813828,
     "long": 13.193833426224124,
@@ -408,7 +408,7 @@
   "fields": {
     "name": "Lund University",
     "description": "With roots stemming all the way back to 1425, this is Scandinavia's oldest site of higher education.",
-    "owner": 2,
+    "owner": 6,
     "city": 25,
     "lat": 55.71207519948493,
     "long": 13.203482268552847,
@@ -421,7 +421,7 @@
   "fields": {
     "name": "Visualization Center C",
     "description": "Small but very nice museum. Great to visit, for free, with family. Well organised exposition, lots of interactive tools and games.",
-    "owner": 2,
+    "owner": 7,
     "city": 24,
     "lat": 58.589044705892256,
     "long": 16.177670058927543,
@@ -434,7 +434,7 @@
   "fields": {
     "name": "Abackarna",
     "description": "Nice walking trails with many kind of birds, flowers and trees.",
-    "owner": 2,
+    "owner": 8,
     "city": 24,
     "lat": 58.58688032892775,
     "long": 16.163874512898964,
@@ -447,7 +447,7 @@
   "fields": {
     "name": "Carl Johans Park",
     "description": "We got within five feet of it. We're sure the park is lovely, but really we only saw the hare!",
-    "owner": 1,
+    "owner": 9,
     "city": 24,
     "lat": 58.595364757454654,
     "long": 16.183468970570825,
@@ -460,7 +460,7 @@
   "fields": {
     "name": "Arbetets Museum",
     "description": "Repurposed textile factory with displays on the history of work, plus a gallery of political satire.",
-    "owner": 1,
+    "owner": 10,
     "city": 24,
     "lat": 58.5893285049852,
     "long": 16.180207712899126,
@@ -473,7 +473,7 @@
   "fields": {
     "name": "Norrkopings Stadsmuseum",
     "description": "Museum exploring the culture & history of Norrköpings, particularly its textile heritage.",
-    "owner": 1,
+    "owner": 11,
     "city": 24,
     "lat": 58.58978313538141,
     "long": 16.179969212899106,
@@ -486,7 +486,7 @@
   "fields": {
     "name": "Louis de Geer-Norrkoping Concert Hall",
     "description": "Large meeting & event centre hosting concerts & live shows, with a restaurant, bars & a cafe.",
-    "owner": 1,
+    "owner": 12,
     "city": 24,
     "lat": 58.58822417542842,
     "long": 16.18480866872051,
@@ -499,7 +499,7 @@
   "fields": {
     "name": "Himmelstalund Rock Carvings",
     "description": "The carvings shows boats, animals etc and are clearly marked in red.",
-    "owner": 1,
+    "owner": 13,
     "city": 24,
     "lat": 58.591331516125514,
     "long": 16.15528472454219,
@@ -525,7 +525,7 @@
   "fields": {
     "name": "Tändsticksmuseet",
     "description": "19th-century factory charting the history of match-making, with a worker's house & shop.",
-    "owner": 1,
+    "owner": 2,
     "city": 23,
     "lat": 57.78474990856226,
     "long": 14.159619597508788,
@@ -538,7 +538,7 @@
   "fields": {
     "name": "Jönköpings stadspark",
     "description": "Stadsparken is perfect place for all family. There are big playground for children, mini golf, bird museum, little zoo, restaurant, place for picnic.",
-    "owner": 1,
+    "owner": 3,
     "city": 23,
     "lat": 57.780718698131054,
     "long": 14.138574297508535,
@@ -551,7 +551,7 @@
   "fields": {
     "name": "Sofiakyrkan",
     "description": "Beautiful Neo Gothic Church",
-    "owner": 1,
+    "owner": 4,
     "city": 23,
     "lat": 57.782149813307214,
     "long": 14.159342261273272,
@@ -564,7 +564,7 @@
   "fields": {
     "name": "Rosenlund Rosarium",
     "description": "Space and seating to pause for a tea break or have a picnic. Fitting for a small wedding ceremony as well.",
-    "owner": 1,
+    "owner": 5,
     "city": 23,
     "lat": 57.78332288754788,
     "long": 14.2149759110016,
@@ -577,7 +577,7 @@
   "fields": {
     "name": "Jönköping County Museum",
     "description": "We made a quick visit to the museum on our was through Jönköping on a Sunday. The John Bauer exhibit was interesting.",
-    "owner": 1,
+    "owner": 6,
     "city": 23,
     "lat": 57.78022825772903,
     "long": 14.175899868672808,
@@ -590,7 +590,7 @@
   "fields": {
     "name": "Homerunners Jönköping",
     "description": "Nice place with a large selection of snacks and drinks as well as games. You can't be bored here.",
-    "owner": 1,
+    "owner": 7,
     "city": 23,
     "lat": 57.78146127606155,
     "long": 14.160498711001472,
@@ -603,7 +603,7 @@
   "fields": {
     "name": "Asecs",
     "description": "This indoor mall with expansive windows features big-name & smaller retailers, plus casual dining.",
-    "owner": 1,
+    "owner": 8,
     "city": 23,
     "lat": 57.773122823396726,
     "long": 14.204525284015196,
@@ -616,7 +616,7 @@
   "fields": {
     "name": "Rådhusparken",
     "description": "My favourite park in Jönköping",
-    "owner": 1,
+    "owner": 9,
     "city": 23,
     "lat": 57.78263017186011,
     "long": 14.166773097508642,
@@ -629,7 +629,7 @@
   "fields": {
     "name": "Sofiero Palace",
     "description": "Former summer residence of the Swedish royal family, with famous flower-filled gardens, plus tours.",
-    "owner": 1,
+    "owner": 10,
     "city": 22,
     "lat": 56.08407067481272,
     "long": 12.659681312752673,
@@ -642,7 +642,7 @@
   "fields": {
     "name": "Tropikariet",
     "description": "Large indoor centre featuring a variety of exotic animals from Africa, South America & more.",
-    "owner": 1,
+    "owner": 11,
     "city": 22,
     "lat": 56.059060779617816,
     "long": 12.706043826244182,
@@ -655,7 +655,7 @@
   "fields": {
     "name": "Kärnan",
     "description": "A  surviving 35-meter tower from a medieval castle, with narrow stairs & stunning views from the top.",
-    "owner": 1,
+    "owner": 12,
     "city": 22,
     "lat": 56.048436296595625,
     "long": 12.697487068572162,
@@ -668,7 +668,7 @@
   "fields": {
     "name": "Fredriksdal Museum & Gardens",
     "description": "Open-air museum & botanical garden with historic buildings guided tours, a shop & cafe.",
-    "owner": 1,
+    "owner": 13,
     "city": 22,
     "lat": 56.057588946454935,
     "long": 12.710773939736978,
@@ -694,7 +694,7 @@
   "fields": {
     "name": "Landborgspromenaden",
     "description": "Wonderful walk! In the right season you can find raspberries and blackberries in the forest. If you enjoy walking it's a perfect activity for a Sunday afternoon. Beautiful and free!",
-    "owner": 1,
+    "owner": 2,
     "city": 22,
     "lat": 56.06906513742741,
     "long": 12.67600179752291,
@@ -707,7 +707,7 @@
   "fields": {
     "name": "Air Force Museum",
     "description": "Museum with Swedish military aircraft on display, plus aviation exhibits & kid-friendly activities.",
-    "owner": 1,
+    "owner": 3,
     "city": 21,
     "lat": 58.410347336278676,
     "long": 15.524184641854276,
@@ -720,7 +720,7 @@
   "fields": {
     "name": "Gamla Linköping Open Air Museum",
     "description": "Open-air museum with a collection of houses, gardens & shops depicting Swedish life a 100 years ago.",
-    "owner": 1,
+    "owner": 4,
     "city": 21,
     "lat": 58.40541593408631,
     "long": 15.588729926510004,
@@ -733,7 +733,7 @@
   "fields": {
     "name": "Linköping Cathedral",
     "description": "Roman Catholic place of worship erected in the 13th century with picturesque architecture.",
-    "owner": 1,
+    "owner": 5,
     "city": 21,
     "lat": 58.41137485329009,
     "long": 15.617477697674454,
@@ -746,7 +746,7 @@
   "fields": {
     "name": "Trädgårdsförening",
     "description": "What an amazing park - fountain, lake, ducks, walking paths-and more.",
-    "owner": 1,
+    "owner": 6,
     "city": 21,
     "lat": 58.408256903657474,
     "long": 15.62073292651021,
@@ -759,7 +759,7 @@
   "fields": {
     "name": "HaMa Adventures",
     "description": "A really fun and exciting adventure experience on the high-altitude-course and very nice staff. Very worth a visit if you want a challenging outdoor activity in the nature.",
-    "owner": 2,
+    "owner": 7,
     "city": 21,
     "lat": 58.37184319932007,
     "long": 15.643451726507797,
@@ -772,7 +772,7 @@
   "fields": {
     "name": "Fenomenmagasinet",
     "description": "Fenomenmagasinet has something for all ages. Kids can interact with and learn from the different exhibitions here. Top floor has a little café, but the best thing with the top floor is the reptiles. This place is well worth a visit!",
-    "owner": 2,
+    "owner": 8,
     "city": 21,
     "lat": 58.39469690382318,
     "long": 15.580284070689235,
@@ -785,7 +785,7 @@
   "fields": {
     "name": "Linköping's Castle- and Cathedral Museum",
     "description": "12th-century castle with a museum showcasing textiles, silver, cathedral models & other artifacts.",
-    "owner": 2,
+    "owner": 9,
     "city": 21,
     "lat": 58.41076521531775,
     "long": 15.615946970690281,
@@ -798,7 +798,7 @@
   "fields": {
     "name": "Ekenäs castle",
     "description": "We visited the castle with friends, the English guided tour was fantastic!\r\nOur guide, Maria, is a great storytellers and also passionate about this place and it’s stories.\r\nIt is a lovely place to visit!",
-    "owner": 1,
+    "owner": 10,
     "city": 21,
     "lat": 58.382074815968494,
     "long": 15.945561053492627,
@@ -811,7 +811,7 @@
   "fields": {
     "name": "Linköping City Library",
     "description": "Very big library. Good selection of books, many activities for children. Nice atmosphere. Big space where kids can play.",
-    "owner": 1,
+    "owner": 11,
     "city": 21,
     "lat": 58.41163091267453,
     "long": 15.61290551301837,
@@ -824,7 +824,7 @@
   "fields": {
     "name": "Fagerlinds Tid",
     "description": "Very fun and challenging. We were surprised how many puzzles there were - some were silly and some were difficult. The host was very informative and in character - very likeable. Would definitely recommend. We played \"The office\".",
-    "owner": 1,
+    "owner": 12,
     "city": 20,
     "lat": 59.272205660950966,
     "long": 15.215614155403072,
@@ -837,7 +837,7 @@
   "fields": {
     "name": "Wadköping",
     "description": "There are beautiful old buildings that contain shops, studios and museums all set on cobblestone roads in a pedestrian only area. We spent a wonderful morning visiting the area and viewing the displays and shops. I particularly recommend the woodworkers studio.",
-    "owner": 1,
+    "owner": 13,
     "city": 20,
     "lat": 59.272744058958054,
     "long": 15.232697353551274,
@@ -850,7 +850,7 @@
   "fields": {
     "name": "Stadsparken",
     "description": "This city park creates a perfect place for strolling, jogging, sunbathing, seeing a concert, having a picnic, or simply just being in. There are many different parts: a playground for children, open-air stage for concerts, children's own island Stora Holmen, greenhouses with a cafe, rose garden, etc",
-    "owner": 2,
+    "owner": 1,
     "city": 20,
     "lat": 59.2724936779056,
     "long": 15.225307297731138,
@@ -876,7 +876,7 @@
   "fields": {
     "name": "Lost City",
     "description": "Sprawling water park offering a wide variety of rides & attractions, including a 50m pool. This was the first time I saw my wife in a water slide and interestingly it was she who said \"just one more time\" when it was time to leave. That means that this is a 5 star experience!",
-    "owner": 2,
+    "owner": 3,
     "city": 20,
     "lat": 59.26033960487272,
     "long": 15.194356684238242,
@@ -889,7 +889,7 @@
   "fields": {
     "name": "Svampen Skybar",
     "description": "Piece of art with a function. You can walk around the rim and have excellent views over Örebro. In the middle there is a café/restaurant. Recommended if you are in Örebro and like to have a perfect overview.",
-    "owner": 1,
+    "owner": 4,
     "city": 20,
     "lat": 59.288185955297564,
     "long": 15.225429426568121,
@@ -902,7 +902,7 @@
   "fields": {
     "name": "Karlslund Manor House",
     "description": "It is definitely worth a visit during the summertime. Take a short walk around the Manor house, visit the beautiful vegetable garden and picturesque pink Mejeriet (Dairy) building and the art gallery.",
-    "owner": 1,
+    "owner": 5,
     "city": 20,
     "lat": 59.27095213668714,
     "long": 15.14892382841887,
@@ -915,7 +915,7 @@
   "fields": {
     "name": "Marieberg Galleria",
     "description": "Laid-back indoor mall with retailers selling clothing, electronics & home goods, plus food options.",
-    "owner": 2,
+    "owner": 6,
     "city": 20,
     "lat": 59.21734270056827,
     "long": 15.137327999579346,
@@ -928,7 +928,7 @@
   "fields": {
     "name": "Yoump Trampolinpark",
     "description": "Fun place! Lots of different types of trampolines, tight rope, giant airbag and stuff to play around on. Suitable for all ages as long as youre playful!",
-    "owner": 1,
+    "owner": 7,
     "city": 20,
     "lat": 59.29718969045224,
     "long": 15.197896240060787,
@@ -941,7 +941,7 @@
   "fields": {
     "name": "Hamam Oriental",
     "description": "Amazing Turkish hammam with very nice staff :)) massage was one of the best we ever had. We took package Prenses de luxe. Strongly recommend",
-    "owner": 2,
+    "owner": 8,
     "city": 19,
     "lat": 59.498910829792294,
     "long": 17.92728071309,
@@ -954,7 +954,7 @@
   "fields": {
     "name": "Vikingagården Gunnes gård",
     "description": "Free! I’m all about free tourist things. We met up with family in Väsby on our way from Dalarna to Stockholm and took a turn around this fun park/garden. Lots of animals to see and cool replicas of Viking style buildings. Fun place for kids. No dogs allowed though!",
-    "owner": 1,
+    "owner": 9,
     "city": 19,
     "lat": 59.50843908541901,
     "long": 17.90671644192661,
@@ -967,7 +967,7 @@
   "fields": {
     "name": "Barnens Wäsby Verkstäder",
     "description": "Great place for children to play: a small community with workshop, farm, school, shop. There is a swing and a picnic area.",
-    "owner": 1,
+    "owner": 10,
     "city": 19,
     "lat": 59.51850853271285,
     "long": 17.919731768911426,
@@ -980,7 +980,7 @@
   "fields": {
     "name": "Vilundabadet",
     "description": "Pool for recreation and relaxation. Several attractions for kids 3 - 15 years old. Two heated pools and one normal, 25m. Sauna as well. Big gym with all kind of equipments.",
-    "owner": 1,
+    "owner": 11,
     "city": 19,
     "lat": 59.51718431958383,
     "long": 17.919585790339937,
@@ -993,7 +993,7 @@
   "fields": {
     "name": "Väsby Konsthall",
     "description": "Art gallery",
-    "owner": 1,
+    "owner": 12,
     "city": 19,
     "lat": 59.52580342721542,
     "long": 17.91455884986432,
@@ -1006,7 +1006,7 @@
   "fields": {
     "name": "Gamla Uppsala",
     "description": "Gamla Uppsala is a parish and a village outside Uppsala in Sweden. It had 17,973 inhabitants in 2016. As early as the 3rd century AD and the 4th century AD and onwards, it was an important religious, economic and political centre.",
-    "owner": 2,
+    "owner": 13,
     "city": 18,
     "lat": 59.89747977414932,
     "long": 17.636182096564553,
@@ -1032,7 +1032,7 @@
   "fields": {
     "name": "Uppsala University Main Building",
     "description": "Oldest university in Sweden and all nordic countries! Founded in 1477. Enjoy the historical architecture. Carl XVI Gustav (king of Sweden) and her daughter graduated from this university. In main hall you can find two little rooms like a little museum full of historical devices belong to scientists.",
-    "owner": 1,
+    "owner": 2,
     "city": 18,
     "lat": 59.85765958723507,
     "long": 17.629450240097974,
@@ -1045,7 +1045,7 @@
   "fields": {
     "name": "Carolina Rediviva Library",
     "description": "There was SO much to see. It's the main library of the university and dates back to the mid 1800s. Lots of history to be found inside. The Silver Bible was very much on display as were many other amazing items. Too many to list but do your research before you go so you don't miss a thing!",
-    "owner": 1,
+    "owner": 3,
     "city": 18,
     "lat": 59.85530377491459,
     "long": 17.63149045729355,
@@ -1058,7 +1058,7 @@
   "fields": {
     "name": "Pelle Svanslös playground",
     "description": "The kids love it. In summertime, there is a café just next to the playground.",
-    "owner": 1,
+    "owner": 4,
     "city": 18,
     "lat": 59.85501273158914,
     "long": 17.62915769776975,
@@ -1071,7 +1071,7 @@
   "fields": {
     "name": "Uppsala Castle",
     "description": "16th-century castle built by Gustav Vasa, acting as the governor's residence & housing 3 museums.",
-    "owner": 2,
+    "owner": 5,
     "city": 18,
     "lat": 59.85338590315567,
     "long": 17.63562702660561,
@@ -1084,7 +1084,7 @@
   "fields": {
     "name": "Biotopia",
     "description": "A nice museum for children and adults. On the upper level, Biotopia has arranged sceneries with stuffed birds and animals, indicating their natural habitats. On the lower level, there is a play area so the small children get their share too.",
-    "owner": 1,
+    "owner": 6,
     "city": 18,
     "lat": 59.86018606492783,
     "long": 17.622374126606072,
@@ -1097,7 +1097,7 @@
   "fields": {
     "name": "Linnaeus' Hammarby",
     "description": "Quaint 18th-century former estate home of university professor, with guided tours & a scenic garden.",
-    "owner": 1,
+    "owner": 7,
     "city": 18,
     "lat": 59.81759857247157,
     "long": 17.776112855439216,
@@ -1110,7 +1110,7 @@
   "fields": {
     "name": "Fjällnora nature reserve",
     "description": "There are several activities such as boating, canoeing, paddle-boating, trekking, fishing and grilling.",
-    "owner": 1,
+    "owner": 8,
     "city": 18,
     "lat": 59.83325156958104,
     "long": 17.91183794009635,
@@ -1123,7 +1123,7 @@
   "fields": {
     "name": "GO Adventure",
     "description": "One of few places with a public beach near Uppsala. In the winter time excellent for ice skating on the frozen lake.",
-    "owner": 1,
+    "owner": 9,
     "city": 18,
     "lat": 59.83410340559722,
     "long": 17.910679225810657,
@@ -1136,7 +1136,7 @@
   "fields": {
     "name": "Disgusting Food Museum",
     "description": "The Disgusting food museum is very well organised and has a good selection of foods from around the world. It served the purpose of educating people to have a more open mind about food cultures from around the world.",
-    "owner": 1,
+    "owner": 10,
     "city": 17,
     "lat": 55.60104888262828,
     "long": 13.001184753313279,
@@ -1149,7 +1149,7 @@
   "fields": {
     "name": "Malmö City Library",
     "description": "On the inside they created a spacious environment which includes active learning rooms for children with arts and music.",
-    "owner": 1,
+    "owner": 11,
     "city": 17,
     "lat": 55.60066884306049,
     "long": 12.994107839821146,
@@ -1162,7 +1162,7 @@
   "fields": {
     "name": "Kungsparken",
     "description": "Built 1869–1870, the 8.4-hectare English-style park features a cast iron fountain & cycling trails.",
-    "owner": 1,
+    "owner": 12,
     "city": 17,
     "lat": 55.60360555173997,
     "long": 12.991997326329276,
@@ -1175,7 +1175,7 @@
   "fields": {
     "name": "Øresund Bridge",
     "description": "It is an iconic structure incorporating fixed spans and a suspension bridge together with a tunnel.",
-    "owner": 1,
+    "owner": 13,
     "city": 17,
     "lat": 55.57276383835522,
     "long": 12.847950452515665,
@@ -1201,7 +1201,7 @@
   "fields": {
     "name": "Technology & Maritime Museum",
     "description": "Large complex with a wide range of museums & buildings exploring history, culture & seafaring.",
-    "owner": 1,
+    "owner": 2,
     "city": 17,
     "lat": 55.60492812954264,
     "long": 12.987009426329408,
@@ -1214,7 +1214,7 @@
   "fields": {
     "name": "Lilla torg",
     "description": "Charming Experience in Central Malmo. We spent a half day in Malmo and after a brief excursion to see the Turning Torso building we really didn't venture too much further from Lilla Torg as it was so lovely.",
-    "owner": 2,
+    "owner": 3,
     "city": 17,
     "lat": 55.605669387379194,
     "long": 12.999117226329414,
@@ -1227,7 +1227,7 @@
   "fields": {
     "name": "Turning Torso",
     "description": "Iconic, energy-efficient tower block with a distinctive twisted shell, home to offices & apartments.",
-    "owner": 1,
+    "owner": 4,
     "city": 17,
     "lat": 55.613445360434135,
     "long": 12.976383455165898,
@@ -1240,7 +1240,7 @@
   "fields": {
     "name": "Södergatan Street",
     "description": "Major pedestrianised shopping street. The life-sized Optimistorkestern (Optimistic Orchestra) marching out of Stortoget into the street was created in 1985 by Yngve Lundell",
-    "owner": 1,
+    "owner": 5,
     "city": 17,
     "lat": 55.604708448161695,
     "long": 13.001237355165305,
@@ -1253,7 +1253,7 @@
   "fields": {
     "name": "Archipelago of Gothenburg",
     "description": "Natural beauty on a great day trip from Gothenburg",
-    "owner": 1,
+    "owner": 6,
     "city": 16,
     "lat": 57.62786672426226,
     "long": 11.808211814634289,
@@ -1266,7 +1266,7 @@
   "fields": {
     "name": "Botanical Garden",
     "description": "These gardens are part of the university and are a credit to all involved in the design and maintenance. A highlight is the rock garden at the top of the site, with over 5000 spies planted on",
-    "owner": 2,
+    "owner": 7,
     "city": 16,
     "lat": 57.68289726334886,
     "long": 11.950370585258806,
@@ -1279,7 +1279,7 @@
   "fields": {
     "name": "Slottsskogen",
     "description": "Slottsskogen is a sprawling park with woods, lakes, nature trails and a zoo housing seals and Gotland ponies. Events like midsummer fireworks and the Way Out West music festival draw crowds, while the Natural History Museum has dinosaur exhibits and an observatory hosting stargazing sessions.",
-    "owner": 1,
+    "owner": 8,
     "city": 16,
     "lat": 57.68404282494284,
     "long": 11.944075919986883,
@@ -1292,7 +1292,7 @@
   "fields": {
     "name": "Horticultural Gardens",
     "description": "These gardens were absolutely beautiful and there was a lot to see. There was the big greenhouse to look in which was nice and the gardens were also exceptional in the summer. Nice to kill an hour or so exploring or just chilling out.",
-    "owner": 1,
+    "owner": 9,
     "city": 16,
     "lat": 57.707225978896275,
     "long": 11.974976084136403,
@@ -1305,7 +1305,7 @@
   "fields": {
     "name": "Gothenburg Museum of Fine Art",
     "description": "The collections include a wide range of art from the 15th century through today.",
-    "owner": 1,
+    "owner": 10,
     "city": 16,
     "lat": 57.69682778374076,
     "long": 11.981143524082794,
@@ -1318,7 +1318,7 @@
   "fields": {
     "name": "Haga",
     "description": "Haga is a charming area of traditional wood buildings, cobbled streets, and bakeries, home to 17th-century fortress Skansen Kronan. Candlelit cafes and pubs with terraced courtyards create a bohemian vibe around Järntorget square and adjoining Långgatorna thoroughfares.",
-    "owner": 1,
+    "owner": 11,
     "city": 16,
     "lat": 57.697363101561834,
     "long": 11.957166771242315,
@@ -1331,7 +1331,7 @@
   "fields": {
     "name": "Delsjön",
     "description": "Recreational destination featuring 2 lakes on a lush nature reserve, with hiking trails & a beach.",
-    "owner": 1,
+    "owner": 12,
     "city": 16,
     "lat": 57.68527167566501,
     "long": 12.04583296231279,
@@ -1344,7 +1344,7 @@
   "fields": {
     "name": "Göteborg Opera",
     "description": "Multi-functional concert space, opened in 1994 & hosting regular opera, classical music & musicals.",
-    "owner": 1,
+    "owner": 13,
     "city": 16,
     "lat": 57.71074952478359,
     "long": 11.963048539956743,
@@ -1370,7 +1370,7 @@
   "fields": {
     "name": "Vasa Museum",
     "description": "Museum for well-preserved, 17th-century warship, Vasa, that sank on her maiden voyage in 1628.",
-    "owner": 1,
+    "owner": 2,
     "city": 15,
     "lat": 59.32812178880331,
     "long": 18.0914500419147,
@@ -1383,7 +1383,7 @@
   "fields": {
     "name": "Gamla Stan",
     "description": "This bustling, compact island is the city’s old town, with cobbled streets and colorful 17th- and 18th-century buildings. It’s home to the Royal Palace, the king’s official residence. Stylish bistros serve New Nordic cuisine, while night spots include old-school pubs and chic cocktail bars.",
-    "owner": 1,
+    "owner": 3,
     "city": 15,
     "lat": 59.324892034015456,
     "long": 18.069934859011145,
@@ -1396,7 +1396,7 @@
   "fields": {
     "name": "Kungliga Djurgården",
     "description": "The area has been a royal domain since the 16th c. It was the world's first national city park. Leafy island with an amusement park, landscaped gardens & parks, many museums & stately homes.",
-    "owner": 2,
+    "owner": 4,
     "city": 15,
     "lat": 59.32664067936528,
     "long": 18.126049040966436,
@@ -1409,7 +1409,7 @@
   "fields": {
     "name": "Stockholm City Hall",
     "description": "Waterside government offices completed in 1923 & made from red brick with a lantern-topped tower.",
-    "owner": 2,
+    "owner": 5,
     "city": 15,
     "lat": 59.32756003665123,
     "long": 18.054281224718892,
@@ -1422,7 +1422,7 @@
   "fields": {
     "name": "Skansen",
     "description": "Open-air Swedish history museum, with buildings, people in costume & a zoo with Nordic animals.",
-    "owner": 1,
+    "owner": 6,
     "city": 15,
     "lat": 59.32715203796522,
     "long": 18.103681224718876,
@@ -1435,7 +1435,7 @@
   "fields": {
     "name": "ABBA The Museum",
     "description": "Collection of the pop group's memorabilia & interactive exhibits, including a studio & dance floor.",
-    "owner": 1,
+    "owner": 7,
     "city": 15,
     "lat": 59.325071706303994,
     "long": 18.0969765265706,
@@ -1448,7 +1448,7 @@
   "fields": {
     "name": "Fotografiska",
     "description": "This photography museum displays a collection of special exhibits of outstanding and unusual photography from around the world. Also has a nice restaurant on site. The exhibits we saw were really engrossing. A short walk from Gamla Stan.",
-    "owner": 2,
+    "owner": 8,
     "city": 15,
     "lat": 59.31795096759708,
     "long": 18.08592112657013,
@@ -1461,7 +1461,7 @@
   "fields": {
     "name": "The Royal Palace",
     "description": "Baroque-style royal palace with 3 museums & a vast library. Admission fee can include a guided tour. The rooms and salons explain the life of the royal family.",
-    "owner": 1,
+    "owner": 9,
     "city": 15,
     "lat": 59.32695283144786,
     "long": 18.07174085540671,
@@ -1474,7 +1474,7 @@
   "fields": {
     "name": "Monteliusvagen",
     "description": "Take a short stroll from Slussen through the winding streets of northern Södermalm up to Monteliusvägen. Along this dusty cliff path a sweeping panorama of Gamla Stan and Kungsholmen lines the water and the northern sky opens up above you. Prepare yourself for show stopping sunsets too!",
-    "owner": 1,
+    "owner": 10,
     "city": 15,
     "lat": 59.32082525834074,
     "long": 18.060594806993574,
@@ -1487,7 +1487,7 @@
   "fields": {
     "name": "Östermalms saluhall",
     "description": "Fast, delicious, fresh, local food in a nineteenth century food-hall.",
-    "owner": 1,
+    "owner": 11,
     "city": 15,
     "lat": 59.33639211108182,
     "long": 18.07747422101578,
@@ -1500,7 +1500,7 @@
   "fields": {
     "name": "Swedish History Museum",
     "description": "Displays including the Viking era & the Middle Ages, including a gold room & ecclesiastical art. The room is filled with many of Sweden's silver and gold treasures.",
-    "owner": 1,
+    "owner": 12,
     "city": 15,
     "lat": 59.334832188772936,
     "long": 18.08996368424317,

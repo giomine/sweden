@@ -17,7 +17,7 @@
     "pk": 16,
     "fields": {
       "region": 26,
-      "owner": 1,
+      "owner": 2,
       "name": "Gothenburg",
       "description": "Gothenburg is the second-largest city in Sweden, and capital of the Västra Götaland County. It has a population of approx. 1.1 million inhabitants in the metropolitan area.",
       "image": "https://media.cnn.com/api/v1/images/stellar/prod/191030123016-17-gothenburg-sweden-travel.jpg?q=w_3000,h_1688,x_0,y_0,c_fill/w_1280",
@@ -30,7 +30,7 @@
     "pk": 17,
     "fields": {
       "region": 20,
-      "owner": 1,
+      "owner": 3,
       "name": "Malmö",
       "description": "Malmö is the largest city in the Swedish county of Skåne. It is the third-largest city in Sweden, after Stockholm and Gothenburg, with a municipal population of 357,377 in 2022.",
       "image": "https://lp-cms-production.imgix.net/2019-06/d2581159edd9062c5ca0322008237e8f-malmo.jpg",
@@ -43,7 +43,7 @@
     "pk": 18,
     "fields": {
       "region": 23,
-      "owner": 1,
+      "owner": 4,
       "name": "Uppsala",
       "description": "Uppsala is the county seat of Uppsala County and the fourth-largest city in Sweden, after Stockholm, Gothenburg, and Malmö. It had 177,074 inhabitants in 2019.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/0545Uppsala_Domkyrka.jpg/1200px-0545Uppsala_Domkyrka.jpg",
@@ -56,7 +56,7 @@
     "pk": 19,
     "fields": {
       "region": 23,
-      "owner": 1,
+      "owner": 5,
       "name": "Upplands Väsby",
       "description": "Upplands Väsby is a locality and the seat of Upplands Väsby Municipality, Stockholm County, Sweden with 48,907 inhabitants in 2020.",
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/01/47/6c/50/vue-du-hall.jpg",
@@ -69,7 +69,7 @@
     "pk": 20,
     "fields": {
       "region": 16,
-      "owner": 1,
+      "owner": 6,
       "name": "Örebro",
       "description": "Örebro is the sixth-largest city in Sweden, and capital of the Örebro County. It has a population of approximately 126,000 in the city proper.",
       "image": "https://content.r9cdn.net/rimg/dimg/74/65/15f677a7-city-46875-1731292d141.jpg?width=1366&height=768&xhint=1211&yhint=773&crop=true",
@@ -82,7 +82,7 @@
     "pk": 21,
     "fields": {
       "region": 19,
-      "owner": 1,
+      "owner": 7,
       "name": "Linköping",
       "description": "Linköping is a city in southern Sweden, with around 105,000 inhabitants as of 2021.",
       "image": "https://thumbs.dreamstime.com/b/karlskrona-main-city-square-june-07-25395479.jpg",
@@ -95,7 +95,7 @@
     "pk": 22,
     "fields": {
       "region": 20,
-      "owner": 1,
+      "owner": 8,
       "name": "Helsingborg",
       "description": "Helsingborg is the second-largest city in Skåne (after Malmö) and ninth-largest in Sweden, with a population of 113,816 (2020). Helsingborg is Sweden's closest point to Denmark.",
       "image": "https://a.cdn-hotels.com/gdcs/production116/d72/9af35de8-c735-40d2-962f-be6daa7311f0.jpg?impolicy=fcrop&w=800&h=533&q=medium",
@@ -108,7 +108,7 @@
     "pk": 23,
     "fields": {
       "region": 21,
-      "owner": 1,
+      "owner": 9,
       "name": "Jönköping",
       "description": "Jönköping is a city in southern Sweden with 112,766 inhabitants (2022).",
       "image": "https://mediaim.expedia.com/destination/1/54cd00465e9bfd237ce443d81dc7aa2c.jpg",
@@ -121,7 +121,7 @@
     "pk": 24,
     "fields": {
       "region": 19,
-      "owner": 1,
+      "owner": 10,
       "name": "Norrköping",
       "description": "Norrköping lies about 160 km southwest of the national capital Stockholm. The city has a population of 95,618 inhabitants in 2016.",
       "image": "https://media.objektvision.se/Image.aspx?f=//21924/218025898.18106.png&wm=960&hm=640&clip=1&us=0",
@@ -134,7 +134,7 @@
     "pk": 25,
     "fields": {
       "region": 20,
-      "owner": 1,
+      "owner": 11,
       "name": "Lund",
       "description": "Lund is a city in the southern Swedish province of Skåne, across the Öresund strait from Copenhagen. The town had 91,940 inhabitants in 2018.",
       "image": "https://cdn1.matadornetwork.com/blogs/1/2019/09/View-of-a-street-in-central-Lund-Sweden-1200x854.jpg",
@@ -147,7 +147,7 @@
     "pk": 26,
     "fields": {
       "region": 25,
-      "owner": 1,
+      "owner": 12,
       "name": "Umeå",
       "description": "Umeå is a city in northeast Sweden.",
       "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/c0/81/90/restaurang-sjobris.jpg?w=500&h=300&s=1",
@@ -160,7 +160,7 @@
     "pk": 27,
     "fields": {
       "region": 8,
-      "owner": 1,
+      "owner": 13,
       "name": "Gävle",
       "description": "Gävle had 77,586 inhabitants in 2020, which makes it the 13th most populated city in Sweden. It is the oldest city in the historical Norrland.",
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/G%C3%A4vle_r%C3%A5dhus_01.jpg/1200px-G%C3%A4vle_r%C3%A5dhus_01.jpg",
@@ -186,7 +186,7 @@
     "pk": 29,
     "fields": {
       "region": 26,
-      "owner": 1,
+      "owner": 2,
       "name": "Borås",
       "description": "Borås had 66,273 inhabitants in 2010. It is located at the point of two crossing railways, among them the railway between Gothenburg and Kalmar.",
       "image": "https://www.hb.se/contentassets/41cec57f860146c7b7fd55b47508c335/borasbilder-juli-2017-foto-anna-sigge-nyhet.jpg?width=1600&quality=95&mode=min&v=6292604",
