@@ -200,7 +200,7 @@ const ProfilePage = () => {
                             const { id, city, name, description, image } = attraction
                             const shortDescription = description.slice(0,55) + '....'
                             let title = `${city.name} - ${name}`
-                            title = title.slice(0,18) + '....'
+                            title = title.slice(0,17) + '....'
                             return (
                               <div key={id}>
                                 <div className='edit-delete'>
