@@ -45,6 +45,8 @@ const EditCity = () => {
     description: '',
     region: '',
     image: '',
+    lat: '',
+    long: '',
   })
 
   const handleChange = async (e) => {
@@ -77,7 +79,9 @@ const EditCity = () => {
     if (formFields.image === ''){
       formFields.image = cityData.image
     }
-    console.log(formFields)
+    formFields.lat = lat
+    formFields.long = lng
+    // console.log(formFields)
     try {
       await axios.put(`/api/cities/${id}/`, formFields, {
         headers: {
