@@ -13,7 +13,7 @@ const Home = () => {
   const [ popupData, setPopupData ] = useState()
 
   const handlePopup = (e) => {
-    // setShowPopup(!showPopup)
+    // setShowPopup(!showPopup) 
     setShowPopup(true)
     // console.log(showPopup)
     setPopupId(Number(e.target.id))
