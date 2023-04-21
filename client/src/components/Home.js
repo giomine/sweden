@@ -18,6 +18,9 @@ const Home = () => {
     console.log(showPopup)
     setPopupId(Number(e.target.id))
   }
+  const removePopup = () => {
+    setShowPopup(false)
+  }
 
 
   const [ allData, setAllData ] = useState('')
@@ -49,6 +52,7 @@ const Home = () => {
       <div className='hero'><h1>Home</h1></div>
 
       <Map
+        onClick={removePopup}
         center={[14.66, 60.23]}
         zoom={[4.3]}
         mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
