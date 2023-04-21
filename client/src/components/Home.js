@@ -55,7 +55,7 @@ const Home = () => {
 
   return (
     <div className='grid-container'>
-      <div className='hero'><h1>Home</h1></div>
+      <div className='hero'><h1>Discover Sweden</h1></div>
 
       <Map
         onClick={removePopup}

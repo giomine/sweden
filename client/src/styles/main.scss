@@ -55,13 +55,44 @@ a{
 }
 
 .hero{
-  background-image: url('https://images.pexels.com/photos/4504337/pexels-photo-4504337.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-  background-position: center;
+  background-image: url('https://media.istockphoto.com/id/517274282/photo/rocky-island-in-a-fjord-of-sweden.jpg?s=612x612&w=0&k=20&c=QNeFc7iONnj5mF9xpkYn5MTwlbWeHqmBurM_PJRmnAo=');
+  background-position: top;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
-  height: 95vh;
+  height: 40vh;
   @include flex-center();
+  align-items: flex-start;
+  h1{
+    width: 100%;
+    margin-top: 60px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+}
+.hero::after{
+  content: '';
+  height: 40vh;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+@media (min-width: 660px){
+  .hero{
+    background-image: url('../images/solaregg.jpg');
+    background-position: bottom;
+    height: 70vh;
+    h1{
+      margin-top: 120px;
+      text-align: right;
+      padding-right: 20vw;
+    }
+  }
+  .hero::after{
+    height: 70vh;
+  }
 }
 
 .card-container{
