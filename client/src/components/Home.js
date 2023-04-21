@@ -15,7 +15,7 @@ const Home = () => {
   const handlePopup = (e) => {
     // setShowPopup(!showPopup)
     setShowPopup(true)
-    console.log(showPopup)
+    // console.log(showPopup)
     setPopupId(Number(e.target.id))
   }
   const removePopup = () => {
@@ -83,13 +83,15 @@ const Home = () => {
 
         { showPopup === true &&
           popupData ?
-          <Popup
-            coordinates={[popupData.long, popupData.lat]}
-            style={{ width: '200px' }}>
-            <h3>{popupData.name}</h3>
-            <p>{popupData.description.slice(0,50)}....</p>
-            <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
-          </Popup>
+          <Link to={`/city/${popupData.id}`}>
+            <Popup
+              coordinates={[popupData.long, popupData.lat]}
+              style={{ width: '200px' }}>
+              <h3>{popupData.name}</h3>
+              <p>{popupData.description.slice(0,50)}....</p>
+              <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
+            </Popup>
+          </Link>
           : ''
         }
 
