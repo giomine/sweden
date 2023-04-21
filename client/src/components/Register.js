@@ -49,6 +49,8 @@ const Register = () => {
           <input type="password" name="password" placeholder="password" onChange={handleChange} value={formFields.password} />
           <label htmlFor="password_confirmation"></label>
           <input type="password" name="password_confirmation" placeholder="confirm password" onChange={handleChange} value={formFields.password_confirmation} />
+
+          <div style={{ width: '90%', color: 'gray', margin: '20px 0 -15px' }}>* Optional</div>
           <ProfileUpload 
             setFormFields={setFormFields}
             formFields={formFields}

@@ -149,8 +149,8 @@ const CreateCity = () => {
           <label htmlFor="description"></label>
           <textarea name="description" style={{ width: '220px' }} rows="5" placeholder='Description' value={formFields.description} onChange={handleChange}></textarea>
 
-
           <div className='image-box'>
+            <div style={{ width: '90%', color: 'gray', margin: '0 0 -5px'  }}>* Optional</div>
             <p>Upload or enter image url</p>
             <label htmlFor="image"></label>
             <input className='input' type="url" name="image" placeholder='image url' value={formFields.image} onChange={handleChange} />

@@ -126,6 +126,7 @@ const CreateAttraction = () => {
           <input type="url" name="url" placeholder='Add link to website or Google Maps pin' value={formFields.url} onChange={handleChange} /> */}
 
           <div className='image-box'>
+            <div style={{ width: '90%', color: 'gray', margin: '0 0 -5px'  }}>* Optional</div>
             <p>Upload or enter image url</p>
             <label htmlFor="image"></label>
             <input className='input' type="url" name="image" placeholder='image url' value={formFields.image} onChange={handleChange} />
