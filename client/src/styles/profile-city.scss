@@ -273,9 +273,13 @@ div{
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    gap: 20px 5px;
+    gap: 20px 15px;
     @media(min-width: 660px){
       grid-template-columns: 1fr 1fr 1fr;
+    }
+    .comment-boxes{
+      padding-top: 20px;
+      border-top: 1px solid $blue;
     }
   }
 }

@@ -129,11 +129,11 @@ const CityPage = () => {
                   city.attractions.map(attraction => {
                     const { id, name, description, owner } = attraction
                     return (
-                      <div key={id}>
+                      <div className='comment-boxes' key={id}>
                         <div className='city-attraction-cards'>
                           <div className='user-attractions'>
                             <div className='profile' style={{ backgroundImage: `url('${owner.profile_image}')`  }}></div>
-                            {owner.username}
+                            <div>{owner.username}</div>
                           </div>
                           <div>
                             <div>
