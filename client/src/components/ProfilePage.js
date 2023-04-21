@@ -198,7 +198,7 @@ const ProfilePage = () => {
                         attractions.map(attraction => {
                           if (attraction.owner.id === profile.id) {
                             const { id, city, name, description, image } = attraction
-                            const shortDescription = description.slice(0,15) + '....'
+                            const shortDescription = description.slice(0,55) + '....'
                             return (
                               <div key={id}>
                                 <div className='edit-delete'>
