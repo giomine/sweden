@@ -89,7 +89,7 @@ const CityPage = () => {
                   style={{ width: '200px' }}>
                   <h3>{popupData.name}</h3>
                   <p>{popupData.description}</p>
-                  {/* <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div> */}
+                  <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
                 </Popup>
                 // </Link>
                 : ''

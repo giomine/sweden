@@ -199,30 +199,34 @@ div{
     }
 }
 
-.attraction-content{
-  @include flex-center();
-  align-items: flex-start;
-  flex-direction: column;
-  padding: 60px 20px 20px;
-  background-color: rgba(0,0,0,0.8);
-  color: white;
-  height: 100%;
-}
-.attraction-card:hover::after {
-  position: absolute;
-  margin: -120px 0;
-  width: 140px;
-  height: 120px;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
+// .attraction-content{
+//   @include flex-center();
+//   align-items: flex-start;
+//   flex-direction: column;
+//   padding: 60px 20px 20px;
+//   background-color: rgba(0,0,0,0.8);
+//   background-position: center;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-color: rgba(0, 0, 0, 0.9);
+//   color: black;
+//   height: 100%;
+// }
+// .attraction-card:hover::after {
+//   position: absolute;
+//   margin: -120px 0;
+//   width: 140px;
+//   height: 120px;
+//   padding: 10px;
+//   background-color: rgba(255, 255, 255, 0.9);
+//   color: white;
   
-  @media (min-width: 660px){
-    width: 160px;
-    height: 110px;
-    margin: -130px 0;
-  }
-}
+//   @media (min-width: 660px){
+//     width: 160px;
+//     height: 110px;
+//     margin: -130px 0;
+//   }
+// }
 
 .user-attractions{
   @include flex-center();

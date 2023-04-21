@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import URLValidator
 
 # Create your models here.
 class Attraction(models.Model):
@@ -18,6 +19,7 @@ class Attraction(models.Model):
     
     lat = models.FloatField()
     long = models.FloatField()
+    image = models.URLField(validators=[URLValidator()])
 
     def __str__(self):
         return f'{self.name} - {self.city}'

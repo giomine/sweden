@@ -197,7 +197,7 @@ const ProfilePage = () => {
                       {attractions.length > 0 ? 
                         attractions.map(attraction => {
                           if (attraction.owner.id === profile.id) {
-                            const { id, city, name, description } = attraction
+                            const { id, city, name, description, image } = attraction
                             const shortDescription = description.slice(0,15) + '....'
                             return (
                               <div key={id}>
@@ -206,13 +206,18 @@ const ProfilePage = () => {
                                   <div id={id} onClick={handleDeleteAttraction}>🗑️</div>
                                 </div>
                                 <Link to={`/city/${city.id}`}>
-                                  <div className="card attraction-card">
-                                    <div className='attraction-content'>
+                                  {/* <div className="card attraction-card">
+                                    <div style={{ backgroundImage: `url('${image}')` }} className='attraction-content'>
                                       <div>{city.name}</div>
                                       <div>{name}</div>
                                       <div>{shortDescription}</div>
                                     </div>
-                                  </div>
+                                  </div> */}
+                                  <Card 
+                                    name={city.name}
+                                    image={image}
+                                    text={shortDescription}
+                                  />
                                 </Link>
                               </div>
                             )

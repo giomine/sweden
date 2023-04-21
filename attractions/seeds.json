@@ -8,7 +8,8 @@
     "owner": 2,
     "city": 29,
     "lat": 57.74097731589167,
-    "long": 12.9414630109991
+    "long": 12.9414630109991,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -20,7 +21,8 @@
     "owner": 2,
     "city": 29,
     "lat": 57.723139430932484,
-    "long": 12.940496528190748
+    "long": 12.940496528190748,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -32,7 +34,8 @@
     "owner": 2,
     "city": 29,
     "lat": 57.72466644271169,
-    "long": 12.936755882162423
+    "long": 12.936755882162423,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -44,7 +47,8 @@
     "owner": 2,
     "city": 29,
     "lat": 57.7413925876,
-    "long": 12.941266184013342
+    "long": 12.941266184013342,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -56,7 +60,8 @@
     "owner": 2,
     "city": 29,
     "lat": 57.72546315290897,
-    "long": 12.93724852634099
+    "long": 12.93724852634099,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -68,7 +73,8 @@
     "owner": 2,
     "city": 29,
     "lat": 57.74196425828478,
-    "long": 12.95794872188037
+    "long": 12.95794872188037,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -80,7 +86,8 @@
     "owner": 2,
     "city": 29,
     "lat": 57.71993698088594,
-    "long": 12.943008309147954
+    "long": 12.943008309147954,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -92,7 +99,8 @@
     "owner": 2,
     "city": 29,
     "lat": 57.72018065043124,
-    "long": 12.941060539833543
+    "long": 12.941060539833543,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -104,7 +112,8 @@
     "owner": 1,
     "city": 28,
     "lat": 59.198646133038096,
-    "long": 17.625860226428294
+    "long": 17.625860226428294,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -116,7 +125,8 @@
     "owner": 1,
     "city": 28,
     "lat": 59.19740142793008,
-    "long": 17.631030937052532
+    "long": 17.631030937052532,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -128,7 +138,8 @@
     "owner": 1,
     "city": 28,
     "lat": 59.19124305052705,
-    "long": 17.62557142827777
+    "long": 17.62557142827777,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -140,7 +151,8 @@
     "owner": 1,
     "city": 28,
     "lat": 59.192912985555395,
-    "long": 17.612744855263724
+    "long": 17.612744855263724,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -152,7 +164,8 @@
     "owner": 1,
     "city": 28,
     "lat": 59.18261481370544,
-    "long": 17.638382528277234
+    "long": 17.638382528277234,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -164,7 +177,8 @@
     "owner": 1,
     "city": 27,
     "lat": 60.674707977340006,
-    "long": 17.124970024667398
+    "long": 17.124970024667398,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -176,7 +190,8 @@
     "owner": 2,
     "city": 27,
     "lat": 60.67305657111426,
-    "long": 17.150403292791367
+    "long": 17.150403292791367,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -188,7 +203,8 @@
     "owner": 2,
     "city": 27,
     "lat": 60.672401940650545,
-    "long": 17.13348348418855
+    "long": 17.13348348418855,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -200,7 +216,8 @@
     "owner": 2,
     "city": 27,
     "lat": 60.73741869719892,
-    "long": 17.308482955356872
+    "long": 17.308482955356872,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -212,7 +229,8 @@
     "owner": 2,
     "city": 27,
     "lat": 60.66476971302794,
-    "long": 17.10031635720229
+    "long": 17.10031635720229,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -224,7 +242,8 @@
     "owner": 2,
     "city": 26,
     "lat": 63.82693669117875,
-    "long": 20.266543769040936
+    "long": 20.266543769040936,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -236,7 +255,8 @@
     "owner": 2,
     "city": 26,
     "lat": 63.82956871466692,
-    "long": 20.289192497876734
+    "long": 20.289192497876734,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -248,7 +268,8 @@
     "owner": 2,
     "city": 26,
     "lat": 63.82066717796716,
-    "long": 20.275687311369108
+    "long": 20.275687311369108,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -260,7 +281,8 @@
     "owner": 2,
     "city": 26,
     "lat": 63.824599287827596,
-    "long": 20.26429509972636
+    "long": 20.26429509972636,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -272,7 +294,8 @@
     "owner": 2,
     "city": 26,
     "lat": 63.83925918210047,
-    "long": 20.159787069041688
+    "long": 20.159787069041688,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -284,7 +307,8 @@
     "owner": 2,
     "city": 26,
     "lat": 63.84029242908195,
-    "long": 20.11421559787749
+    "long": 20.11421559787749,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -296,7 +320,8 @@
     "owner": 2,
     "city": 26,
     "lat": 63.8232423658365,
-    "long": 20.306189369670715
+    "long": 20.306189369670715,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -308,7 +333,8 @@
     "owner": 2,
     "city": 26,
     "lat": 63.8266939272085,
-    "long": 20.26597609787661
+    "long": 20.26597609787661,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -320,7 +346,8 @@
     "owner": 2,
     "city": 25,
     "lat": 55.704169689110344,
-    "long": 13.193700397388085
+    "long": 13.193700397388085,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -332,7 +359,8 @@
     "owner": 2,
     "city": 25,
     "lat": 55.70468353907541,
-    "long": 13.196436250491839
+    "long": 13.196436250491839,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -344,7 +372,8 @@
     "owner": 2,
     "city": 25,
     "lat": 55.70400217108906,
-    "long": 13.20335246855237
+    "long": 13.20335246855237,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -356,7 +385,8 @@
     "owner": 2,
     "city": 25,
     "lat": 55.70809786766046,
-    "long": 13.198120639716914
+    "long": 13.198120639716914,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -368,7 +398,8 @@
     "owner": 2,
     "city": 25,
     "lat": 55.70972361813828,
-    "long": 13.193833426224124
+    "long": 13.193833426224124,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -380,7 +411,8 @@
     "owner": 2,
     "city": 25,
     "lat": 55.71207519948493,
-    "long": 13.203482268552847
+    "long": 13.203482268552847,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -392,7 +424,8 @@
     "owner": 2,
     "city": 24,
     "lat": 58.589044705892256,
-    "long": 16.177670058927543
+    "long": 16.177670058927543,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -404,7 +437,8 @@
     "owner": 2,
     "city": 24,
     "lat": 58.58688032892775,
-    "long": 16.163874512898964
+    "long": 16.163874512898964,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -416,7 +450,8 @@
     "owner": 1,
     "city": 24,
     "lat": 58.595364757454654,
-    "long": 16.183468970570825
+    "long": 16.183468970570825,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -428,7 +463,8 @@
     "owner": 1,
     "city": 24,
     "lat": 58.5893285049852,
-    "long": 16.180207712899126
+    "long": 16.180207712899126,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -440,7 +476,8 @@
     "owner": 1,
     "city": 24,
     "lat": 58.58978313538141,
-    "long": 16.179969212899106
+    "long": 16.179969212899106,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -452,7 +489,8 @@
     "owner": 1,
     "city": 24,
     "lat": 58.58822417542842,
-    "long": 16.18480866872051
+    "long": 16.18480866872051,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -464,7 +502,8 @@
     "owner": 1,
     "city": 24,
     "lat": 58.591331516125514,
-    "long": 16.15528472454219
+    "long": 16.15528472454219,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -476,7 +515,8 @@
     "owner": 1,
     "city": 24,
     "lat": 58.57198068313766,
-    "long": 16.208028926390927
+    "long": 16.208028926390927,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -488,7 +528,8 @@
     "owner": 1,
     "city": 23,
     "lat": 57.78474990856226,
-    "long": 14.159619597508788
+    "long": 14.159619597508788,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -500,7 +541,8 @@
     "owner": 1,
     "city": 23,
     "lat": 57.780718698131054,
-    "long": 14.138574297508535
+    "long": 14.138574297508535,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -512,7 +554,8 @@
     "owner": 1,
     "city": 23,
     "lat": 57.782149813307214,
-    "long": 14.159342261273272
+    "long": 14.159342261273272,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -524,7 +567,8 @@
     "owner": 1,
     "city": 23,
     "lat": 57.78332288754788,
-    "long": 14.2149759110016
+    "long": 14.2149759110016,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -536,7 +580,8 @@
     "owner": 1,
     "city": 23,
     "lat": 57.78022825772903,
-    "long": 14.175899868672808
+    "long": 14.175899868672808,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -548,7 +593,8 @@
     "owner": 1,
     "city": 23,
     "lat": 57.78146127606155,
-    "long": 14.160498711001472
+    "long": 14.160498711001472,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -560,7 +606,8 @@
     "owner": 1,
     "city": 23,
     "lat": 57.773122823396726,
-    "long": 14.204525284015196
+    "long": 14.204525284015196,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -572,7 +619,8 @@
     "owner": 1,
     "city": 23,
     "lat": 57.78263017186011,
-    "long": 14.166773097508642
+    "long": 14.166773097508642,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -584,7 +632,8 @@
     "owner": 1,
     "city": 22,
     "lat": 56.08407067481272,
-    "long": 12.659681312752673
+    "long": 12.659681312752673,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -596,7 +645,8 @@
     "owner": 1,
     "city": 22,
     "lat": 56.059060779617816,
-    "long": 12.706043826244182
+    "long": 12.706043826244182,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -608,7 +658,8 @@
     "owner": 1,
     "city": 22,
     "lat": 56.048436296595625,
-    "long": 12.697487068572162
+    "long": 12.697487068572162,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -620,7 +671,8 @@
     "owner": 1,
     "city": 22,
     "lat": 56.057588946454935,
-    "long": 12.710773939736978
+    "long": 12.710773939736978,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -632,7 +684,8 @@
     "owner": 1,
     "city": 22,
     "lat": 56.04795602216214,
-    "long": 12.689090855193546
+    "long": 12.689090855193546,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -644,7 +697,8 @@
     "owner": 1,
     "city": 22,
     "lat": 56.06906513742741,
-    "long": 12.67600179752291
+    "long": 12.67600179752291,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -656,7 +710,8 @@
     "owner": 1,
     "city": 21,
     "lat": 58.410347336278676,
-    "long": 15.524184641854276
+    "long": 15.524184641854276,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -668,7 +723,8 @@
     "owner": 1,
     "city": 21,
     "lat": 58.40541593408631,
-    "long": 15.588729926510004
+    "long": 15.588729926510004,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -680,7 +736,8 @@
     "owner": 1,
     "city": 21,
     "lat": 58.41137485329009,
-    "long": 15.617477697674454
+    "long": 15.617477697674454,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -692,7 +749,8 @@
     "owner": 1,
     "city": 21,
     "lat": 58.408256903657474,
-    "long": 15.62073292651021
+    "long": 15.62073292651021,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -704,7 +762,8 @@
     "owner": 2,
     "city": 21,
     "lat": 58.37184319932007,
-    "long": 15.643451726507797
+    "long": 15.643451726507797,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -716,7 +775,8 @@
     "owner": 2,
     "city": 21,
     "lat": 58.39469690382318,
-    "long": 15.580284070689235
+    "long": 15.580284070689235,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -728,7 +788,8 @@
     "owner": 2,
     "city": 21,
     "lat": 58.41076521531775,
-    "long": 15.615946970690281
+    "long": 15.615946970690281,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -740,7 +801,8 @@
     "owner": 1,
     "city": 21,
     "lat": 58.382074815968494,
-    "long": 15.945561053492627
+    "long": 15.945561053492627,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -752,7 +814,8 @@
     "owner": 1,
     "city": 21,
     "lat": 58.41163091267453,
-    "long": 15.61290551301837
+    "long": 15.61290551301837,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -764,7 +827,8 @@
     "owner": 1,
     "city": 20,
     "lat": 59.272205660950966,
-    "long": 15.215614155403072
+    "long": 15.215614155403072,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -776,7 +840,8 @@
     "owner": 1,
     "city": 20,
     "lat": 59.272744058958054,
-    "long": 15.232697353551274
+    "long": 15.232697353551274,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -788,7 +853,8 @@
     "owner": 2,
     "city": 20,
     "lat": 59.2724936779056,
-    "long": 15.225307297731138
+    "long": 15.225307297731138,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -800,7 +866,8 @@
     "owner": 2,
     "city": 20,
     "lat": 59.27411301733018,
-    "long": 15.215443197731275
+    "long": 15.215443197731275,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -812,7 +879,8 @@
     "owner": 2,
     "city": 20,
     "lat": 59.26033960487272,
-    "long": 15.194356684238242
+    "long": 15.194356684238242,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -824,7 +892,8 @@
     "owner": 1,
     "city": 20,
     "lat": 59.288185955297564,
-    "long": 15.225429426568121
+    "long": 15.225429426568121,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -836,7 +905,8 @@
     "owner": 1,
     "city": 20,
     "lat": 59.27095213668714,
-    "long": 15.14892382841887
+    "long": 15.14892382841887,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -848,7 +918,8 @@
     "owner": 2,
     "city": 20,
     "lat": 59.21734270056827,
-    "long": 15.137327999579346
+    "long": 15.137327999579346,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -860,7 +931,8 @@
     "owner": 1,
     "city": 20,
     "lat": 59.29718969045224,
-    "long": 15.197896240060787
+    "long": 15.197896240060787,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -872,7 +944,8 @@
     "owner": 2,
     "city": 19,
     "lat": 59.498910829792294,
-    "long": 17.92728071309
+    "long": 17.92728071309,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -884,7 +957,8 @@
     "owner": 1,
     "city": 19,
     "lat": 59.50843908541901,
-    "long": 17.90671644192661
+    "long": 17.90671644192661,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -896,7 +970,8 @@
     "owner": 1,
     "city": 19,
     "lat": 59.51850853271285,
-    "long": 17.919731768911426
+    "long": 17.919731768911426,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -908,7 +983,8 @@
     "owner": 1,
     "city": 19,
     "lat": 59.51718431958383,
-    "long": 17.919585790339937
+    "long": 17.919585790339937,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -920,7 +996,8 @@
     "owner": 1,
     "city": 19,
     "lat": 59.52580342721542,
-    "long": 17.91455884986432
+    "long": 17.91455884986432,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -932,7 +1009,8 @@
     "owner": 2,
     "city": 18,
     "lat": 59.89747977414932,
-    "long": 17.636182096564553
+    "long": 17.636182096564553,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -944,7 +1022,8 @@
     "owner": 1,
     "city": 18,
     "lat": 59.85070250177918,
-    "long": 17.628942168933484
+    "long": 17.628942168933484,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -956,7 +1035,8 @@
     "owner": 1,
     "city": 18,
     "lat": 59.85765958723507,
-    "long": 17.629450240097974
+    "long": 17.629450240097974,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -968,7 +1048,8 @@
     "owner": 1,
     "city": 18,
     "lat": 59.85530377491459,
-    "long": 17.63149045729355
+    "long": 17.63149045729355,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -980,7 +1061,8 @@
     "owner": 1,
     "city": 18,
     "lat": 59.85501273158914,
-    "long": 17.62915769776975
+    "long": 17.62915769776975,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -992,7 +1074,8 @@
     "owner": 2,
     "city": 18,
     "lat": 59.85338590315567,
-    "long": 17.63562702660561
+    "long": 17.63562702660561,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1004,7 +1087,8 @@
     "owner": 1,
     "city": 18,
     "lat": 59.86018606492783,
-    "long": 17.622374126606072
+    "long": 17.622374126606072,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1016,7 +1100,8 @@
     "owner": 1,
     "city": 18,
     "lat": 59.81759857247157,
-    "long": 17.776112855439216
+    "long": 17.776112855439216,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1028,7 +1113,8 @@
     "owner": 1,
     "city": 18,
     "lat": 59.83325156958104,
-    "long": 17.91183794009635
+    "long": 17.91183794009635,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1040,7 +1126,8 @@
     "owner": 1,
     "city": 18,
     "lat": 59.83410340559722,
-    "long": 17.910679225810657
+    "long": 17.910679225810657,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1052,7 +1139,8 @@
     "owner": 1,
     "city": 17,
     "lat": 55.60104888262828,
-    "long": 13.001184753313279
+    "long": 13.001184753313279,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1064,7 +1152,8 @@
     "owner": 1,
     "city": 17,
     "lat": 55.60066884306049,
-    "long": 12.994107839821146
+    "long": 12.994107839821146,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1076,7 +1165,8 @@
     "owner": 1,
     "city": 17,
     "lat": 55.60360555173997,
-    "long": 12.991997326329276
+    "long": 12.991997326329276,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1088,7 +1178,8 @@
     "owner": 1,
     "city": 17,
     "lat": 55.57276383835522,
-    "long": 12.847950452515665
+    "long": 12.847950452515665,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1100,7 +1191,8 @@
     "owner": 1,
     "city": 17,
     "lat": 55.60367845150349,
-    "long": 12.98812319749337
+    "long": 12.98812319749337,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1112,7 +1204,8 @@
     "owner": 1,
     "city": 17,
     "lat": 55.60492812954264,
-    "long": 12.987009426329408
+    "long": 12.987009426329408,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1124,7 +1217,8 @@
     "owner": 2,
     "city": 17,
     "lat": 55.605669387379194,
-    "long": 12.999117226329414
+    "long": 12.999117226329414,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1136,7 +1230,8 @@
     "owner": 1,
     "city": 17,
     "lat": 55.613445360434135,
-    "long": 12.976383455165898
+    "long": 12.976383455165898,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1148,7 +1243,8 @@
     "owner": 1,
     "city": 17,
     "lat": 55.604708448161695,
-    "long": 13.001237355165305
+    "long": 13.001237355165305,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1160,7 +1256,8 @@
     "owner": 1,
     "city": 16,
     "lat": 57.62786672426226,
-    "long": 11.808211814634289
+    "long": 11.808211814634289,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1172,7 +1269,8 @@
     "owner": 2,
     "city": 16,
     "lat": 57.68289726334886,
-    "long": 11.950370585258806
+    "long": 11.950370585258806,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1184,7 +1282,8 @@
     "owner": 1,
     "city": 16,
     "lat": 57.68404282494284,
-    "long": 11.944075919986883
+    "long": 11.944075919986883,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1196,7 +1295,8 @@
     "owner": 1,
     "city": 16,
     "lat": 57.707225978896275,
-    "long": 11.974976084136403
+    "long": 11.974976084136403,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1208,7 +1308,8 @@
     "owner": 1,
     "city": 16,
     "lat": 57.69682778374076,
-    "long": 11.981143524082794
+    "long": 11.981143524082794,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1220,7 +1321,8 @@
     "owner": 1,
     "city": 16,
     "lat": 57.697363101561834,
-    "long": 11.957166771242315
+    "long": 11.957166771242315,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1232,7 +1334,8 @@
     "owner": 1,
     "city": 16,
     "lat": 57.68527167566501,
-    "long": 12.04583296231279
+    "long": 12.04583296231279,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1244,7 +1347,8 @@
     "owner": 1,
     "city": 16,
     "lat": 57.71074952478359,
-    "long": 11.963048539956743
+    "long": 11.963048539956743,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1256,7 +1360,8 @@
     "owner": 1,
     "city": 16,
     "lat": 57.69601834447759,
-    "long": 11.955433968791796
+    "long": 11.955433968791796,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1268,7 +1373,8 @@
     "owner": 1,
     "city": 15,
     "lat": 59.32812178880331,
-    "long": 18.0914500419147
+    "long": 18.0914500419147,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1280,7 +1386,8 @@
     "owner": 1,
     "city": 15,
     "lat": 59.324892034015456,
-    "long": 18.069934859011145
+    "long": 18.069934859011145,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1292,7 +1399,8 @@
     "owner": 2,
     "city": 15,
     "lat": 59.32664067936528,
-    "long": 18.126049040966436
+    "long": 18.126049040966436,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1304,7 +1412,8 @@
     "owner": 2,
     "city": 15,
     "lat": 59.32756003665123,
-    "long": 18.054281224718892
+    "long": 18.054281224718892,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1316,7 +1425,8 @@
     "owner": 1,
     "city": 15,
     "lat": 59.32715203796522,
-    "long": 18.103681224718876
+    "long": 18.103681224718876,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1328,7 +1438,8 @@
     "owner": 1,
     "city": 15,
     "lat": 59.325071706303994,
-    "long": 18.0969765265706
+    "long": 18.0969765265706,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1340,7 +1451,8 @@
     "owner": 2,
     "city": 15,
     "lat": 59.31795096759708,
-    "long": 18.08592112657013
+    "long": 18.08592112657013,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1352,7 +1464,8 @@
     "owner": 1,
     "city": 15,
     "lat": 59.32695283144786,
-    "long": 18.07174085540671
+    "long": 18.07174085540671,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1364,7 +1477,8 @@
     "owner": 1,
     "city": 15,
     "lat": 59.32082525834074,
-    "long": 18.060594806993574
+    "long": 18.060594806993574,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1376,7 +1490,8 @@
     "owner": 1,
     "city": 15,
     "lat": 59.33639211108182,
-    "long": 18.07747422101578
+    "long": 18.07747422101578,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 },
 {
@@ -1388,7 +1503,8 @@
     "owner": 1,
     "city": 15,
     "lat": 59.334832188772936,
-    "long": 18.08996368424317
+    "long": 18.08996368424317,
+    "image": "https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png"
   }
 }
 ]
