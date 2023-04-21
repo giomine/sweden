@@ -66,6 +66,9 @@ const CreateCity = () => {
     e.preventDefault()
     formFields.lat = lat
     formFields.long = lng
+    if (formFields.image === ''){
+      formFields.image = 'https://img.traveltriangle.com/attachments/pictures/1097529/original/CB_Placeholder-hero-image_DS.png?tr=w-1291,h-332'
+    }
     // console.log(formFields)
     try {
       await axios.post('/api/cities/', formFields, {
