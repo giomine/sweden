@@ -18,7 +18,7 @@ const CreateCity = () => {
     const uploadPreset = 'sweden_image'
 
     const image = e.target.files[0]
-    console.log(image)
+    // console.log(image)
     const formData = new FormData()
     formData.append('file', image)
     formData.append('upload_preset', uploadPreset)
@@ -66,7 +66,7 @@ const CreateCity = () => {
     e.preventDefault()
     formFields.lat = lat
     formFields.long = lng
-    console.log(formFields)
+    // console.log(formFields)
     try {
       await axios.post('/api/cities/', formFields, {
         headers: {

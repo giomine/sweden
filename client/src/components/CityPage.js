@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
+import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
+
+const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 
 const CityPage = () => {
 
@@ -27,6 +30,22 @@ const CityPage = () => {
         
         { city ?
           <>
+            <Map
+              center={[city.long, city.lat]}
+              zoom={[10]}
+              mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
+              style="mapbox://styles/mapbox/streets-v8"
+              containerStyle={{
+                height: '30vh',
+                width: '100vw',
+              }}>
+              <Marker
+                coordinates={[city.long, city.lat]}
+                anchor="bottom">
+                <i id={id} style={{ color: 'red' }} className="fa-solid fa-2xl fa-map-marker"></i>
+              </Marker>
+            </Map>
+
             <div className='city-top'>
               <div className='city-image' style={{ backgroundImage: `url('${city.image}')` }}></div>
 
