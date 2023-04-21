@@ -30,7 +30,7 @@ const ProfileUpload = ({ formFields, setFormFields }) => {
       { formFields.profile_image ? 
         <img style={{ height: '180px' }} src={formFields.profile_image} /> 
         : 
-        <input style={{ fontSize: '14px', width: '200px', margin: '20px 0' }} type="file" onChange={handleUpload}/>
+        <input style={{ fontSize: '12px', width: '170px', margin: '20px 0' }} type="file" onChange={handleUpload}/>
       }
       {error && <p className='text-center'>{error}</p>}
     </div>

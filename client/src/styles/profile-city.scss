@@ -58,10 +58,28 @@
     align-items: center;
     justify-content: space-between;
 
+    .profile-first-tab{
+      @include flex-center();
+      justify-content: space-between;
+      height: 40vh;
+      width: 90vw;
+      @media (min-width: 660px){
+        width: 70vw;
+      }
+      @media (min-width: 1000px){
+        width: 50vw;
+      }
+      .add-box{
+        @media(max-width: 660px){
+          width: 130px;
+          height: 130px;
+        }
+      }
+    }
+
     .button{
       margin-top: 30px;
     }
-    // height: 350px;
 
     .card-container{
       margin-top: 0;
@@ -70,7 +88,11 @@
     form {
       @include flex-center();
       flex-direction: column;
-      margin: 30px 0 20px;
+      border: 1px solid gray;
+      padding: 10px;
+      // @media(max-width: 660px){
+      //   max-width: 160px;
+      // }
     }
   }
 
@@ -78,7 +100,6 @@
   .city-top{
     @include flex-center();
     flex-direction: column;
-    // width: 100%;
     padding: 20px 0 0;
     @media(min-width: 750px){
       padding-bottom: 30px;

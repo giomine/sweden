@@ -155,8 +155,6 @@ const ProfilePage = () => {
         profile ?
           <div className='profile-page'>
             <div className='profile-container'>
-            
-
               <>
                 <div className='profile-top'>
                   <div onClick={handleClick} className='profile-image' style={{ backgroundImage: `url('${profile.profile_image}')` }}></div>
@@ -175,12 +173,20 @@ const ProfilePage = () => {
 
                 <div className='edit-profile'>        
                   {activeTab === 'tab1' && 
-                  <>
+                  <div className='profile-first-tab'>
+                    <div className='card add-box'>
+                      <Link className='add' to={'/createcity/'}>
+                        <div><i className="fa-regular fa-plus"></i>Add city</div>
+                      </Link>
+                      <Link className='add' to={'/createattraction/'}>
+                        <div><i className="fa-regular fa-plus"></i>Add attraction</div>
+                      </Link>
+                    </div>
                     {/* <div>No profile info</div> */}
                     {editTab === false &&
-                    <>
-                      <button className='button' onClick={handleClick}>Upload new profile photo</button>
-                    </>
+                    <div>
+                      <button className='button' onClick={handleClick}>Upload profile photo</button>
+                    </div>
                     }
                     <div>
                       {editTab === true &&
@@ -189,7 +195,7 @@ const ProfilePage = () => {
                       </div>
                       }
                     </div>
-                  </>}
+                  </div>}
 
                   {activeTab === 'tab2' && 
                   <div className='grid-container'>

@@ -43,7 +43,7 @@ const EditProfile = () => {
   return (
     <>
       <div className='form-container'>
-        <div style={{ marginTop: '-30px' }} className="form-border">
+        <div className="form-border">
 
           <form action="" onSubmit={handleSubmit}>
 
@@ -52,7 +52,7 @@ const EditProfile = () => {
             <label htmlFor="email"></label>
             <input type="email" name="email" placeholder='update email' value={newUser.email}  /> */}
 
-            <h3>Upload profile picture</h3>
+            <h3>Upload photo</h3>
 
             <ProfileUpload 
               setFormFields={setNewUser}

@@ -105,6 +105,14 @@ const Home = () => {
       </Map>
 
       <div className='card-container'>
+        <div className='card add-box'>
+          <Link className='add' to={'/createcity/'}>
+            <div><i className="fa-regular fa-plus"></i>Add city</div>
+          </Link>
+          <Link className='add' to={'/createattraction/'}>
+            <div><i className="fa-regular fa-plus"></i>Add attraction</div>
+          </Link>
+        </div>
         {allData.length > 0 ? 
           allData.map(data => {
             const { id, image, name, description } = data
