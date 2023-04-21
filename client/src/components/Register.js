@@ -23,6 +23,9 @@ const Register = () => {
 
   const handleSubmit = async(e) => {
     e.preventDefault()
+    if (formFields.profile_image === ''){
+      formFields.profile_image = 'https://t3.ftcdn.net/jpg/05/16/27/58/240_F_516275801_f3Fsp17x6HQK0xQgDQEELoTuERO4SsWV.jpg'
+    }
     try {
       console.log(formFields)
       await axios.post('/api/auth/register/', formFields)
