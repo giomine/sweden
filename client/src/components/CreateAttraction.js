@@ -65,6 +65,9 @@ const CreateAttraction = () => {
     e.preventDefault()
     formFields.lat = lat
     formFields.long = lng
+    if (formFields.image === ''){
+      formFields.image = 'https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png'
+    }
     try {
       await axios.post('/api/attractions/', formFields, {
         headers: {
