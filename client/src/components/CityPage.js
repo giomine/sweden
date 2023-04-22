@@ -67,7 +67,7 @@ const CityPage = () => {
               mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
               style="mapbox://styles/mapbox/streets-v8"
               containerStyle={{
-                height: '45vh',
+                height: '70vh',
                 width: '100vw',
               }}>
               {/* <Marker // * this pin shows the location of the city.
