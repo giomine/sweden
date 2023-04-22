@@ -40,10 +40,7 @@
   }
 
   .profile-section{
-    // min-height: 100px;
-    // max-height: 450px;
     width: 100%;
-    // padding: 20px 0;
     margin: 20px 0;
     overflow: scroll;
     div {
@@ -60,25 +57,34 @@
     justify-content: space-between;
 
     .profile-first-tab{
-      @include flex-center();
-      justify-content: space-evenly;
-      height: 40vh;
-      width: 90vw;
-      @media (min-width: 660px){
-        width: 70vw;
-      }
-      @media (min-width: 1000px){
-        width: 50vw;
+      margin-top: 30px;
+      .add-box, div{
+        @include flex-center();
+        width: 160px;
       }
       .add-box{
-        @media(max-width: 660px){
-          width: 130px;
-          height: 130px;
+        height: 120px;
+      }
+      .first-tab-boxes {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .card.add-box{
+        display: flex;
+        justify-content: center;
+        height: 50px;
+        align-items: center;
+        .add{
+          height: 50px;
+          @media(max-width: 660px){
+          }
         }
       }
     }
 
-    .button{
+    .button, form{
       margin-top: 30px;
     }
 
@@ -91,9 +97,6 @@
       flex-direction: column;
       border: 1px solid gray;
       padding: 10px;
-      // @media(max-width: 660px){
-      //   max-width: 160px;
-      // }
     }
   }
 
@@ -131,7 +134,6 @@
       justify-content: space-evenly;
       @media(min-width: 660px){
         width: 50%;
-        // max-width: 300px;
         height: 560px;
         h2 {
           margin-top: 5px;
@@ -140,12 +142,8 @@
           margin: 8px 0 10px;
         }
       }
-      // @media(min-width: 1200px){
-        // max-width: 400px;
-      // }
       @media (max-width: 750px){
         width: 90vw;
-        // max-width: 750px;
       }
 
     }
@@ -236,35 +234,6 @@ div{
       }
     }
 }
-
-// .attraction-content{
-//   @include flex-center();
-//   align-items: flex-start;
-//   flex-direction: column;
-//   padding: 60px 20px 20px;
-//   background-color: rgba(0,0,0,0.8);
-//   background-position: center;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-color: rgba(0, 0, 0, 0.9);
-//   color: black;
-//   height: 100%;
-// }
-// .attraction-card:hover::after {
-//   position: absolute;
-//   margin: -120px 0;
-//   width: 140px;
-//   height: 120px;
-//   padding: 10px;
-//   background-color: rgba(255, 255, 255, 0.9);
-//   color: white;
-  
-//   @media (min-width: 660px){
-//     width: 160px;
-//     height: 110px;
-//     margin: -130px 0;
-//   }
-// }
 
 .user-attractions{
   @include flex-center();

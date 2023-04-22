@@ -174,17 +174,19 @@ const ProfilePage = () => {
                 <div className='edit-profile'>        
                   {activeTab === 'tab1' && 
                   <div className='profile-first-tab'>
-                    <div className='card add-box'>
-                      <Link className='add' to={'/createcity/'}>
-                        <div><i className="fa-regular fa-plus"></i>Add city</div>
-                      </Link>
-                      <Link className='add' to={'/createattraction/'}>
-                        <div><i className="fa-regular fa-plus"></i>Add attraction</div>
-                      </Link>
+                    <div className='first-tab-boxes'>
+                      <div className='card add-box'>
+                        <Link className='add' to={'/createcity/'}>
+                          <div><i className="fa-regular fa-plus"></i>Add city</div>
+                        </Link>
+                        <Link className='add' to={'/createattraction/'}>
+                          <div><i className="fa-regular fa-plus"></i>Add attraction</div>
+                        </Link>
+                      </div>
                     </div>
                     {/* <div>No profile info</div> */}
                     {editTab === false &&
-                    <div>
+                    <div className='first-tab-boxes'>
                       <button className='button' onClick={handleClick}>Upload profile photo</button>
                     </div>
                     }
