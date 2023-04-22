@@ -86,10 +86,10 @@ const CityPage = () => {
                 // <Link to={`/city/${popupData.id}`}>
                 <Popup
                   coordinates={[popupData.long, popupData.lat]}
-                  style={{ width: '200px' }}>
+                  style={{ width: '300px' }}>
                   <h3>{popupData.name}</h3>
                   <p>{popupData.description}</p>
-                  <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
+                  <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '280px', height: '100px' }}></div>
                 </Popup>
                 // </Link>
                 : ''

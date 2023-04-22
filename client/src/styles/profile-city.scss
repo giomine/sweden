@@ -345,3 +345,11 @@ div{
   bottom: 0;
   display: none
 }
+.mapboxgl-popup-content{
+  h3{
+    margin: 5px 0;
+  }
+  p {
+    margin: 0 0 5px;
+  }
+}
