@@ -22,6 +22,17 @@ const CityPage = () => {
     setShowPopup(false)
   }
 
+  const handleClick = (e) => {
+    // console.log(e.target.id)
+    setShowPopup(true)
+    setPopupId(Number(e.target.id))
+    // window.scroll({
+    //   top: 0,
+    //   left: 0,
+    //   behavior: 'smooth',
+    // })
+  }
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -143,17 +154,17 @@ const CityPage = () => {
                     return (
                       <div className='comment-boxes' key={id}>
                         <div className='city-attraction-cards'>
-                          <div className='attraction-image' style={{ backgroundImage: `url('${image}')` }}></div>
+                          <div onClick={handleClick} id={id} className='attraction-image' style={{ backgroundImage: `url('${image}')` }}></div>
                           <div className='attraction-comment'>
                             <p>{name}</p>
                           </div>
-                          <div>
+                          <div >
                             <div className='user-attractions'>
                               <div>
                                 <div className='profile' style={{ backgroundImage: `url('${owner.profile_image}')`  }}></div>
                                 <div>{owner.username}</div>
                               </div>
-                              <div>{description}</div>
+                              <div onClick={handleClick} id={id}>{description}</div>
                             </div>
                           </div>
                         </div>
