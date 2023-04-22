@@ -23,6 +23,16 @@ const Home = () => {
   const removePopup = () => {
     setShowPopup(false)
   }
+  const handleMouseOver = (e) => {
+    console.log(e.target)
+    setShowPopup(true)
+    setPopupId(Number(e.target.id))
+    // window.scroll({
+    //   top: 500,
+    //   left: 0,
+    //   behavior: 'smooth',
+    // })
+  }
 
   // get lngLat on dblClick for dropping pins - use on create city page?
   const handleDblClick = (map, event) => {
@@ -121,8 +131,9 @@ const Home = () => {
             const shortDescription = description.slice(0,50) + '....'
             return (
               <div key={id}>
-                <Link to={`/city/${id}`}>
+                <Link id={id} onMouseOver={handleMouseOver} to={`/city/${id}`}>
                   <Card
+                    id={id}
                     image={image}
                     name={name}
                     text={shortDescription}
