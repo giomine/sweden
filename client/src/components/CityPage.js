@@ -26,7 +26,7 @@ const CityPage = () => {
       try {
         const { data } = await axios.get(`/api/cities/${id}/`)
         setCity(data)
-        // console.log(data.attractions)
+        console.log(data)
 
         // this captures only the attraction for the clicked pin
         data.attractions.map(data => {
@@ -100,19 +100,30 @@ const CityPage = () => {
               <div className='city-image' style={{ backgroundImage: `url('${city.image}')` }}></div>
 
               <div className='text'>
-                <h2>{city.name}</h2>
-                <h4>{city.region.name} municipality</h4>
-                <p>{city.description}</p>
+                <div>
+                  <h2>{city.name}</h2>
+                  <h4>{city.region.name} municipality</h4>
+                  <p>{city.description}</p>
+                </div>
                 
-                <div className='profile-section'>
-                  <div><h3>Latest Attraction:</h3> {city.attractions.length > 0 ? 
-                    <div key={id}>
-                      <div className='user-attractions'>
-                        <div className='profile' style={{ backgroundImage: `url('${city.attractions[0].owner.profile_image}')`  }}></div>
-                        {city.attractions[0].owner.username}
+                <div className='featured'>
+                  <div><h3>Featured Attraction:</h3> {city.attractions.length > 0 ? 
+                    <div className='comment-boxes' key={id}>
+                      <div className='city-attraction-cards'>
+                        <div className='attraction-image' style={{ backgroundImage: `url('${city.attractions[0].image}')` }}></div>
+                        <div className='attraction-comment'>
+                          <p>{city.attractions[0].name}</p>
+                        </div>
+                        <div>
+                          <div className='user-attractions'>
+                            <div>
+                              <div className='profile' style={{ backgroundImage: `url('${city.attractions[0].owner.profile_image}')`  }}></div>
+                              <div>{city.attractions[0].owner.username}</div>
+                            </div>
+                            <div>{city.attractions[0].description}</div>
+                          </div>
+                        </div>
                       </div>
-                      <div>{city.attractions[0].name}</div>
-                      <div>{city.attractions[0].description}</div>
                     </div>
                     : 'No attractions added yet!'}
                   </div>
@@ -127,17 +138,20 @@ const CityPage = () => {
               <div className='city-bottom'>
                 {city.attractions.length > 0 ? 
                   city.attractions.map(attraction => {
-                    const { id, name, description, owner } = attraction
+                    const { id, name, description, owner, image } = attraction
                     return (
                       <div className='comment-boxes' key={id}>
                         <div className='city-attraction-cards'>
-                          <div className='user-attractions'>
-                            <div className='profile' style={{ backgroundImage: `url('${owner.profile_image}')`  }}></div>
-                            <div>{owner.username}</div>
+                          <div className='attraction-image' style={{ backgroundImage: `url('${image}')` }}></div>
+                          <div className='attraction-comment'>
+                            <p>{name}</p>
                           </div>
                           <div>
-                            <div>
-                              <div>{name}</div>
+                            <div className='user-attractions'>
+                              <div>
+                                <div className='profile' style={{ backgroundImage: `url('${owner.profile_image}')`  }}></div>
+                                <div>{owner.username}</div>
+                              </div>
                               <div>{description}</div>
                             </div>
                           </div>
