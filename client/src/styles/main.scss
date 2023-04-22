@@ -4,9 +4,11 @@
 @import './footer.scss';
 @import './register-login.scss';
 @import './profile-city.scss';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }
 
 a{
@@ -114,6 +116,6 @@ a{
   border: 0.5px solid black;
 }
 
-input {
+input, textarea, select {
   font-size: 16px;
 }
