@@ -4,7 +4,7 @@
 @import './footer.scss';
 @import './register-login.scss';
 @import './profile-city.scss';
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Latofamily=Tangerine:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -66,11 +66,20 @@ a{
   @include flex-center();
   align-items: flex-start;
   h1{
+    color: white;
+    font-size: 40px;
     width: 100%;
-    margin-top: 60px;
-    text-align: center;
+    margin-top: 70px;
     position: relative;
     z-index: 1;
+    line-height: 20px;
+    vertical-align: top;
+    display: flex;
+    justify-content: center;
+    span{
+      font-family: 'Tangerine', cursive;
+      font-size: 90px;
+    }
   }
 }
 .hero::after{
@@ -79,7 +88,7 @@ a{
   width: 100%;
   position: absolute;
   top: 50px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0,0,0,0.4);
 }
 @media (min-width: 660px){
   .hero{
@@ -87,9 +96,16 @@ a{
     background-position: bottom;
     height: 70vh;
     h1{
+      font-size: 60px;
+      justify-content: flex-end;
       margin-top: 120px;
       text-align: right;
-      padding-right: 20vw;
+      padding-right: 10vw;
+      span{
+        font-size: 140px;
+        font-style: italic;
+        margin-right: 10px;
+      }
     }
   }
   .hero::after{
