@@ -37,7 +37,7 @@ class LoginView(APIView):
         return Response({ 'message': f'Welcome back, {user_to_login.username}', 'token': token })
     
 class ProfileView(APIView):
-    # All profiles
+    # Logged in user's profile
     # ENDPOINT: GET /api/auth/profile/
     @exceptions
     def get(self, request):
@@ -55,3 +55,13 @@ class ProfileView(APIView):
         serialized_profile_to_update.is_valid(raise_exception=True)
         serialized_profile_to_update.save()
         return Response(serialized_profile_to_update.data, status.HTTP_202_ACCEPTED)
+    
+class ProfilesListView(APIView):
+    # All profiles
+    # ENDPOINT: GET /api/auth/profile/:id/
+    @exceptions
+    def get(self, request, pk):
+        # print(request.user, request.user.id)
+        profile = User.objects.get(pk=pk)
+        serialized_profile = UserSerializer(profile)
+        return Response(serialized_profile.data)

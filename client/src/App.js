@@ -11,6 +11,7 @@ import CreateCity from './components/CreateCity'
 import CreateAttraction from './components/CreateAttraction'
 import EditCity from './components/EditCity'
 import EditAttraction from './components/EditAttraction'
+import OtherProfiles from './components/OtherProfiles'
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/city/:id' element={<CityPage />} />
           <Route path='/profile' element={<ProfilePage />} />
+          <Route path='/profile/:id' element={<OtherProfiles />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
           <Route path='/createcity' element={<CreateCity />}/>

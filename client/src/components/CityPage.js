@@ -129,7 +129,7 @@ const CityPage = () => {
                         <div className='attraction-comment'>
                           <p onClick={handleClick} id={city.attractions[0].id}>{city.attractions[0].name}</p>
                         </div>
-                        <div>
+                        <Link to={`/profile/${city.attractions[0].owner.id}/`}>
                           <div className='user-attractions'>
                             <div>
                               <div className='profile' style={{ backgroundImage: `url('${city.attractions[0].owner.profile_image}')`  }}></div>
@@ -137,7 +137,7 @@ const CityPage = () => {
                             </div>
                             <div>{city.attractions[0].description}</div>
                           </div>
-                        </div>
+                        </Link>
                       </div>
                     </div>
                     : 'No attractions added yet!'}
@@ -161,7 +161,7 @@ const CityPage = () => {
                           <div className='attraction-comment'>
                             <p>{name}</p>
                           </div>
-                          <div >
+                          <Link to={`/profile/${owner.id}/`}>
                             <div className='user-attractions'>
                               <div>
                                 <div className='profile' style={{ backgroundImage: `url('${owner.profile_image}')`  }}></div>
@@ -169,7 +169,7 @@ const CityPage = () => {
                               </div>
                               <div onClick={handleClick} id={id}>{description}</div>
                             </div>
-                          </div>
+                          </Link>
                         </div>
                       </div>
                     )
