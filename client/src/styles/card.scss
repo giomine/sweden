@@ -69,14 +69,17 @@
   justify-content: flex-start;
   width: 160px;
   i {
-    font-size: 70px;
-    margin-left: 0;
+    font-size: 50px;
+    margin: 0 10px 0 10px;
     @media(min-width: 660px){
+      font-size: 70px;
       margin: 0 10px 0 20px;
     }
   }
-  p{
-    margin-bottom: 0;
+  @media(min-width: 660px){
+    p{
+      margin-bottom: 0;
+    }
   }
 }
 .profile-add i{
