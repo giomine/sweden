@@ -20,5 +20,6 @@ nav{
     @include flex-center();
     justify-content: space-between;
     width: 80%;
+    max-width: 1000px;
   }
 }
