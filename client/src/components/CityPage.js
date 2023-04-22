@@ -122,9 +122,9 @@ const CityPage = () => {
                   <div><h3>Featured Attraction:</h3> {city.attractions.length > 0 ? 
                     <div className='comment-boxes' key={id}>
                       <div className='city-attraction-cards'>
-                        <div className='attraction-image' style={{ backgroundImage: `url('${city.attractions[0].image}')` }}></div>
+                        <div onClick={handleClick} id={city.attractions[0].id} className='attraction-image' style={{ backgroundImage: `url('${city.attractions[0].image}')` }}></div>
                         <div className='attraction-comment'>
-                          <p>{city.attractions[0].name}</p>
+                          <p onClick={handleClick} id={city.attractions[0].id}>{city.attractions[0].name}</p>
                         </div>
                         <div>
                           <div className='user-attractions'>
