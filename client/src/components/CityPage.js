@@ -26,11 +26,11 @@ const CityPage = () => {
     // console.log(e.target.id)
     setShowPopup(true)
     setPopupId(Number(e.target.id))
-    // window.scroll({
-    //   top: 0,
-    //   left: 0,
-    //   behavior: 'smooth',
-    // })
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    })
   }
 
   useEffect(() => {
@@ -38,7 +38,7 @@ const CityPage = () => {
       try {
         const { data } = await axios.get(`/api/cities/${id}/`)
         setCity(data)
-        console.log(data)
+        // console.log(data)
 
         // this captures only the attraction for the clicked pin
         data.attractions.map(data => {
