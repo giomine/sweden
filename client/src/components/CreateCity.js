@@ -169,6 +169,7 @@ const CreateCity = () => {
           Double click to drop pin
           <Map
             onDblClick={handleDblClick}
+            onTouchStart={handleDblClick}
             center={[14.66, 60.23]}
             zoom={[4.3]}
             mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
