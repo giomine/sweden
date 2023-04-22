@@ -4,6 +4,7 @@ import { useParams, Link } from 'react-router-dom'
 import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 
 const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
+const zoom = [10]
 
 const CityPage = () => {
 
@@ -51,7 +52,7 @@ const CityPage = () => {
             <Map
               onClick={removePopup}
               center={[city.long, city.lat]}
-              zoom={[10]}
+              zoom={zoom}
               mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
               style="mapbox://styles/mapbox/streets-v8"
               containerStyle={{

@@ -5,6 +5,8 @@ import Card from './Card'
 import { Link } from 'react-router-dom'
 
 const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
+const zoom = [4.3]
+const center = [14.66, 60.23]
 
 const Home = () => {
 
@@ -60,8 +62,8 @@ const Home = () => {
       <Map
         onClick={removePopup}
         onDblClick={handleDblClick}
-        center={[14.66, 60.23]}
-        zoom={[4.3]}
+        center={center}
+        zoom={zoom}
         mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
         // style='mapbox://styles/giorgiamineo/clgmck52m00ci01qybnxh2gw8'
         style="mapbox://styles/mapbox/streets-v8"
