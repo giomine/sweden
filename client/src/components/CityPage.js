@@ -5,6 +5,7 @@ import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 
 const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 const zoom = [10]
+// let center = [14.66, 60.23]
 
 const CityPage = () => {
 
@@ -47,6 +48,7 @@ const CityPage = () => {
             setPopupData(data)
           }
         })
+        // popupData ? center = [popupData.long, popupData.lat] : center = [data.long, data.lat]
       } catch (err) {
         console.log(err)
       }
@@ -63,6 +65,7 @@ const CityPage = () => {
             <Map
               onClick={removePopup}
               center={[city.long, city.lat]}
+              // center={center}
               zoom={zoom}
               mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
               style="mapbox://styles/mapbox/streets-v8"
