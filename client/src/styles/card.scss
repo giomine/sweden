@@ -66,12 +66,44 @@
   height: 50%;
   background-color: rgb(176, 176, 176);
   @include flex-center();
+  justify-content: flex-start;
   width: 160px;
+  i {
+    font-size: 70px;
+    margin-left: 0;
+    @media(min-width: 660px){
+      margin: 0 10px 0 20px;
+    }
+  }
+  p{
+    margin-bottom: 0;
+  }
 }
+.profile-add i{
+  font-size: 60px;
+  margin: -10px 10px 0 10px;
+}
+.profile-add div{
+  margin-top: 3px;
+  justify-content: flex-start !important;
+}
+
 .add:nth-of-type(1){
   background-color: gray;
   color: rgb(232, 232, 232);
 }
 .add:hover{
   color: $yellow;
+}
+
+.unlogged{
+  height: 160px;
+  @include flex-center();
+  @media(min-width: 660px){
+    height: 180px;
+  }
+  div{
+    @include flex-center();
+    width: 80%;
+  }
 }

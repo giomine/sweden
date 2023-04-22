@@ -74,11 +74,15 @@
       .card.add-box{
         display: flex;
         justify-content: center;
-        height: 50px;
         align-items: center;
+        height: 50px;
         .add{
           height: 50px;
-          @media(max-width: 660px){
+          @media (max-width: 660px){
+            i {
+              margin-top: 2px;
+              font-size: 30px;
+            }
           }
         }
       }

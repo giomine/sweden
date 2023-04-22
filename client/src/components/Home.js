@@ -3,6 +3,7 @@ import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 import axios from 'axios'
 import Card from './Card'
 import { Link } from 'react-router-dom'
+import { getToken, isAuthenticated } from '../helpers/auth'
 
 const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 const zoom = [4.3]
@@ -13,6 +14,7 @@ const Home = () => {
   const [ showPopup, setShowPopup ] = useState(false)
   const [ popupId, setPopupId ] = useState()
   const [ popupData, setPopupData ] = useState()
+  const [ profile, setProfile ] = useState()
 
   const handlePopup = (e) => {
     // setShowPopup(!showPopup) 
@@ -63,6 +65,22 @@ const Home = () => {
     }
     getData()
   },[popupId])
+
+  useEffect(() => {
+    const getData = async () => {
+      try {
+        const { data } = await axios.get('/api/auth/profile/', {
+          headers: {
+            Authorization: `Bearer ${getToken()}`,
+          },
+        })
+        setProfile(data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getData()
+  },[])
 
 
   return (
@@ -117,14 +135,24 @@ const Home = () => {
       </Map>
 
       <div className='home-card-container'>
-        <div className='card add-box'>
-          <Link className='add' to={'/createcity/'}>
-            <div><i className="fa-regular fa-plus"></i>Add city</div>
-          </Link>
-          <Link className='add' to={'/createattraction/'}>
-            <div><i className="fa-regular fa-plus"></i>Add attraction</div>
-          </Link>
-        </div>
+        { isAuthenticated() ?
+          <div className='card add-box'>
+            <Link className='add' to={'/createcity/'}>
+              <i className="fa-regular fa-plus"></i>
+              <p>City</p>
+            </Link>
+            <Link className='add' to={'/createattraction/'}>
+              <i className="fa-regular fa-plus"></i>
+              <p>Attraction</p>
+            </Link>
+          </div>
+          :
+          <div className='card add-box'>
+            <Link className='add unlogged' to={'/login'}>
+              <i className="fa-regular fa-plus"></i>
+            </Link>
+          </div>
+        }
         {allData.length > 0 ? 
           allData.map(data => {
             const { id, image, name, description } = data

@@ -176,11 +176,13 @@ const ProfilePage = () => {
                   <div className='profile-first-tab'>
                     <div className='first-tab-boxes'>
                       <div className='card add-box'>
-                        <Link className='add' to={'/createcity/'}>
-                          <div><i className="fa-regular fa-plus"></i>Add city</div>
+                        <Link className='add profile-add' to={'/createcity/'}>
+                          <i className="fa-regular fa-plus"></i>
+                          <div>City</div>
                         </Link>
-                        <Link className='add' to={'/createattraction/'}>
-                          <div><i className="fa-regular fa-plus"></i>Add attraction</div>
+                        <Link className='add profile-add' to={'/createattraction/'}>
+                          <i className="fa-regular fa-plus"></i>
+                          <div>Attraction</div>
                         </Link>
                       </div>
                     </div>
