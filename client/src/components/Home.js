@@ -131,7 +131,7 @@ const Home = () => {
             const shortDescription = description.slice(0,50) + '....'
             return (
               <div key={id}>
-                <Link id={id} onMouseOver={handleMouseOver} to={`/city/${id}`}>
+                <Link id={id} onMouseOver={handleMouseOver} onTouchStart={handleMouseOver} to={`/city/${id}`}>
                   <Card
                     cardClass='card home'
                     id={id}
