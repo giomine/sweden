@@ -24,7 +24,7 @@ const Home = () => {
     setShowPopup(false)
   }
   const handleMouseOver = (e) => {
-    console.log(e.target)
+    // console.log(e.target)
     setShowPopup(true)
     setPopupId(Number(e.target.id))
     // window.scroll({
@@ -37,7 +37,7 @@ const Home = () => {
   // get lngLat on dblClick for dropping pins - use on create city page?
   const handleDblClick = (map, event) => {
     const lngLat = event.lngLat
-    console.log(lngLat, lngLat.lat, lngLat.lng)
+    // console.log(lngLat, lngLat.lat, lngLat.lng)
   }
 
 
@@ -116,7 +116,7 @@ const Home = () => {
 
       </Map>
 
-      <div className='card-container'>
+      <div className='home-card-container'>
         <div className='card add-box'>
           <Link className='add' to={'/createcity/'}>
             <div><i className="fa-regular fa-plus"></i>Add city</div>
@@ -133,6 +133,7 @@ const Home = () => {
               <div key={id}>
                 <Link id={id} onMouseOver={handleMouseOver} to={`/city/${id}`}>
                   <Card
+                    cardClass='card home'
                     id={id}
                     image={image}
                     name={name}

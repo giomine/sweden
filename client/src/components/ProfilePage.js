@@ -222,6 +222,7 @@ const ProfilePage = () => {
                                     </div>
                                   </div> */}
                                   <Card 
+                                    cardClass={'card'}
                                     name={title}
                                     image={image}
                                     text={shortDescription}
@@ -252,6 +253,7 @@ const ProfilePage = () => {
                                 </div>
                                 <Link to={`/city/${id}`}>
                                   <Card 
+                                    cardClass={'card'}
                                     name={name}
                                     image={image}
                                     text={shortDescription}

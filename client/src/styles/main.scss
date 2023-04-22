@@ -97,6 +97,15 @@ a{
   }
 }
 
+.home-card-container{
+  margin: 50px auto;
+  width: 95vw;
+  display: flex;
+  overflow: scroll;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr 1fr 1fr;
+  // gap: 2px;
+}
 .card-container{
   margin: 50px auto;
   display: grid;
