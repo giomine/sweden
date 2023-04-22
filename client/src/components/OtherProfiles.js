@@ -10,7 +10,7 @@ const ProfilePage = () => {
   const [ profile, setProfile ] = useState('')
   const [ attractions, setAttractions ] = useState()
   const [ cities, setCities ] = useState()
-  const [ activeTab, setActiveTab ] = useState('tab2')
+  const [ activeTab, setActiveTab ] = useState('tab3')
 
 
   const handleTab2 = () => {
@@ -38,9 +38,9 @@ const ProfilePage = () => {
       try {
         const { data } = await axios.get('/api/attractions/')
         setAttractions(data)
-        console.log('ATTRACTIONS -->', data)
+        // console.log('ATTRACTIONS -->', data)
         // console.log('FIRST OWNER ID -->', data[0].owner.id)
-        // console.log('ATTRACTIONS OWNER -->', data.map(attraction => attraction.owner.username))
+        // console.log('ATTRACTIONS OWNERS -->', data.map(attraction => attraction.owner.id === profile.id))
         // console.log('CLAUDIOS ID -->', id)
 
       } catch (err) {
@@ -86,12 +86,12 @@ const ProfilePage = () => {
 
               <div className='edit-profile'>        
 
-                {activeTab === 'tab2' && 
+                {activeTab === 'tab2' && attractions &&
                   <div className='grid-container'>
                     <div className='card-container'>
-                      {/* {attractions.length > 0 ? 
+                      {attractions.length > 0 ? 
                         attractions.map(attraction => {
-                          if (attraction.owner.id === id) {
+                          if (attraction.owner.id === profile.id) {
                             const { id, city, name, description, image } = attraction
                             const shortDescription = description.slice(0,55) + '....'
                             let title = `${city.name} - ${name}`
@@ -111,11 +111,11 @@ const ProfilePage = () => {
                           }
                         })
                         : <><div></div><div>No attractions added yet!</div></>
-                      } */}
+                      }
                     </div>
                   </div>}
 
-                {activeTab === 'tab3' &&                 
+                {activeTab === 'tab3' && cities &&                
                   <div className='grid-container'>
                     <div className='card-container'>
                       {cities.length > 0 ? 
