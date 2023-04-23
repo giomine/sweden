@@ -7,14 +7,6 @@ import EditProfile from './EditProfile'
 
 const ProfilePage = () => {
 
-  const handleScroll = () => {
-    window.scroll({
-      top: 0,
-      left: 0,
-      // behavior: 'smooth',
-    })
-  }
-
   const navigate = useNavigate()
 
   const [ profile, setProfile ] = useState('')
@@ -48,7 +40,7 @@ const ProfilePage = () => {
     setEditModal(!editModel)
     setCardId(e.target.id)
     console.log(editModel)
-    handleScroll()
+    // handleScroll()
   }
 
   const editEntry = () => {
@@ -60,7 +52,7 @@ const ProfilePage = () => {
     setDeleteModal(!deleteModal)
     console.log(e.target.id)
     setCardId(e.target.id)
-    handleScroll()
+    // handleScroll()
   }
 
   const deleteEntry = async (e) => {
@@ -79,7 +71,7 @@ const ProfilePage = () => {
     setEditModalAttr(!editModelAttr)
     setCardId(e.target.id)
     console.log(editModelAttr)
-    handleScroll()
+    // handleScroll()
   }
 
   const editEntryAttr = () => {
@@ -91,7 +83,7 @@ const ProfilePage = () => {
     setDeleteModalAttr(!deleteModalAttr)
     console.log(e.target.id)
     setCardId(e.target.id)
-    handleScroll()
+    // handleScroll()
   }
 
   const deleteEntryAttr = async (e) => {
@@ -218,13 +210,6 @@ const ProfilePage = () => {
                                   <div id={id} onClick={handleDeleteAttraction}>🗑️</div>
                                 </div>
                                 <Link to={`/city/${city.id}`}>
-                                  {/* <div className="card attraction-card">
-                                    <div style={{ backgroundImage: `url('${image}')` }} className='attraction-content'>
-                                      <div>{city.name}</div>
-                                      <div>{name}</div>
-                                      <div>{shortDescription}</div>
-                                    </div>
-                                  </div> */}
                                   <Card 
                                     cardClass={'card'}
                                     name={title}
@@ -276,20 +261,24 @@ const ProfilePage = () => {
                   {/* //! City modals */}
                   {deleteModal &&
                   <div className='delete-modal'>
-                    <div className='modal-container'>Are you sure you want to delete this card?</div>
-                    <div className='button-container'>
-                      <div onClick={deleteEntry} className='button-sm'>Yes, confirm</div>
-                      <div onClick={handleDelete} className='button-sm'>Cancel</div>
+                    <div className='delete-modal-inner'>
+                      <div className='modal-container'>Are you sure you want to delete this city?</div>
+                      <div className='button-container'>
+                        <div onClick={deleteEntry} className='button-sm'>Yes, confirm</div>
+                        <div onClick={handleDelete} className='button-sm'>Cancel</div>
+                      </div>
                     </div>
                   </div>
                   }
 
                   {editModel &&
                   <div className='delete-modal'>
-                    <div className='modal-container'>Do you want to edit this card?</div>
-                    <div className='button-container'>
-                      <div onClick={editEntry} className='button-sm'>Yes, edit</div>
-                      <div onClick={handleEdit} className='button-sm'>Cancel</div>
+                    <div className='delete-modal-inner edit'>
+                      <div className='modal-container'>Do you want to edit this city?</div>
+                      <div className='button-container'>
+                        <div onClick={editEntry} className='button-sm'>Yes, edit</div>
+                        <div onClick={handleEdit} className='button-sm'>Cancel</div>
+                      </div>
                     </div>
                   </div>
                   }
@@ -297,20 +286,24 @@ const ProfilePage = () => {
                   {/* //! Attraction modals */} 
                   {deleteModalAttr &&
                   <div className='delete-modal'>
-                    <div className='modal-container'>Are you sure you want to delete this attraction?</div>
-                    <div className='button-container'>
-                      <div onClick={deleteEntryAttr} className='button-sm'>Yes, confirm</div>
-                      <div onClick={handleDeleteAttraction} className='button-sm'>Cancel</div>
+                    <div className='delete-modal-inner'>
+                      <div className='modal-container'>Are you sure you want to delete this attraction?</div>
+                      <div className='button-container'>
+                        <div onClick={deleteEntryAttr} className='button-sm'>Yes, confirm</div>
+                        <div onClick={handleDeleteAttraction} className='button-sm'>Cancel</div>
+                      </div>
                     </div>
                   </div>
                   }
 
                   {editModelAttr &&
                   <div className='delete-modal'>
-                    <div className='modal-container'>Do you want to edit this attraction?</div>
-                    <div className='button-container'>
-                      <div onClick={editEntryAttr} className='button-sm'>Yes, edit</div>
-                      <div onClick={handleEditAttraction} className='button-sm'>Cancel</div>
+                    <div className='delete-modal-inner edit'>
+                      <div className='modal-container'>Do you want to edit this attraction?</div>
+                      <div className='button-container'>
+                        <div onClick={editEntryAttr} className='button-sm'>Yes, edit</div>
+                        <div onClick={handleEditAttraction} className='button-sm'>Cancel</div>
+                      </div>
                     </div>
                   </div>
                   }

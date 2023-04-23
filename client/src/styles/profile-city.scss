@@ -203,22 +203,31 @@ div{
 }
   
 .delete-modal{
-  height: 30vh;
-  width: 90vw;
-  background-color: rgba(0, 0, 0, 0.98);
+  top: 30vh;
+  width: 95vw;
   color: white;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   @include flex-center();
   flex-direction: column;
   justify-content: space-around;
   text-align: center;
 
-  @media(min-width: 660px){
+  .delete-modal-inner{
     height: 30vh;
-    width: 60vw;
+    padding: 30px 40px;
+    background-color: rgba(0, 0, 0, 1);
+    border-radius: 3px;
+    @include flex-center();
+    flex-direction: column;
+    justify-content: space-evenly;
+    @media (min-width: 800px){
+      width: 50vw;
+    }
   }
-
+  .edit {
+    background-color: $blue;
+  }
   .modal-container{
     @include flex-center();
     width: 90%;
@@ -227,6 +236,7 @@ div{
       @include flex-center();
       justify-content: space-between;
       width: 90%;
+      max-width: 350px;
     }
     .button-sm{
       background-color: white;
