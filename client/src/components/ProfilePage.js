@@ -6,6 +6,8 @@ import Card from './Card'
 import EditProfile from './EditProfile'
 
 const ProfilePage = () => {
+  const [ attractionCount, setAttractionCount ] = useState()
+  const [ cityCount, setCityCount ] = useState()
 
   const handleMouseOver = (e) => {
     window.localStorage.setItem('attrId', e.target.id)
@@ -116,12 +118,27 @@ const ProfilePage = () => {
         setAttractions(data)
         // console.log('ATTRACTIONS -->', data)
         // console.log('ATTRACTIONS OWNER -->', attractions.map(attraction => attraction.owner.username))
+      
+        const arr = []
+        data.map(attraction => {
+          if (attraction.owner.id === profile.id){
+            arr.push(attraction)
+            setAttractionCount(arr.length)
+          }
+        })
+        const arr2 = []
+        cities.map(city => {
+          if (city.owner.id === profile.id){
+            arr2.push(city)
+            setCityCount(arr2.length)
+          }
+        })
       } catch (err) {
         console.log(err)
       }
     }
     getData()
-  },[deleteModalAttr])
+  },[deleteModalAttr, cities])
 
   useEffect(() => {
     const getData = async () => {
@@ -130,6 +147,13 @@ const ProfilePage = () => {
         setCities(data)
         // console.log('CITIES -->', data)
         // console.log('CITIES OWNER -->', cities.map(city => city.owner.username))
+        // const arr = []
+        // data.map(city => {
+        //   if (city.owner.id === profile.id){
+        //     arr.push(city)
+        //     setCityCount(arr.length)
+        //   }
+        // })
       } catch (err) {
         console.log(err)
       }
@@ -140,7 +164,7 @@ const ProfilePage = () => {
   return (
     <>
       { isAuthenticated() ?
-        profile ?
+        profile && attractions && cities ?
           <div className='profile-page'>
             <div className='profile-container'>
               <>
@@ -148,8 +172,9 @@ const ProfilePage = () => {
                   <div onClick={handleClick} className='profile-image' style={{ backgroundImage: `url('${profile.profile_image}')` }}></div>
                   
                   <div>
-                    <p>{profile.username}</p>
+                    <p className='name'>{profile.username}</p>
                     <p>{profile.email}</p>
+                    <div className='count'><p>Cities created: {cityCount}</p><p>Attractions created: {attractionCount}</p></div>
                   </div>
                 </div>
 

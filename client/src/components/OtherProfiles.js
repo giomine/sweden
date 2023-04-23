@@ -4,6 +4,8 @@ import { Link, useParams } from 'react-router-dom'
 import Card from './Card'
 
 const ProfilePage = () => {
+  const [ attractionCount, setAttractionCount ] = useState()
+  const [ cityCount, setCityCount ] = useState()
 
   const handleMouseOver = (e) => {
     window.localStorage.setItem('attrId', e.target.id)
@@ -47,13 +49,19 @@ const ProfilePage = () => {
         // console.log('FIRST OWNER ID -->', data[0].owner.id)
         // console.log('ATTRACTIONS OWNERS -->', data.map(attraction => attraction.owner.id === profile.id))
         // console.log('CLAUDIOS ID -->', id)
-
+        const arr = []
+        data.map(attraction => {
+          if (attraction.owner.id === profile.id){
+            arr.push(attraction)
+            setAttractionCount(arr.length)
+          }
+        })
       } catch (err) {
         console.log(err)
       }
     }
     getData()
-  },[])
+  },[profile])
 
   useEffect(() => {
     const getData = async () => {
@@ -62,16 +70,23 @@ const ProfilePage = () => {
         setCities(data)
         // console.log('CITIES -->', data)
         // console.log('CITIES OWNER -->', cities.map(city => city.owner.username))
+        const arr = []
+        data.map(city => {
+          if (city.owner.id === profile.id){
+            arr.push(city)
+            setCityCount(arr.length)
+          }
+        })
       } catch (err) {
         console.log(err)
       }
     }
     getData()
-  },[])
+  },[profile])
 
   return (
     <>
-      { profile ?
+      { profile && attractions && cities ?
         <div className='profile-page'>
           <div className='profile-container'>
             <>
@@ -79,8 +94,8 @@ const ProfilePage = () => {
                 <div className='profile-image' style={{ backgroundImage: `url('${profile.profile_image}')` }}></div>
                 
                 <div>
-                  <p>{profile.username}</p>
-                  <p>{profile.email}</p>
+                  <p className='name'>{profile.username}</p>
+                  <div className='count'><p>Cities created: {cityCount}</p><p>Attractions created: {attractionCount}</p></div>
                 </div>
               </div>
 
