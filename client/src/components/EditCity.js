@@ -96,6 +96,7 @@ const EditCity = () => {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     const getCity = async () => {
       const { data } = await axios.get(`/api/cities/${id}`)
       setCityData(data)

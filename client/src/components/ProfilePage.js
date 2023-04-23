@@ -90,6 +90,10 @@ const ProfilePage = () => {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     const getData = async () => {
       try {
         const { data } = await axios.get('/api/auth/profile/', {

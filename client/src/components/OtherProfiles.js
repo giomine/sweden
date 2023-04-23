@@ -25,6 +25,7 @@ const ProfilePage = () => {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/auth/profile/${id}`)
@@ -36,7 +37,7 @@ const ProfilePage = () => {
     getData()
   },[])
 
-  let claudios
+
   useEffect(() => {
     const getData = async () => {
       try {
@@ -52,7 +53,7 @@ const ProfilePage = () => {
       }
     }
     getData()
-  },[claudios])
+  },[])
 
   useEffect(() => {
     const getData = async () => {

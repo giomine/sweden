@@ -88,7 +88,8 @@ const EditAttraction = () => {
     }
   }
 
-  useEffect(() => {            
+  useEffect(() => {    
+    window.scrollTo(0, 0)      
     const getData = async () => {
       try {
         const { data } = await axios.get(`/api/attractions/${id}`)
