@@ -57,8 +57,9 @@ a{
 }
 
 .hero{
-  background-image: url('https://media.istockphoto.com/id/517274282/photo/rocky-island-in-a-fjord-of-sweden.jpg?s=612x612&w=0&k=20&c=QNeFc7iONnj5mF9xpkYn5MTwlbWeHqmBurM_PJRmnAo=');
-  background-position: top;
+  background-image: url('../images/solaregg.jpg');
+  // background-image: url('https://media.istockphoto.com/id/517274282/photo/rocky-island-in-a-fjord-of-sweden.jpg?s=612x612&w=0&k=20&c=QNeFc7iONnj5mF9xpkYn5MTwlbWeHqmBurM_PJRmnAo=');
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100vw;
@@ -143,7 +144,8 @@ a{
 }
 
 .home-card-container{
-  margin: 0 auto 50px;
+  // margin: 0 auto 50px;
+  margin: 10px 0;
   width: 95vw;
   display: flex;
   overflow: scroll;

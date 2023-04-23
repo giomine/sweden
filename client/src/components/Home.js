@@ -269,7 +269,7 @@ const Home = () => {
 
       </Map>
 
-      <div style={{ marginTop: '50px' }} className='home-card-container'>
+      <div className='home-card-container'>
         { isAuthenticated() ?
           <div className='card add-box'>
             <Link className='add' to={'/createcity/'}>
@@ -294,7 +294,7 @@ const Home = () => {
           attractions.map(attraction => {
             const { id, name, image, lat, long, city } = attraction
             // console.log(id, name, image, lat, long, city.id)
-            const shortName = name.slice(0,15) + '....'
+            const shortName = name.slice(0,14) + '....'
             return (
               <div key={id}>
                 <Link id={id} onMouseOver={handleMouseOverAttr} onTouchStart={handleMouseOverAttr} to={`/city/${city.id}`}>
