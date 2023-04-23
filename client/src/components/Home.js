@@ -14,6 +14,7 @@ const Home = () => {
   const [ showPopup, setShowPopup ] = useState(false)
   const [ showPopupAttr, setShowPopupAttr ] = useState(false)
   const [ popupId, setPopupId ] = useState()
+  const [ popupIdAttr, setPopupIdAttr ] = useState()
   const [ popupData, setPopupData ] = useState()
   const [ popupDataAttr, setPopupDataAttr ] = useState()
   const [ profile, setProfile ] = useState()
@@ -49,7 +50,7 @@ const Home = () => {
     window.localStorage.setItem('attrId', e.target.id)
     setShowPopup(false)
     setShowPopupAttr(true)
-    setPopupId(Number(e.target.id))
+    setPopupIdAttr(Number(e.target.id))
   } 
 
   //! delete? get lngLat on dblClick for dropping pins - use on create city page?
@@ -92,7 +93,7 @@ const Home = () => {
         // this captures only the attraction for the clicked pin
         data.map(attraction => {
           // console.log(attraction)
-          if (attraction.id === popupId){
+          if (attraction.id === popupIdAttr){
             // console.log('match!!!', popupId, attraction)
             setPopupDataAttr(attraction)
           }
@@ -102,7 +103,7 @@ const Home = () => {
       }
     }
     getAttr()
-  },[popupId])
+  },[popupIdAttr])
 
   useEffect(() => {
     const getData = async () => {
@@ -214,7 +215,7 @@ const Home = () => {
               </div>
             )
           })
-          : <>Loading...</>
+          : <></>
         }
       </div>
 
