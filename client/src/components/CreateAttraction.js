@@ -48,6 +48,7 @@ const CreateAttraction = () => {
 
   const handleChange = async (e) => {
     setFormFields({ ...formFields, [e.target.name]: e.target.value })
+    setError('')
   }
 
   const handleCity = async (e) => {
@@ -78,6 +79,7 @@ const CreateAttraction = () => {
       navigate(`/city/${formFields.city}`)
     } catch (err) {
       console.log(err)
+      setError('Please fill all fields')
     }
   }
 
@@ -138,7 +140,7 @@ const CreateAttraction = () => {
                 : 
                 <input style={{ fontSize: '14px', width: '200px', margin: '10px 0', padding: '0' }} type="file" onChange={handleUpload}/>
               }
-              {error && <p className='text-center'>{error}</p>}
+              {/* {imageError && <p className='text-center'>{imageError}</p>} */}
             </div>
             {/* //! end of cloudinary */}
           </div>
@@ -165,6 +167,7 @@ const CreateAttraction = () => {
           </Map>
 
           <button>Submit</button>
+          {error && <p className='unauthorized'>{error}</p>}
 
         </form>
 
