@@ -243,7 +243,7 @@ const Home = () => {
                     onClick={handlePopup}
                     coordinates={[long, lat]}
                     anchor="bottom">
-                    <i id={id} style={{ color: 'red', fontSize: '25px' }} className="fa-solid fa-map-marker"></i>
+                    <i id={id} style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
                   </Marker>
                 </>
               </div>
@@ -263,7 +263,7 @@ const Home = () => {
                     onClick={handlePopup}
                     coordinates={[long, lat]}
                     anchor="bottom">
-                    <i id={id} style={{ color: 'blue', fontSize: '15px' }} className="fa-solid fa-map-marker"></i>
+                    <i id={id} style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
                   </Marker>
                 </>
               </div>
