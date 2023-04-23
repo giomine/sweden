@@ -7,6 +7,10 @@ import EditProfile from './EditProfile'
 
 const ProfilePage = () => {
 
+  const handleMouseOver = (e) => {
+    window.localStorage.setItem('attrId', e.target.id)
+  }
+
   const navigate = useNavigate()
 
   const [ profile, setProfile ] = useState('')
@@ -39,8 +43,6 @@ const ProfilePage = () => {
   const handleEdit = (e) => {
     setEditModal(!editModel)
     setCardId(e.target.id)
-    console.log(editModel)
-    // handleScroll()
   }
 
   const editEntry = () => {
@@ -50,14 +52,10 @@ const ProfilePage = () => {
 
   const handleDelete = (e) => {
     setDeleteModal(!deleteModal)
-    console.log(e.target.id)
     setCardId(e.target.id)
-    // handleScroll()
   }
 
   const deleteEntry = async (e) => {
-    console.log('deleted', e.target)
-    // setCardId(e.target.value)
     await axios.delete(`/api/cities/${cardId}`, {
       headers: {
         Authorization: `Bearer ${getToken()}`,
@@ -70,8 +68,6 @@ const ProfilePage = () => {
   const handleEditAttraction = (e) => {
     setEditModalAttr(!editModelAttr)
     setCardId(e.target.id)
-    console.log(editModelAttr)
-    // handleScroll()
   }
 
   const editEntryAttr = () => {
@@ -81,14 +77,10 @@ const ProfilePage = () => {
 
   const handleDeleteAttraction = (e) => {
     setDeleteModalAttr(!deleteModalAttr)
-    console.log(e.target.id)
     setCardId(e.target.id)
-    // handleScroll()
   }
 
   const deleteEntryAttr = async (e) => {
-    console.log('deleted', e.target)
-    // setCardId(e.target.value)
     await axios.delete(`/api/attractions/${cardId}`, {
       headers: {
         Authorization: `Bearer ${getToken()}`,
@@ -118,7 +110,7 @@ const ProfilePage = () => {
       try {
         const { data } = await axios.get('/api/attractions/')
         setAttractions(data)
-        // console.log('ATTRACTIONS -->', attractions)
+        // console.log('ATTRACTIONS -->', data)
         // console.log('ATTRACTIONS OWNER -->', attractions.map(attraction => attraction.owner.username))
       } catch (err) {
         console.log(err)
@@ -209,8 +201,9 @@ const ProfilePage = () => {
                                   <div id={id} onClick={handleEditAttraction}>✏️</div>
                                   <div id={id} onClick={handleDeleteAttraction}>🗑️</div>
                                 </div>
-                                <Link to={`/city/${city.id}`}>
-                                  <Card 
+                                <Link onMouseOver={handleMouseOver} to={`/city/${city.id}`}>
+                                  <Card
+                                    id={id}
                                     cardClass={'card'}
                                     name={title}
                                     image={image}

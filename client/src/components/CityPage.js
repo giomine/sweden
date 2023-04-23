@@ -5,14 +5,13 @@ import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
 
 const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 const zoom = [10]
-// let center = [14.66, 60.23]
 
 const CityPage = () => {
 
   const { id } = useParams()
   const [ city, setCity ] = useState('')
-  const [ showPopup, setShowPopup ] = useState(false)
-  const [ popupId, setPopupId ] = useState()
+  const [ showPopup, setShowPopup ] = useState(true)
+  const [ popupId, setPopupId ] = useState(localStorage.getItem('attrId') ? (Number(localStorage.getItem('attrId'))) : setShowPopup(false))
   const [ popupData, setPopupData ] = useState()
 
   const handlePopup = (e) => {
@@ -39,7 +38,6 @@ const CityPage = () => {
       try {
         const { data } = await axios.get(`/api/cities/${id}/`)
         setCity(data)
-        // console.log(data)
 
         // this captures only the attraction for the clicked pin
         data.attractions.map(data => {
@@ -48,7 +46,6 @@ const CityPage = () => {
             setPopupData(data)
           }
         })
-        // popupData ? center = [popupData.long, popupData.lat] : center = [data.long, data.lat]
       } catch (err) {
         console.log(err)
       }
@@ -65,7 +62,6 @@ const CityPage = () => {
             <Map
               onClick={removePopup}
               center={[city.long, city.lat]}
-              // center={center}
               zoom={zoom}
               mapboxAccessToken={process.env.REACT_APP_MAP_TOKEN}
               style="mapbox://styles/mapbox/streets-v8"
@@ -73,16 +69,10 @@ const CityPage = () => {
                 height: '70vh',
                 width: '100vw',
               }}>
-              {/* <Marker // * this pin shows the location of the city.
-                coordinates={[city.long, city.lat]}
-                anchor="bottom">
-                <i id={id} style={{ color: 'red' }} className="fa-solid fa-2xl fa-map-marker"></i>
-              </Marker> */}
 
               { city.attractions.length > 0 ?
                 city.attractions.map(attraction => {
                   const { id, name, description, lat, long } = attraction
-                  // console.log(id, name, description, lat, long)
                   return (
                     <Marker
                       key={id}
@@ -98,7 +88,6 @@ const CityPage = () => {
 
               { showPopup === true &&
                 popupData ?
-                // <Link to={`/city/${popupData.id}`}>
                 <Popup
                   coordinates={[popupData.long, popupData.lat]}
                   style={{ width: '300px' }}>
@@ -106,7 +95,6 @@ const CityPage = () => {
                   <p>{popupData.description}</p>
                   <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '280px', height: '100px' }}></div>
                 </Popup>
-                // </Link>
                 : ''
               }
             </Map>

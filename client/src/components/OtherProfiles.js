@@ -5,6 +5,10 @@ import Card from './Card'
 
 const ProfilePage = () => {
 
+  const handleMouseOver = (e) => {
+    window.localStorage.setItem('attrId', e.target.id)
+  }
+
   const { id } = useParams()
 
   const [ profile, setProfile ] = useState('')
@@ -98,8 +102,9 @@ const ProfilePage = () => {
                             title = title.slice(0,15) + '....'
                             return (
                               <div key={id}>
-                                <Link to={`/city/${city.id}`}>
+                                <Link onMouseOver={handleMouseOver} to={`/city/${city.id}`}>
                                   <Card 
+                                    id={id}
                                     cardClass={'card'}
                                     name={title}
                                     image={image}
