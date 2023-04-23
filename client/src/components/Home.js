@@ -308,7 +308,7 @@ const Home = () => {
               </div>
             )
           })
-          : console.log('boo')
+          : <>Loading...</>
         }
 
       </div>
