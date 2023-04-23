@@ -19,6 +19,14 @@ const Home = () => {
   const [ profile, setProfile ] = useState()
   const [ allData, setAllData ] = useState('')
   const [ attractions, setAttractions ] = useState('')
+  const [ activeTab, setActiveTab ] = useState('tab1')
+
+  const handleTab1 = () => {
+    setActiveTab('tab1')
+  }
+  const handleTab2 = () => {
+    setActiveTab('tab2')
+  }
 
   const handlePopup = (e) => {
     // setShowPopup(!showPopup) 
@@ -141,6 +149,11 @@ const Home = () => {
         }
       </div>
 
+      <div style={{ display: 'flex' }} className='home-tabs tabs-container'>
+        <div onClick={handleTab1} className={activeTab === 'tab1' ? 'active tabs' : 'tabs'} >Browse cities</div>
+        <div onClick={handleTab2} className={activeTab === 'tab2' ? 'active tabs' : 'tabs'} >Browse attractions</div>
+      </div>
+
       <div className='home-card-container'>
         { isAuthenticated() ?
           <div className='card add-box'>
@@ -161,7 +174,7 @@ const Home = () => {
           </div>
         }
         {/* //! cities carousel */}
-        {allData.length > 0 ? 
+        {activeTab === 'tab1' && allData.length > 0 ? 
           allData.map(data => {
             const { id, image, name, description } = data
             // console.log(data, id)
@@ -181,6 +194,27 @@ const Home = () => {
             )
           })
           : <></>
+        }
+        {/* //! attractions carousel */}
+        {activeTab === 'tab2' && attractions.length > 0 ?
+          attractions.map(attraction => {
+            const { id, name, image, lat, long, city } = attraction
+            // console.log(id, name, image, lat, long, city.id)
+            const shortName = name.slice(0,13) + '....'
+            return (
+              <div key={id}>
+                <Link id={id} onMouseOver={handleMouseOverAttr} onTouchStart={handleMouseOverAttr} to={`/city/${city.id}`}>
+                  <Card
+                    cardClass='card home'
+                    id={id}
+                    image={image}
+                    name={shortName}
+                  />
+                </Link>
+              </div>
+            )
+          })
+          : <>Loading...</>
         }
       </div>
 
@@ -269,49 +303,6 @@ const Home = () => {
 
       </Map>
 
-      <div className='home-card-container'>
-        { isAuthenticated() ?
-          <div className='card add-box'>
-            <Link className='add' to={'/createcity/'}>
-              <i className="fa-regular fa-plus"></i>
-              <p>City</p>
-            </Link>
-            <Link className='add' to={'/createattraction/'}>
-              <i className="fa-regular fa-plus"></i>
-              <p>Attraction</p>
-            </Link>
-          </div>
-          :
-          <div className='card add-box'>
-            <Link className='add unlogged' to={'/login'}>
-              <i className="fa-regular fa-plus"></i>
-            </Link>
-          </div>
-        }
-
-        {/* //! attractions carousel */}
-        {attractions.length > 0 ?
-          attractions.map(attraction => {
-            const { id, name, image, lat, long, city } = attraction
-            // console.log(id, name, image, lat, long, city.id)
-            const shortName = name.slice(0,14) + '....'
-            return (
-              <div key={id}>
-                <Link id={id} onMouseOver={handleMouseOverAttr} onTouchStart={handleMouseOverAttr} to={`/city/${city.id}`}>
-                  <Card
-                    cardClass='card home'
-                    id={id}
-                    image={image}
-                    name={shortName}
-                  />
-                </Link>
-              </div>
-            )
-          })
-          : <>Loading...</>
-        }
-
-      </div>
     </div>
   )
 }
