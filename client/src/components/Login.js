@@ -28,7 +28,7 @@ const Login = () => {
       navigate('/profile/')
     } catch (err) {
       // console.log(err)
-      console.log(err.response)
+      // console.log(err.response)
       setError(err.response.data.detail)
     }
   }

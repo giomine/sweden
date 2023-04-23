@@ -15,10 +15,12 @@ const Register = () => {
     password_confirmation: '',
     profile_image: '',
   })
+  const [error, setError] = useState('')
 
 
   const handleChange = (e) => {
     setFormFields({ ...formFields, [e.target.name]: e.target.value })
+    setError('')
   }
 
   const handleSubmit = async(e) => {
@@ -31,7 +33,8 @@ const Register = () => {
       await axios.post('/api/auth/register/', formFields)
       navigate('/login')
     } catch (err) {
-      console.log(err)
+      // console.log(err.response.data)
+      setError('Please fill all fields')
     }
   }
 
@@ -60,6 +63,7 @@ const Register = () => {
             formFields={formFields}
           />
           <button>Register</button>
+          {error && <p className='unauthorized'>{error}</p>}
           <p className='register-link'><Link to={'/login/'}>Already have an account? <p>Click here to log in</p></Link></p>
         </form>     
       </div>
