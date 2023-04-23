@@ -114,25 +114,26 @@ const CityPage = () => {
                 </div>
                 
                 <div className='featured'>
-                  <div><h3>Featured Attraction:</h3> {city.attractions.length > 0 ? 
-                    <div className='comment-boxes' key={id}>
-                      <div className='city-attraction-cards'>
-                        <div onClick={handleClick} id={city.attractions[0].id} className='attraction-image' style={{ backgroundImage: `url('${city.attractions[0].image}')` }}></div>
-                        <div className='attraction-comment'>
-                          <p onClick={handleClick} id={city.attractions[0].id}>{city.attractions[0].name}</p>
-                        </div>
-                        <Link to={`/profile/${city.attractions[0].owner.id}/`}>
-                          <div className='user-attractions'>
-                            <div>
-                              <div className='profile' style={{ backgroundImage: `url('${city.attractions[0].owner.profile_image}')`  }}></div>
-                              <div>{city.attractions[0].owner.username}</div>
-                            </div>
-                            <div>{city.attractions[0].description}</div>
+                  <div><h3>Featured Attraction:</h3> 
+                    {city.attractions.length > 0 ? 
+                      <div className='comment-boxes' key={id}>
+                        <div className='city-attraction-cards'>
+                          <div onClick={handleClick} id={city.attractions[0].id} className='attraction-image' style={{ backgroundImage: `url('${city.attractions[0].image}')` }}></div>
+                          <div className='attraction-comment'>
+                            <p onClick={handleClick} id={city.attractions[0].id}>{city.attractions[0].name}</p>
                           </div>
-                        </Link>
+                          <Link to={`/profile/${city.attractions[0].owner.id}/`}>
+                            <div className='user-attractions'>
+                              <div>
+                                <div className='profile' style={{ backgroundImage: `url('${city.attractions[0].owner.profile_image}')`  }}></div>
+                                <div>{city.attractions[0].owner.username}</div>
+                              </div>
+                              <div>{city.attractions[0].description}</div>
+                            </div>
+                          </Link>
+                        </div>
                       </div>
-                    </div>
-                    : 'No attractions added yet!'}
+                      : 'No attractions added yet!'}
                   </div>
                 </div>
 
@@ -172,7 +173,7 @@ const CityPage = () => {
               </div>
             </div>
           </>
-          : 'error'
+          : 'Loading...'
         }
 
       </div>
