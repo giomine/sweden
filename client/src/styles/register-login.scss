@@ -24,6 +24,15 @@
         margin: 5px 0;
         padding-left: 10px;
     }
+    button{
+      background-color: $blue;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      &:hover{
+        transform: scale(1.05);
+      }
+    }
     textarea{
       padding-top: 10px;
     }

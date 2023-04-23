@@ -133,18 +133,25 @@ a{
   div{
     @include flex-center();
   }
-  .buttons{
-    @include flex-center();
-    height: 40px;
-    width: 100px;
-    margin: 0 10px 10px;
-    border: 1px solid black;
-    border-radius: 3px;
-  }
   .plus{
     justify-content: flex-start;
     padding-left: 10px;
   }
+}
+.buttons {
+  @include flex-center();
+  background-color: lighten($blue, 30%);
+  height: 40px;
+  width: 100px;
+  margin: 0 10px 10px;
+  // border: 1px solid black;
+  border-radius: 3px;
+  color: black;
+}
+.buttons:hover{
+  transform: scale(1.05);
+  background-color: $blue;
+  color: white;
 }
 
 .home-card-container{
@@ -170,11 +177,11 @@ a{
   }
 }
 
-.button{
-  padding: 10px 20px;
-  border-radius: 3px;
-  border: 0.5px solid black;
-}
+// .button{
+//   padding: 10px 20px;
+//   border-radius: 3px;
+//   border: 0.5px solid black;
+// }
 
 input, textarea, select {
   font-size: 16px;

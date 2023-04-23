@@ -202,7 +202,7 @@ const ProfilePage = () => {
                     {/* <div>No profile info</div> */}
                     {editTab === false &&
                     <div className='first-tab-boxes'>
-                      <button className='button' onClick={handleClick}>Upload profile photo</button>
+                      <div className='buttons' onClick={handleClick}>Upload profile photo</div>
                     </div>
                     }
                     <div>
