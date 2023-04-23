@@ -14,14 +14,14 @@ const ProfilePage = () => {
   const [ profile, setProfile ] = useState('')
   const [ attractions, setAttractions ] = useState()
   const [ cities, setCities ] = useState()
-  const [ activeTab, setActiveTab ] = useState('tab3')
+  const [ activeTab, setActiveTab ] = useState('tab1')
 
 
+  const handleTab1 = () => {
+    setActiveTab('tab1')
+  }
   const handleTab2 = () => {
     setActiveTab('tab2')
-  }
-  const handleTab3 = () => {
-    setActiveTab('tab3')
   }
 
   useEffect(() => {
@@ -85,11 +85,38 @@ const ProfilePage = () => {
               </div>
 
               <div style={{ display: 'flex' }} className='profile-section tabs-container'>
-                <div onClick={handleTab3} className={activeTab === 'tab3' ? 'active tabs' : 'tabs'} >Cities</div>
+                <div onClick={handleTab1} className={activeTab === 'tab1' ? 'active tabs' : 'tabs'} >Cities</div>
                 <div onClick={handleTab2} className={activeTab === 'tab2' ? 'active tabs' : 'tabs'} >Attractions</div>
               </div>
 
-              <div className='edit-profile'>        
+              <div className='edit-profile'>     
+
+                {activeTab === 'tab1' && cities &&                
+                  <div className='grid-container'>
+                    <div className='card-container'>
+                      {cities.length > 0 ? 
+                        cities.map(city => {
+                          if (city.owner.id === profile.id) {
+                            const { id, name, image, description } = city
+                            const shortDescription = description.slice(0,50) + '....'
+                            return (
+                              <div key={id}>
+                                <Link to={`/city/${id}`}>
+                                  <Card 
+                                    cardClass={'card'}
+                                    name={name}
+                                    image={image}
+                                    text={shortDescription}
+                                  />
+                                </Link>
+                              </div>
+                            )
+                          }
+                        })
+                        : <><div></div><div>No cards added yet!</div></>
+                      }
+                    </div>
+                  </div>}   
 
                 {activeTab === 'tab2' && attractions &&
                   <div className='grid-container'>
@@ -117,33 +144,6 @@ const ProfilePage = () => {
                           }
                         })
                         : <><div></div><div>No attractions added yet!</div></>
-                      }
-                    </div>
-                  </div>}
-
-                {activeTab === 'tab3' && cities &&                
-                  <div className='grid-container'>
-                    <div className='card-container'>
-                      {cities.length > 0 ? 
-                        cities.map(city => {
-                          if (city.owner.id === profile.id) {
-                            const { id, name, image, description } = city
-                            const shortDescription = description.slice(0,50) + '....'
-                            return (
-                              <div key={id}>
-                                <Link to={`/city/${id}`}>
-                                  <Card 
-                                    cardClass={'card'}
-                                    name={name}
-                                    image={image}
-                                    text={shortDescription}
-                                  />
-                                </Link>
-                              </div>
-                            )
-                          }
-                        })
-                        : <><div></div><div>No cards added yet!</div></>
                       }
                     </div>
                   </div>}
