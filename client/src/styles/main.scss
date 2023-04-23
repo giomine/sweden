@@ -113,8 +113,37 @@ a{
   }
 }
 
+.home-top{
+  height: 15vh;
+  margin-bottom: 5vh;
+  text-align: center;
+  @include flex-center();
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.home-buttons{
+  height: 10vh;
+  @include flex-center();
+  align-items: flex-start;
+  div{
+    @include flex-center();
+  }
+  .buttons{
+    @include flex-center();
+    height: 40px;
+    width: 100px;
+    margin: 0 10px 10px;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+  .plus{
+    justify-content: flex-start;
+    padding-left: 10px;
+  }
+}
+
 .home-card-container{
-  margin: 50px auto;
+  margin: 0 auto 50px;
   width: 95vw;
   display: flex;
   overflow: scroll;

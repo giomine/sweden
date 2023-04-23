@@ -91,6 +91,67 @@ const Home = () => {
     <div className='grid-container'>
       <div className='hero'><h1>Discover <span>S</span>weden</h1></div>
 
+      <div className='home-top' >
+        <div>Your definitive guide to Sweden</div>
+        <div>Discover new spots for relaxation, travel, and entertainment</div>
+
+      </div>
+
+      <div className='home-buttons'>
+        { isAuthenticated() ?
+          <div>
+            <Link to={'/createcity/'}><div className='buttons plus'>+ city</div></Link>
+            <Link to={'/createattraction/'}><div className='buttons plus'>+ attraction</div></Link>
+          </div>
+          :
+          <div>
+            <Link to={'/register/'}><div className='buttons'>Sign up</div></Link>
+            <Link to={'/login/'}><div className='buttons'>Log in</div></Link>
+          </div>
+        }
+      </div>
+
+      <div className='home-card-container'>
+        { isAuthenticated() ?
+          <div className='card add-box'>
+            <Link className='add' to={'/createcity/'}>
+              <i className="fa-regular fa-plus"></i>
+              <p>City</p>
+            </Link>
+            <Link className='add' to={'/createattraction/'}>
+              <i className="fa-regular fa-plus"></i>
+              <p>Attraction</p>
+            </Link>
+          </div>
+          :
+          <div className='card add-box'>
+            <Link className='add unlogged' to={'/login'}>
+              <i className="fa-regular fa-plus"></i>
+            </Link>
+          </div>
+        }
+        {allData.length > 0 ? 
+          allData.map(data => {
+            const { id, image, name, description } = data
+            const shortDescription = description.slice(0,50) + '....'
+            return (
+              <div key={id}>
+                <Link id={id} onMouseOver={handleMouseOver} onTouchStart={handleMouseOver} to={`/city/${id}`}>
+                  <Card
+                    cardClass='card home'
+                    id={id}
+                    image={image}
+                    name={name}
+                    text={shortDescription}
+                  />
+                </Link>
+              </div>
+            )
+          })
+          : <></>
+        }
+      </div>
+
       <Map
         onClick={removePopup}
         onDblClick={handleDblClick}
@@ -138,7 +199,7 @@ const Home = () => {
 
       </Map>
 
-      <div className='home-card-container'>
+      <div style={{ marginTop: '50px' }} className='home-card-container'>
         { isAuthenticated() ?
           <div className='card add-box'>
             <Link className='add' to={'/createcity/'}>
