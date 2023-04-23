@@ -158,6 +158,13 @@
   }
 }
 
+.register-border .mapboxgl-map{
+  @media(max-width: 660px){
+    width: 90vw !important;
+    max-width: 398px !important;
+  }
+}
+
 
 .tabs-container{
   align-items: flex-end;
