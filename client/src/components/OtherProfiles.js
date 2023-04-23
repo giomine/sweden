@@ -170,7 +170,7 @@ const ProfilePage = () => {
           </div>
         </div>
 
-        : 'Account not found'
+        : 'Loading...'
       }
     </>
   )

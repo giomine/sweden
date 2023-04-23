@@ -173,7 +173,7 @@ const ProfilePage = () => {
                   
                   <div>
                     <p className='name'>{profile.username}</p>
-                    <p>{profile.email}</p>
+                    {/* <p>{profile.email}</p> */}
                     <div className='count'><p>Cities created: {cityCount}</p><p>Attractions created: {attractionCount}</p></div>
                   </div>
                 </div>
@@ -337,9 +337,9 @@ const ProfilePage = () => {
             </div>
           </div>
 
-          : 'error'
+          : 'Loading...'
           
-        : 'please log in!'
+        : 'Log in to view your profile page'
       }
     </>
   )
