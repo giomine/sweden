@@ -159,7 +159,7 @@ const EditAttraction = () => {
               {/* //! cloudinary */}
               <div className='field'>
                 { formFields.image ? 
-                  <img style={{ height: '180px' }} src={formFields.image} /> 
+                  <img style={{ height: '180px', width: '200px' }} src={formFields.image} /> 
                   : 
                   <input style={{ fontSize: '14px', width: '200px', margin: '10px 0', padding: '0' }} type="file" onChange={handleUpload}/>
                 }

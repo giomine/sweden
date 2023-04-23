@@ -28,7 +28,7 @@ const ProfileUpload = ({ formFields, setFormFields }) => {
     <div className='field'>
       {/* <label>Image</label> */}
       { formFields.profile_image ? 
-        <img style={{ height: '180px' }} src={formFields.profile_image} /> 
+        <img style={{ height: '180px', width: '180px' }} src={formFields.profile_image} /> 
         : 
         <input style={{ fontSize: '12px', width: '170px', margin: '20px 0' }} type="file" onChange={handleUpload}/>
       }
