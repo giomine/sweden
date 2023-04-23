@@ -223,10 +223,12 @@ div{
     justify-content: space-evenly;
     @media (min-width: 800px){
       width: 50vw;
+      max-width: 700px;
     }
   }
   .edit {
     background-color: $blue;
+    width: 95vw;
   }
   .modal-container{
     @include flex-center();
