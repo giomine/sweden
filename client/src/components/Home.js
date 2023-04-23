@@ -12,9 +12,13 @@ const center = [14.66, 60.23]
 const Home = () => {
 
   const [ showPopup, setShowPopup ] = useState(false)
+  const [ showPopupAttr, setShowPopupAttr ] = useState(false)
   const [ popupId, setPopupId ] = useState()
   const [ popupData, setPopupData ] = useState()
+  const [ popupDataAttr, setPopupDataAttr ] = useState()
   const [ profile, setProfile ] = useState()
+  const [ allData, setAllData ] = useState('')
+  const [ attractions, setAttractions ] = useState('')
 
   const handlePopup = (e) => {
     // setShowPopup(!showPopup) 
@@ -28,22 +32,24 @@ const Home = () => {
   const handleMouseOver = (e) => {
     // console.log(e.target)
     setShowPopup(true)
+    setShowPopupAttr(false)
     setPopupId(Number(e.target.id))
-    // window.scroll({
-    //   top: 500,
-    //   left: 0,
-    //   behavior: 'smooth',
-    // })
   }
 
-  // get lngLat on dblClick for dropping pins - use on create city page?
+  const handleMouseOverAttr = (e) => {
+    // console.log(e.target)
+    setShowPopup(false)
+    setShowPopupAttr(true)
+    setPopupId(Number(e.target.id))
+  } 
+
+  //! delete? get lngLat on dblClick for dropping pins - use on create city page?
   const handleDblClick = (map, event) => {
     const lngLat = event.lngLat
     // console.log(lngLat, lngLat.lat, lngLat.lng)
   }
 
 
-  const [ allData, setAllData ] = useState('')
 
   useEffect(() => {
     const getData = async () => {
@@ -64,6 +70,29 @@ const Home = () => {
       }
     }
     getData()
+  },[popupId])
+
+  useEffect(() => {
+    const getAttr = async () => {
+      try {
+        // this capture the whole cities data
+        const { data } = await axios.get('/api/attractions/')
+        setAttractions(data)
+        // console.log(data)
+
+        // this captures only the attraction for the clicked pin
+        data.map(attraction => {
+          // console.log(attraction)
+          if (attraction.id === popupId){
+            // console.log('match!!!', popupId, attraction)
+            setPopupDataAttr(attraction)
+          }
+        })
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getAttr()
   },[popupId])
 
   useEffect(() => {
@@ -130,9 +159,11 @@ const Home = () => {
             </Link>
           </div>
         }
+        {/* //! cities carousel */}
         {allData.length > 0 ? 
           allData.map(data => {
             const { id, image, name, description } = data
+            // console.log(data, id)
             const shortDescription = description.slice(0,50) + '....'
             return (
               <div key={id}>
@@ -165,9 +196,10 @@ const Home = () => {
           width: '100vw',
         }}>
 
+        {/* //! city markers */}
         {allData.length > 0 &&
-          allData.map(data => {
-            const { id, lat, long } = data
+          allData.map(city => {
+            const { id, lat, long } = city
             return (
               <div key={id}>
                 <>
@@ -175,7 +207,7 @@ const Home = () => {
                     onClick={handlePopup}
                     coordinates={[long, lat]}
                     anchor="bottom">
-                    <i id={id} style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
+                    <i id={id} style={{ color: 'red', fontSize: '25px' }} className="fa-solid fa-map-marker"></i>
                   </Marker>
                 </>
               </div>
@@ -183,6 +215,27 @@ const Home = () => {
           })
         }
 
+        {/* //! attraction markers */}
+        {attractions.length > 0 &&
+          attractions.map(attraction => {
+            const { id, lat, long } = attraction
+            // console.log(attraction)
+            return (
+              <div key={id}>
+                <>
+                  <Marker
+                    onClick={handlePopup}
+                    coordinates={[long, lat]}
+                    anchor="bottom">
+                    <i id={id} style={{ color: 'blue', fontSize: '15px' }} className="fa-solid fa-map-marker"></i>
+                  </Marker>
+                </>
+              </div>
+            )
+          })
+        }
+
+        {/* //! city popups */}
         { showPopup === true &&
           popupData ?
           <Link to={`/city/${popupData.id}`}>
@@ -192,6 +245,22 @@ const Home = () => {
               <h3>{popupData.name}</h3>
               <p>{popupData.description.slice(0,50)}....</p>
               <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
+            </Popup>
+          </Link>
+          : ''
+        }
+
+        {/* //! attraction popups */}
+        { showPopupAttr === true &&
+          popupDataAttr ?
+          // console.log(popupDataAttr, popupDataAttr)
+          <Link to={`/city/${popupDataAttr.city.id}`}>
+            <Popup
+              coordinates={[popupDataAttr.long, popupDataAttr.lat]}
+              style={{ width: '200px' }}>
+              <h3>{popupDataAttr.name}</h3>
+              <p>{popupDataAttr.description.slice(0,50)}....</p>
+              <div style={{ backgroundImage: `url('${popupDataAttr.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '180px', height: '100px' }}></div>
             </Popup>
           </Link>
           : ''
@@ -218,26 +287,29 @@ const Home = () => {
             </Link>
           </div>
         }
-        {allData.length > 0 ? 
-          allData.map(data => {
-            const { id, image, name, description } = data
-            const shortDescription = description.slice(0,50) + '....'
+
+        {/* //! attractions carousel */}
+        {attractions.length > 0 ?
+          attractions.map(attraction => {
+            const { id, name, image, lat, long, city } = attraction
+            // console.log(id, name, image, lat, long, city.id)
+            const shortName = name.slice(0,15) + '....'
             return (
               <div key={id}>
-                <Link id={id} onMouseOver={handleMouseOver} onTouchStart={handleMouseOver} to={`/city/${id}`}>
+                <Link id={id} onMouseOver={handleMouseOverAttr} onTouchStart={handleMouseOverAttr} to={`/city/${city.id}`}>
                   <Card
                     cardClass='card home'
                     id={id}
                     image={image}
-                    name={name}
-                    text={shortDescription}
+                    name={shortName}
                   />
                 </Link>
               </div>
             )
           })
-          : <></>
+          : console.log('boo')
         }
+
       </div>
     </div>
   )
