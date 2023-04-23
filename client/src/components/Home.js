@@ -38,6 +38,7 @@ const Home = () => {
 
   const handleMouseOverAttr = (e) => {
     // console.log(e.target)
+    window.localStorage.setItem('attrId', e.target.id)
     setShowPopup(false)
     setShowPopupAttr(true)
     setPopupId(Number(e.target.id))
