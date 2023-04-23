@@ -11,9 +11,11 @@ const Login = () => {
     email: '',
     password: '',
   })
+  const [error, setError] = useState('')
 
   const handleChange = (e) => {
     setFormFields({ ...formFields, [e.target.name]: e.target.value })
+    setError('')
   }
 
   const handleSubmit = async (e) => {
@@ -25,7 +27,9 @@ const Login = () => {
       setToken(response.data.token)
       navigate('/profile/')
     } catch (err) {
-      console.log(err)
+      // console.log(err)
+      console.log(err.response)
+      setError(err.response.data.detail)
     }
   }
 
@@ -43,6 +47,7 @@ const Login = () => {
           <label htmlFor="password"></label>
           <input type="password" name="password" placeholder="password" onChange={handleChange} value={formFields.password} />
           <button>Log in</button>
+          {error && <p className='unauthorized'>{error}</p>}
           <p className='register-link'><Link to={'/register/'}>No account? Click here to register</Link></p>
         </form>     
       </div>
