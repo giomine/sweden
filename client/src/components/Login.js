@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import { setToken } from '../helpers/auth'
 
 
@@ -43,6 +43,7 @@ const Login = () => {
           <label htmlFor="password"></label>
           <input type="password" name="password" placeholder="password" onChange={handleChange} value={formFields.password} />
           <button>Log in</button>
+          <p className='register-link'><Link to={'/register/'}>No account? Click here to register</Link></p>
         </form>     
       </div>
     </div>
