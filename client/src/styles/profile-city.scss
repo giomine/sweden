@@ -140,16 +140,17 @@
         width: 50%;
         height: 560px;
         h2 {
-          margin-top: 5px;
+          margin-top: 0;
+          font-size: 26px;
         }
         h3 {
           margin: 8px 0 10px;
+          font-size: 21px;
         }
       }
       @media (max-width: 750px){
         width: 90vw;
       }
-
     }
   }
   .city-top, .city-bottom-container, .profile-container, .profile-first-tab{
@@ -258,6 +259,7 @@ div{
     }
 }
 
+
 .user-attractions{
   @include flex-center();
   flex-direction: column;
@@ -275,13 +277,14 @@ div{
     display: flex;
     align-items: center;
     padding-bottom: 10px;
+    font-weight: bold;
   }
 }
 .attraction-comment {
   p {
     margin: 10px 0;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
