@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import ProfileUpload from './ProfileUpload'
 
 
@@ -60,6 +60,7 @@ const Register = () => {
             formFields={formFields}
           />
           <button>Register</button>
+          <p className='register-link'><Link to={'/login/'}>Already have an account? <p>Click here to log in</p></Link></p>
         </form>     
       </div>
     </div>
