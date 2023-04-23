@@ -130,6 +130,7 @@ a{
   height: 10vh;
   @include flex-center();
   align-items: flex-start;
+  margin-bottom: 30px;
   div{
     @include flex-center();
   }
