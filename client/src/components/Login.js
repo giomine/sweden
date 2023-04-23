@@ -22,7 +22,7 @@ const Login = () => {
     e.preventDefault()
     try {
       // console.log(formFields)
-      const response = await axios.post('api/auth/login/', formFields)
+      const response = await axios.post('/api/auth/login/', formFields)
       // console.log(response.data.token)
       setToken(response.data.token)
       navigate('/profile/')

@@ -5,6 +5,7 @@
 @import './register-login.scss';
 @import './profile-city.scss';
 @import url('https://fonts.googleapis.com/css2?family=Latofamily=Tangerine:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -119,12 +120,25 @@ a{
 }
 
 .home-top{
-  height: 15vh;
-  margin-bottom: 5vh;
-  text-align: center;
   @include flex-center();
+  font-size: 18px;
+  height: 35vh;
+  width: 90vw;
+  margin-bottom: 8vh;
+  text-align: center;
   flex-direction: column;
   justify-content: flex-end;
+  div{
+    font-family: 'Playfair Display', serif;
+  }
+  div:nth-child(1){
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  @media(min-width: 660px){
+    height: 25vh;
+    font-size: 20px;
+  }
 }
 .home-buttons{
   height: 10vh;

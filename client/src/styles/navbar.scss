@@ -4,7 +4,6 @@ nav{
   @include flex-center();
   width: 100vw;
   height: 50px;
-  background-color: rgb(48, 112, 91);
   background-color: $blue;
   a{
     color: white;
