@@ -22,7 +22,7 @@ const PageNavbar = () => {
           { isAuthenticated() ?
             <>
               <Link className='margin' to='/profile'>Profile</Link>
-              <Link to='/' onClick = {() => handleLogout(navigate())}>Logout</Link>
+              <Link to='/' onClick = {() => handleLogout(navigate)}>Logout</Link>
             </>
             :
             <>
