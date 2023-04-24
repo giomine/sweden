@@ -118,8 +118,8 @@ const CityPage = () => {
                     {city.attractions.length > 0 ? 
                       <div className='comment-boxes' key={id}>
                         <div className='city-attraction-cards'>
-                          <div onClick={handleClick} id={city.attractions[0].id} className='attraction-image' style={{ backgroundImage: `url('${city.attractions[0].image}')` }}></div>
                           <div className='attraction-comment'>
+                            <div onClick={handleClick} id={city.attractions[0].id} className='attraction-image' style={{ backgroundImage: `url('${city.attractions[0].image}')` }}></div>
                             <p onClick={handleClick} id={city.attractions[0].id}>{city.attractions[0].name}</p>
                           </div>
                           <Link to={`/profile/${city.attractions[0].owner.id}/`}>
@@ -150,8 +150,8 @@ const CityPage = () => {
                     return (
                       <div className='comment-boxes' key={id}>
                         <div className='city-attraction-cards'>
-                          <div onClick={handleClick} id={id} className='attraction-image' style={{ backgroundImage: `url('${image}')` }}></div>
                           <div className='attraction-comment'>
+                            <div onClick={handleClick} id={id} className='attraction-image' style={{ backgroundImage: `url('${image}')` }}></div>
                             <p>{name}</p>
                           </div>
                           <Link to={`/profile/${owner.id}/`}>

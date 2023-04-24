@@ -309,6 +309,10 @@ div{
     font-weight: bold;
     font-size: 16px;
   }
+  &:hover{
+    color: $blue;
+    transform: scale(1.05);
+  }
 }
 
 .city-bottom-container{
@@ -332,6 +336,10 @@ div{
     }
   }
 }
+.comment-boxes a:hover, .user-attractions a:hover{
+  color: darken($blue, 20%);
+}
+
 .attraction-image {
   background-size: cover; 
   background-position: center; 
@@ -339,9 +347,8 @@ div{
   height: 200px; 
   width: 100%;
 }
-.city-attraction-cards:hover{
-  color: $blue;
-}
+
+
 
 .image-box{
   @include flex-center();
