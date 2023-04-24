@@ -52,7 +52,7 @@ const CreateCity = () => {
     setError('')
   }
 
-  // const handleAttractions = async (e) => {
+  // const handleAttractions = async (e) => { // keeping this for future reference - how to get multiple values from multiselect input
   //   console.log(e.target.selectedOptions)
   //   const choices = Array.from(e.target.selectedOptions, option => option.value)
   //   console.log(choices)

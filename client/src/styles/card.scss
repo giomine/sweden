@@ -64,7 +64,6 @@
 
 .add{
   height: 50%;
-  // background-color: rgb(176, 176, 176);
   background-color: $blue;
   color: white;
   @include flex-center();
@@ -94,8 +93,6 @@
 }
 
 .add:nth-of-type(1){
-  // background-color: gray;
-  // color: rgb(232, 232, 232);
   background-color: lighten($blue, 30%);
   color: black;
 }

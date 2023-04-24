@@ -135,7 +135,6 @@ const EditCity = () => {
                 {regions.length > 0 ? 
                   regions.map(region => {
                     const { id, name } = region
-                    // console.log(region.id)
                     return (
                       <option key={id} value={region.id} onChange={handleChange}>{name}</option>
                     )

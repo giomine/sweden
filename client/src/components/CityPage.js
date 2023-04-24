@@ -7,7 +7,7 @@ const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 const zoom = [10]
 
 const CityPage = () => {
-  console.log('rendering')
+  // console.log('rendering') // for checking why page was crashing. sometime rendered 25+ times on page load. I believe this was solved by changing the default popupid (see lines 15+16)
 
   const { id } = useParams()
   const [ city, setCity ] = useState('')
@@ -26,7 +26,6 @@ const CityPage = () => {
   }
 
   const handleClick = (e) => {
-    // console.log(e.target.id)
     setShowPopup(true)
     setPopupId(Number(e.target.id))
     window.scroll({
