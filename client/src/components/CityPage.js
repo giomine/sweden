@@ -7,12 +7,14 @@ const Map = ReactMapboxGl({ accessToken: process.env.REACT_APP_MAP_TOKEN })
 const zoom = [10]
 
 const CityPage = () => {
+  console.log('rendering')
 
   const { id } = useParams()
   const [ city, setCity ] = useState('')
   const [ showPopup, setShowPopup ] = useState(true)
   const [ popupId, setPopupId ] = useState(localStorage.getItem('attrId') ? (Number(localStorage.getItem('attrId'))) : setShowPopup(false))
   const [ popupData, setPopupData ] = useState()
+
 
   const handlePopup = (e) => {
     setShowPopup(true)
@@ -90,15 +92,16 @@ const CityPage = () => {
                 : ''
               }
 
-              { showPopup === true &&
+              { showPopup === true ?
                 popupData ?
-                <Popup
-                  coordinates={[popupData.long, popupData.lat]}
-                  style={{ width: '300px' }}>
-                  <h3>{popupData.name}</h3>
-                  <p>{popupData.description}</p>
-                  <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '280px', height: '100px' }}></div>
-                </Popup>
+                  <Popup
+                    coordinates={[popupData.long, popupData.lat]}
+                    style={{ width: '300px' }}>
+                    <h3>{popupData.name}</h3>
+                    <p>{popupData.description}</p>
+                    <div style={{ backgroundImage: `url('${popupData.image}')`, backgroundSize: 'cover', backgroundPosition: 'center', width: '280px', height: '100px' }}></div>
+                  </Popup>
+                  : ''
                 : ''
               }
             </Map>
@@ -173,7 +176,7 @@ const CityPage = () => {
               </div>
             </div>
           </>
-          : 'Loading...'
+          : <div style={{ marginTop: '40vh' }}>Loading...</div>
         }
 
       </div>

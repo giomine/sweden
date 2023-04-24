@@ -21,13 +21,13 @@ const PageNavbar = () => {
 
           { isAuthenticated() ?
             <>
-              <Link className='margin' to='/profile'>Profile</Link>
+              <Link className='margin' to='/profile/'>Profile</Link>
               <Link to='/' onClick = {() => handleLogout(navigate)}>Logout</Link>
             </>
             :
             <>
-              <Link className='margin' to='/register'>Register</Link>
-              <Link to='/login'>Login</Link>
+              <Link className='margin' to='/register/'>Register</Link>
+              <Link to='/login/'>Login</Link>
             </>
           }
         </div>
