@@ -30,10 +30,14 @@ const Home = () => {
   }
 
   const handlePopup = (e) => {
-    // setShowPopup(!showPopup) 
     setShowPopup(true)
-    // console.log(showPopup)
+    setShowPopupAttr(false)
     setPopupId(Number(e.target.id))
+  }
+  const handlePopupAttr = (e) => {
+    setShowPopup(false)
+    setShowPopupAttr(true)
+    setPopupIdAttr(Number(e.target.id))
   }
   const removePopup = () => {
     setShowPopup(false)
@@ -260,7 +264,7 @@ const Home = () => {
               <div key={id}>
                 <>
                   <Marker
-                    onClick={handlePopup}
+                    onClick={handlePopupAttr}
                     coordinates={[long, lat]}
                     anchor="bottom">
                     <i id={id} style={{ color: 'red' }} className="fa-solid fa-map-marker"></i>
