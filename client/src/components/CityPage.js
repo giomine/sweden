@@ -12,8 +12,9 @@ const CityPage = () => {
   const { id } = useParams()
   const [ city, setCity ] = useState('')
   const [ showPopup, setShowPopup ] = useState(true)
-  const [ popupId, setPopupId ] = useState(localStorage.getItem('attrId') ? (Number(localStorage.getItem('attrId'))) : setShowPopup(false))
-  const [ popupData, setPopupData ] = useState()
+  // const [ popupId, setPopupId ] = useState(localStorage.getItem('attrId') ? (Number(localStorage.getItem('attrId'))) : setShowPopup(false))
+  const [ popupId, setPopupId ] = useState(localStorage.getItem('attrId') ? (Number(localStorage.getItem('attrId'))) : '')
+  const [ popupData, setPopupData ] = useState('')
 
 
   const handlePopup = (e) => {
