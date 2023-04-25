@@ -13,7 +13,6 @@ const zoom = [4.3]
 const center = [14.66, 60.23]
 
 const Home = () => {
-  console.log(process.env.REACT_APP_MAP_TOKEN)
 
   const [ showPopup, setShowPopup ] = useState(false)
   const [ showPopupAttr, setShowPopupAttr ] = useState(false)
