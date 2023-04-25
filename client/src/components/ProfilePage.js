@@ -58,7 +58,7 @@ const ProfilePage = () => {
   }
 
   const deleteEntry = async (e) => {
-    await axios.delete(`/api/cities/${cardId}`, {
+    await axios.delete(`/api/cities/${cardId}/`, {
       headers: {
         Authorization: `Bearer ${getToken()}`,
       },
@@ -83,7 +83,7 @@ const ProfilePage = () => {
   }
 
   const deleteEntryAttr = async (e) => {
-    await axios.delete(`/api/attractions/${cardId}`, {
+    await axios.delete(`/api/attractions/${cardId}/`, {
       headers: {
         Authorization: `Bearer ${getToken()}`,
       },

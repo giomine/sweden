@@ -91,7 +91,7 @@ const EditAttraction = () => {
     window.scrollTo(0, 0)      
     const getData = async () => {
       try {
-        const { data } = await axios.get(`/api/attractions/${id}`)
+        const { data } = await axios.get(`/api/attractions/${id}/`)
         setAttraction(data)
         // console.log(data)
       } catch (err) {
