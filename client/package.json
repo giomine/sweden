@@ -26,8 +26,13 @@
   },
   "browserslist": {
     "production": [
-      "defaults",
-      "not ie 11"
+      ">0.2%",
+      "not dead",
+      "not op_mini all",
+      "not safari < 10",
+      "not chrome < 51",
+      "not android < 5",
+      "not ie < 12"
     ],
     "development": [
       "last 1 chrome version",
