@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 import ReactMapboxGl, { Marker, Popup } from 'react-mapbox-gl'
+// import mapboxgl from '!mapbox-gl'
+// import worker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker'
+// mapboxgl.workerClass = worker.default
 import axios from 'axios'
 import Card from './Card'
 import { Link } from 'react-router-dom'

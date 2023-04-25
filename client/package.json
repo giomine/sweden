@@ -12,7 +12,8 @@
     "react-mapbox-gl": "^5.1.1",
     "react-router-dom": "^6.10.0",
     "react-scripts": "^5.0.1",
-    "sass": "^1.62.0"
+    "sass": "^1.62.0",
+    "worker-loader": "^3.0.8"
   },
   "scripts": {
     "start": "react-scripts start",
