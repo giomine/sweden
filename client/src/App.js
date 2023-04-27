@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import PageNavbar from './components/PageNavbar'
 // import Card from './components/Card'
@@ -12,10 +13,16 @@ import CreateAttraction from './components/CreateAttraction'
 import EditCity from './components/EditCity'
 import EditAttraction from './components/EditAttraction'
 import OtherProfiles from './components/OtherProfiles'
+import icon from './images/favicon.ico'
+
 
 
 const App = () => {
-
+  useEffect(() => {
+    const favicon = document.getElementById('favicon')
+    favicon.setAttribute('href', icon)
+  }, [])
+  
   return (
     <div className='page-container'>
       <BrowserRouter>
