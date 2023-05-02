@@ -176,7 +176,7 @@ const CityPage = () => {
               </div>
             </div>
           </>
-          : <div style={{ marginTop: '40vh' }}>Loading...</div>
+          : <div style={{ marginTop: '30vh' }}><div className='loading'></div></div>
         }
 
       </div>

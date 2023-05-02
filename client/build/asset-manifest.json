@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.e1171dca.css",
-    "main.js": "/static/js/main.2029631c.js",
+    "main.css": "/static/css/main.b8bc2cb4.css",
+    "main.js": "/static/js/main.cd5b204d.js",
     "static/media/solaregg.jpg": "/static/media/solaregg.fd163d4297fb2b4c37e2.jpg",
+    "static/media/loading.gif": "/static/media/loading.1b9bf68401d11183692b.gif",
     "static/media/favicon.ico": "/static/media/favicon.2c2d85b4a1ad71aed973.ico",
     "index.html": "/index.html",
-    "main.e1171dca.css.map": "/static/css/main.e1171dca.css.map",
-    "main.2029631c.js.map": "/static/js/main.2029631c.js.map"
+    "main.b8bc2cb4.css.map": "/static/css/main.b8bc2cb4.css.map",
+    "main.cd5b204d.js.map": "/static/js/main.cd5b204d.js.map"
   },
   "entrypoints": [
-    "static/css/main.e1171dca.css",
-    "static/js/main.2029631c.js"
+    "static/css/main.b8bc2cb4.css",
+    "static/js/main.cd5b204d.js"
   ]
 }

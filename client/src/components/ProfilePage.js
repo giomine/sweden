@@ -337,7 +337,7 @@ const ProfilePage = () => {
             </div>
           </div>
 
-          : 'Loading...'
+          : <div className='loading'></div>
           
         : 'Log in to view your profile page'
       }

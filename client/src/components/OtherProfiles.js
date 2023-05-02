@@ -170,7 +170,7 @@ const ProfilePage = () => {
           </div>
         </div>
 
-        : 'Loading...'
+        : <div className='loading'></div>
       }
     </>
   )
