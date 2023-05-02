@@ -23,7 +23,7 @@ const PageNavbar = () => {
       }
     }
     getProfile()
-  }, [])
+  }, [setTimeout(() => {}), 1000])
 
   return (
     <nav>
