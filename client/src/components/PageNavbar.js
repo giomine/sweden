@@ -29,7 +29,7 @@ const PageNavbar = () => {
     <nav>
       <div className='nav-container'>
         <div>
-          <Link className='flex' to='/'><div className='profile-image brand' style={{ backgroundImage: 'url(/favicon.ico)' }}></div><div>Discover</div></Link>
+          <Link className='flex' to='/'><div className='profile-image brand'></div><div>Discover</div></Link>
         </div>
 
         <div className='flex'>
