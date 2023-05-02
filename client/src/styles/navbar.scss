@@ -18,7 +18,23 @@ nav{
   .nav-container{
     @include flex-center();
     justify-content: space-between;
-    width: 80%;
+    width: 90%;
     max-width: 1400px;
+    @media (min-width: 660px){
+      width: 80%;
+    }
+  }
+  .flex{
+    @include flex-center();
+    .profile-image{
+      width: 30px;
+      height: 30px;
+      margin: 0;
+    }
+    .brand{
+      width: 20px;
+      height: 20px;
+      margin-right: 5px;
+    }
   }
 }

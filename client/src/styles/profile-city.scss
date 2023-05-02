@@ -43,21 +43,6 @@
       }
     }
   }
-  
-  .profile-image{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
-    background-color: gray;
-    margin-right: 30px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    @media(min-width: 660px){
-      height: 100px;
-      width: 100px;
-    }
-  }
 
   .profile-section{
     width: 100%;
@@ -179,6 +164,21 @@
   .city-top, .city-bottom-container, .profile-container, .profile-first-tab{
     max-width: 1400px;
     margin: 0 auto;
+  }
+}
+
+.profile-image{
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: gray;
+  margin-right: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  @media(min-width: 660px){
+    height: 100px;
+    width: 100px;
   }
 }
 

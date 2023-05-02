@@ -1,27 +1,43 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { isAuthenticated, handleLogout } from '../helpers/auth'
+import { useEffect, useState } from 'react'
+import { getToken } from '../helpers/auth'
+import axios from 'axios'
 
 const PageNavbar = () => {
 
   const navigate = useNavigate()
+  const [ profile, setProfile ] = useState()
+
+  useEffect(() => {
+    const getProfile = async () => {
+      try {
+        const { data } = await axios.get('/api/auth/profile/', {
+          headers: {
+            Authorization: `Bearer ${getToken()}`,
+          },
+        })
+        setProfile(data)
+      } catch (err) {
+        console.log(err)
+      }
+    }
+    getProfile()
+  }, [])
 
   return (
     <nav>
       <div className='nav-container'>
         <div>
-          <Link to='/'>Home</Link>
+          <Link className='flex' to='/'><div className='profile-image brand' style={{ backgroundImage: 'url(/favicon.ico)' }}></div><div>Discover</div></Link>
         </div>
 
-        <div>
-          {/* TEMPORARY LINKS FOR DEBUGGING */}
-          {/* <Link style={{ color: 'black', marginRight: '5px' }} to='/city/8'>Sgl</Link> */}
-          {/* <Link style={{ color: 'black', marginRight: '5px' }} to='/profile'>Prof</Link>
-          <Link style={{ color: 'black', marginRight: '5px' }} to='/createcity'>CrCi</Link>
-          <Link style={{ color: 'black', marginRight: '5px' }} to='/createattraction'>CrAtt</Link> */}
+        <div className='flex'>
 
           { isAuthenticated() ?
+            profile &&
             <>
-              <Link className='margin' to='/profile/'>Profile</Link>
+              <Link className='margin' to='/profile/'><div className='profile-image' style={{ backgroundImage: `url('${profile.profile_image}')` }}></div></Link>
               <Link to='/' onClick = {() => handleLogout(navigate)}>Logout</Link>
             </>
             :
