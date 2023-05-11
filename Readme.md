@@ -1,5 +1,7 @@
 # GA Project 4 - Discover Sweden
 
+![wireframe](./ReadMe/sweden.png)
+
 # Contents
 - [Description](#description)
 - [Technology used](#technologies-used)
